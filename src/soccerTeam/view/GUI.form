@@ -1,0 +1,1362 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JDialog" name="loginGegevens">
+      <Properties>
+        <Property name="defaultCloseOperation" type="int" value="2"/>
+        <Property name="title" type="java.lang.String" value="Login Gegevens"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="174" max="32767" attributes="0"/>
+                          <Component id="loginGegevensWijzigButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="LoginGegevensOKButton" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="loginGegevensGebruikersnaamLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="loginGegevensWachtwoordPanel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="loginGegevensWachtwoordField" max="32767" attributes="0"/>
+                              <Component id="loginGegevensGebruikersnaamField" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="loginGegevensGebruikersnaamLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="loginGegevensGebruikersnaamField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="loginGegevensWachtwoordPanel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="loginGegevensWachtwoordField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="LoginGegevensOKButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="loginGegevensWijzigButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="loginGegevensGebruikersnaamLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Gebruikersnaam :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="loginGegevensWachtwoordPanel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Wachtwoord :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="loginGegevensGebruikersnaamField">
+        </Component>
+        <Component class="javax.swing.JTextField" name="loginGegevensWachtwoordField">
+        </Component>
+        <Component class="javax.swing.JButton" name="LoginGegevensOKButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="OK"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="loginGegevensWijzigButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Wijzig"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="login">
+      <Properties>
+        <Property name="defaultCloseOperation" type="int" value="2"/>
+        <Property name="title" type="java.lang.String" value="Login"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="loginGebruikersnaamLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="loginWachtwoordLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="loginWachtwoordField" max="32767" attributes="0"/>
+                              <Component id="loginGebruikersnaamField" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="159" max="32767" attributes="0"/>
+                          <Component id="loginLoginButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="loginAnnuleerButton" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="loginGebruikersnaamLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="loginGebruikersnaamField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="loginWachtwoordLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="loginWachtwoordField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="loginAnnuleerButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="loginLoginButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="loginGebruikersnaamLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Gebruikersnaam :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="loginWachtwoordLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Wachtwoord :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="loginGebruikersnaamField">
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="loginWachtwoordField">
+        </Component>
+        <Component class="javax.swing.JButton" name="loginLoginButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Log In"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="loginAnnuleerButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Annuleren"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="spelerToevoegen">
+      <Properties>
+        <Property name="defaultCloseOperation" type="int" value="2"/>
+        <Property name="title" type="java.lang.String" value="Speler Toevoegen"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="spelerToevoegenPostcodeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="spelerToevoegenTelefoonnummerLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="spelerToevoegenprofielEmailLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="spelerToevoegenTelefoonnummerField" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="spelerToevoegenprofielPostcodeField" min="-2" pref="70" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="spelerToevoegenprofielPlaatsLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="spelerToevoegenPlaatsField" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="spelerToevoegenEmailField" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="spelerToevoegenNaamLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="spelerToevoegenGeslachtLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="spelerToevoegenStraatLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="spelerToevoegenStraatField" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="spelerToevoegenHuisnummerLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="spelerToevoegenHuisnummerField" min="-2" pref="53" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="spelerToevoegenNaamField" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="spelerToevoegenGeslachtManRadioButton" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="spelerToevoegenGeslachtVrouwRadioButton" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="153" max="32767" attributes="0"/>
+                          <Component id="spelerToevoegenClearButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="spelerToevoegenVoegToeButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="spelerToevoegenAnnulerenButton" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="spelerToevoegenNaamLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenNaamField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="spelerToevoegenGeslachtLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenGeslachtManRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenGeslachtVrouwRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="spelerToevoegenStraatLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenHuisnummerLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenStraatField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenHuisnummerField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="spelerToevoegenPostcodeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenprofielPlaatsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenprofielPostcodeField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenPlaatsField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="spelerToevoegenTelefoonnummerLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenTelefoonnummerField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="spelerToevoegenprofielEmailLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenEmailField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="spelerToevoegenAnnulerenButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenVoegToeButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenClearButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="spelerToevoegenStraatLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Straat :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="spelerToevoegenNaamLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Naam :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="spelerToevoegenNaamField">
+        </Component>
+        <Component class="javax.swing.JLabel" name="spelerToevoegenGeslachtLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Geslacht :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="spelerToevoegenGeslachtManRadioButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Man"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="spelerToevoegenGeslachtVrouwRadioButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Vrouw"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="spelerToevoegenStraatField">
+        </Component>
+        <Component class="javax.swing.JTextField" name="spelerToevoegenHuisnummerField">
+        </Component>
+        <Component class="javax.swing.JTextField" name="spelerToevoegenPlaatsField">
+        </Component>
+        <Component class="javax.swing.JTextField" name="spelerToevoegenprofielPostcodeField">
+        </Component>
+        <Component class="javax.swing.JLabel" name="spelerToevoegenprofielPlaatsLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Plaats :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="spelerToevoegenHuisnummerLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Huisnr. :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="spelerToevoegenPostcodeLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Postcode :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="spelerToevoegenTelefoonnummerLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tel. nr. :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="spelerToevoegenprofielEmailLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="E-mail :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="spelerToevoegenEmailField">
+        </Component>
+        <Component class="javax.swing.JTextField" name="spelerToevoegenTelefoonnummerField">
+        </Component>
+        <Component class="javax.swing.JButton" name="spelerToevoegenClearButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Clear"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="spelerToevoegenClearButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="spelerToevoegenVoegToeButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Voeg Toe"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="spelerToevoegenAnnulerenButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Annuleren"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="firstTime">
+      <Properties>
+        <Property name="defaultCloseOperation" type="int" value="2"/>
+        <Property name="title" type="java.lang.String" value="Welkom"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="spelerToevoegenPostcodeLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="spelerToevoegenTelefoonnummerLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="spelerToevoegenprofielEmailLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="spelerToevoegenTelefoonnummerField1" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="spelerToevoegenprofielPostcodeField1" min="-2" pref="70" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                  <Component id="spelerToevoegenPlaatsField1" pref="192" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="spelerToevoegenEmailField1" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="spelerToevoegenNaamLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="spelerToevoegenGeslachtLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="spelerToevoegenStraatLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="spelerToevoegenStraatField1" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="spelerToevoegenHuisnummerLabel1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="spelerToevoegenHuisnummerField1" min="-2" pref="53" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="spelerToevoegenNaamField1" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="spelerToevoegenGeslachtManRadioButton1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="spelerToevoegenGeslachtVrouwRadioButton1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="spelerToevoegenVoegToeButton1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="spelerToevoegenAnnulerenButton1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                  <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="9" max="32767" attributes="0"/>
+                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="spelerToevoegenNaamLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenNaamField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="spelerToevoegenGeslachtLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenGeslachtManRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenGeslachtVrouwRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="spelerToevoegenStraatLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenHuisnummerLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenStraatField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenHuisnummerField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="spelerToevoegenPostcodeLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenprofielPostcodeField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenPlaatsField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="spelerToevoegenTelefoonnummerLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenTelefoonnummerField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="spelerToevoegenprofielEmailLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenEmailField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="spelerToevoegenAnnulerenButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="spelerToevoegenVoegToeButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JTextField" name="spelerToevoegenNaamField1">
+        </Component>
+        <Component class="javax.swing.JLabel" name="spelerToevoegenNaamLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Naam :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="spelerToevoegenGeslachtLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Geslacht :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="spelerToevoegenStraatLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Straat :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="spelerToevoegenPostcodeLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Postcode :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="spelerToevoegenTelefoonnummerLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tel. nr. :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="spelerToevoegenprofielEmailLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="E-mail :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="spelerToevoegenEmailField1">
+        </Component>
+        <Component class="javax.swing.JTextField" name="spelerToevoegenTelefoonnummerField1">
+        </Component>
+        <Component class="javax.swing.JTextField" name="spelerToevoegenprofielPostcodeField1">
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="spelerToevoegenGeslachtManRadioButton1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Man"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="spelerToevoegenGeslachtVrouwRadioButton1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Vrouw"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="spelerToevoegenStraatField1">
+        </Component>
+        <Component class="javax.swing.JLabel" name="spelerToevoegenHuisnummerLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Huisnr. :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="spelerToevoegenHuisnummerField1">
+        </Component>
+        <Component class="javax.swing.JTextField" name="spelerToevoegenPlaatsField1">
+        </Component>
+        <Component class="javax.swing.JButton" name="spelerToevoegenVoegToeButton1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Clear"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="spelerToevoegenAnnulerenButton1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="OK"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Welkom bij Soccer Assistent 2000! "/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ja, ik ben de coach"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nee, ik ben geen coach"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Bent u de coach?"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Plaats :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Wat zijn uw gegevens?"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="wedstrijdTeamAanmaken">
+      <Properties>
+        <Property name="defaultCloseOperation" type="int" value="2"/>
+        <Property name="title" type="java.lang.String" value="Wedstrijd Team Aanmaken"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="wedstrijdTeamAanmakenBeschikbareSpelersScrollPane" min="-2" pref="129" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="wedstrijdTeamAanmakenVerwijderButton" max="32767" attributes="0"/>
+                                      <Component id="wedstrijdTeamAanmakenKiesButton" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Component id="wedstrijdTeamAanmakenBeschikbareSpelersLabel" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="wedstrijdTeamAanmakenGekozenTeamScrollPane" max="32767" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="0" pref="47" max="32767" attributes="0"/>
+                                  <Component id="wedstrijdTeamAanmakenGekozenTeamLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="wedstrijdTeamAanmakenOpslaanButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="wedstrijdTeamAanmakenAnnulerenButton" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="wedstrijdTeamAanmakenBeschikbareSpelersLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="wedstrijdTeamAanmakenGekozenTeamLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="wedstrijdTeamAanmakenBeschikbareSpelersScrollPane" pref="237" max="32767" attributes="0"/>
+                              <Component id="wedstrijdTeamAanmakenGekozenTeamScrollPane" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="wedstrijdTeamAanmakenAnnulerenButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="wedstrijdTeamAanmakenOpslaanButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
+                          <Component id="wedstrijdTeamAanmakenKiesButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="wedstrijdTeamAanmakenVerwijderButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JScrollPane" name="wedstrijdTeamAanmakenGekozenTeamScrollPane">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JList" name="wedstrijdTeamAanmakenGekozenTeamList">
+              <Properties>
+                <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                  <StringArray count="5">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                    <StringItem index="4" value="Item 5"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="wedstrijdTeamAanmakenBeschikbareSpelersScrollPane">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JList" name="wedstrijdTeamAanmakenBeschikbareSpelersList">
+              <Properties>
+                <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                  <StringArray count="5">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                    <StringItem index="4" value="Item 5"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="wedstrijdTeamAanmakenBeschikbareSpelersLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Beschikbare spelers"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="wedstrijdTeamAanmakenGekozenTeamLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Gekozen team"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="wedstrijdTeamAanmakenKiesButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Kies voor team"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="wedstrijdTeamAanmakenVerwijderButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Verwijder uit team"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="wedstrijdTeamAanmakenAnnulerenButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Annuleren"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="wedstrijdTeamAanmakenOpslaanButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Opslaan"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Menu class="javax.swing.JMenuBar" name="menuBar">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="optionsMenu">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Options"/>
+          </Properties>
+          <Events>
+            <EventHandler event="componentHidden" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="optionsMenuComponentHidden"/>
+          </Events>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="logoffMenuItem">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Log uit"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="loginMenuItem">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Log in"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JRadioButtonMenuItem" name="toggleFullscreenMenuItem">
+              <Properties>
+                <Property name="selected" type="boolean" value="true"/>
+                <Property name="text" type="java.lang.String" value="Fullscreen"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="exitMenuItem">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Exit"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitMenuItemActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="Soccer Assistent 2000"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="menuBar"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="tabbedPane" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="tabbedPane" alignment="1" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JTabbedPane" name="tabbedPane">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="welkomTab">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Welkom">
+                <Property name="tabTitle" type="java.lang.String" value="Welkom"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="468" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="227" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+        </Container>
+        <Container class="javax.swing.JPanel" name="profielTab">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Profiel">
+                <Property name="tabTitle" type="java.lang.String" value="Profiel"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="profielPostcodeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="profielTelefoonnummerLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="profielEmailLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="profielTelefoonnummerField" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="profielPostcodeField" min="-2" pref="70" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="profielPlaatsLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="profielPlaatsField" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="profielEmailField" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="profielNaamLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="profielGeslachtLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="profielStraatLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="profielStraatField" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="profielHuisnummerLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="profielHuisnummerField" min="-2" pref="53" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="profielNaamField" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="profielGeslachtManRadioButton" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="profielGeslachtVrouwRadioButton" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="201" max="32767" attributes="0"/>
+                              <Component id="profielLoginGegevensButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="profielWijzigButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="profielLoguitButton" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="profielNaamLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profielNaamField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="profielGeslachtLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profielGeslachtManRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profielGeslachtVrouwRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="profielStraatLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profielHuisnummerLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profielStraatField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profielHuisnummerField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="profielPostcodeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profielPlaatsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profielPostcodeField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profielPlaatsField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="profielTelefoonnummerLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profielTelefoonnummerField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="profielEmailLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profielEmailField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="37" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="profielLoguitButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profielWijzigButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profielLoginGegevensButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="profielNaamLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Naam :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="profielGeslachtLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Geslacht :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="profielStraatLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Straat :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="profielHuisnummerLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Huisnr. :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="profielPostcodeLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Postcode :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="profielPlaatsLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Plaats :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="profielTelefoonnummerLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Tel. nr. :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="profielEmailLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="E-mail :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="profielNaamField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="profielStraatField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="profielHuisnummerField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="profielPostcodeField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="profielPlaatsField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="profielTelefoonnummerField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="profielEmailField">
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="profielGeslachtManRadioButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Man"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="profielGeslachtVrouwRadioButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Vrouw"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="profielLoguitButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Log uit"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="profielWijzigButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Wijzig"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="profielLoginGegevensButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Login Gegevens"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="profielLoginGegevensButtonActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="beschikbaarheidTab">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Beschikbaarheid">
+                <Property name="tabTitle" type="java.lang.String" value="Beschikbaarheid"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="beschikbaarheidWedstrijdenScrollPane" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel6" min="-2" pref="246" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="202" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="beschikbaarheidWedstrijdenScrollPane" pref="185" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="beschikbaarheidWedstrijdenScrollPane">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JList" name="beschikbaarheidWedstrijdenList">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                      <StringArray count="5">
+                        <StringItem index="0" value="Item 1"/>
+                        <StringItem index="1" value="Item 2"/>
+                        <StringItem index="2" value="Item 3"/>
+                        <StringItem index="3" value="Item 4"/>
+                        <StringItem index="4" value="Item 5"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="jLabel6">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Je bent beschikbaar voor de volgende wedstrijden:"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="statistiekenToevoegenTab">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Statistieken Toevoegen">
+                <Property name="tabTitle" type="java.lang.String" value="Statistieken Toevoegen"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="298" max="32767" attributes="0"/>
+                              <Component id="statistiekenToevoegenClearButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="statistiekenToevoegenToevoegenButton" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="168" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="statistiekenToevoegenToevoegenButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="statistiekenToevoegenClearButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="statistiekenToevoegenToevoegenButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Toevoegen"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="statistiekenToevoegenClearButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Clear"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="jLabel1"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="teamTab">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Team">
+                <Property name="tabTitle" type="java.lang.String" value="Team"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="teamStatistiekenBekijkenButton" min="-2" pref="161" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="teamSpelerToevoegenButton" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="teamCapainAanwijzenButton" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="teamKeeperAanwijzenButton" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                                      <Component id="teamTeamLabel" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="teamSpelerOpvragenButton" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="166" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="teamWedstrijdTeamWijzigenButton" alignment="1" min="-2" pref="161" max="-2" attributes="0"/>
+                                          <Component id="teamAankomendeWedstrijdenButton" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="teamWedstrijdToevoegenButton" min="-2" pref="161" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="teamWedstrijdLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="teamWedstrijdTeamAanmakenButton" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="teamTeamLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="teamWedstrijdLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="teamSpelerToevoegenButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="teamAankomendeWedstrijdenButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="teamCapainAanwijzenButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="teamWedstrijdToevoegenButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="teamKeeperAanwijzenButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="teamWedstrijdTeamAanmakenButton" alignment="3" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="teamSpelerOpvragenButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="teamWedstrijdTeamWijzigenButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="teamStatistiekenBekijkenButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="57" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="teamSpelerToevoegenButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Speler Toevoegen"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="teamWedstrijdToevoegenButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Wedstrijd Toevoegen"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="teamCapainAanwijzenButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Captain Aanwijzen"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="teamKeeperAanwijzenButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Keeper Aanwijzen"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="teamSpelerOpvragenButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Speler Opvragen"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="teamWedstrijdTeamAanmakenButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Wedstrijd Team Aanmaken"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="teamWedstrijdTeamWijzigenButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Wedstrijd Team Wijzigen"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="teamTeamLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Team"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="teamWedstrijdLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Wedstrijd"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="teamStatistiekenBekijkenButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Statistieken bekijken"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="teamAankomendeWedstrijdenButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Aankomende Wedstrijden"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
