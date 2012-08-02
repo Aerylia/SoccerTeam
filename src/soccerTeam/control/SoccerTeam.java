@@ -4,6 +4,8 @@
  */
 package soccerTeam.control;
 
+import soccerTeam.view.GUI;
+
 /**
  *
  * @author Arianne
@@ -15,5 +17,6 @@ public class SoccerTeam {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        // new GUI().setVisible(true);
     }
 }

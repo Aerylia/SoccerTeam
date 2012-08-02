@@ -94,4 +94,33 @@ public class Team {
         public void changeAvailability(Player player, Match match){
             match.changeAvailability(player);
         }
+
+        public int containsPlayer(String username, String password) {
+            int index = 0;
+            for(Player player: this.getTeam()){
+                if(player.getUsername().equals(username) && player.getPassword().equals(password)){
+                    return index;
+                }
+                index++;
+            }
+            return -1;
+        }
+
+        public Player getPlayer(int index) {
+            return this.getTeam().get(index);
+        }
+
+        int containsCoach(String username, String password) {
+            int index = 0;
+            for(Coach coach: this.getCoaches()){
+                if(coach.getUsername().equals(username) && coach.getPassword().equals(password)){
+                    return index;
+                }
+            }
+            return -1;
+        }
+
+        Coach getCoach(int index) {
+            return this.getCoaches().get(index);
+        }
 }

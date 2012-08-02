@@ -4,11 +4,13 @@
  */
 package soccerTeam.logic.data;
 
+import soccerTeam.control.User;
+
 /**
  *
  * @author Arianne
  */
-public class Player {
+public class Player implements User{
     
         private ContactInfo contactInfo;
         private LoginInfo loginInfo;
@@ -154,6 +156,11 @@ public class Player {
         
         public String getPassword(){
             return this.getLoginInfo().getPassword();
+        }        
+
+        @Override
+        public User getUser() {
+            return this;
         }
 
 }

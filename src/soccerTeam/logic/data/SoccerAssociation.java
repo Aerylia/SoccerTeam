@@ -21,54 +21,82 @@ public class SoccerAssociation {
             this.teams = new ArrayList();
         }
         //Getters
-        public String getName(){
-            return this.contactInfo.getName();
+        private ContactInfo getContactInfo(){
+            return this.contactInfo;
         }
         
-        public String getStreet(){
-            return this.contactInfo.getStreet();
-        }
-
-        public String getHousenumber(){
-            return this.contactInfo.getHousenumber();
-        }
-
-        public String getZipcode(){
-            return this.contactInfo.getZipcode();
+        public String getSAName(){
+            return this.getContactInfo().getName();
         }
         
-        public String getCity(){
-            return this.contactInfo.getCity();
+        public String getSAStreet(){
+            return this.getContactInfo().getStreet();
         }
 
-        public String getPhonenumber(){
-            return this.contactInfo.getPhonenumber();
+        public String getSAHousenumber(){
+            return this.getContactInfo().getHousenumber();
+        }
+
+        public String getSAZipcode(){
+            return this.getContactInfo().getZipcode();
+        }
+        
+        public String getSACity(){
+            return this.getContactInfo().getCity();
+        }
+
+        public String getSAPhonenumber(){
+            return this.getContactInfo().getPhonenumber();
+        }
+        
+        private ArrayList<Team> getTeams(){
+            return this.teams;
         }
         
 	//Setters
-        public void setName(String name) {
+        public void setSAName(String name) {
             this.contactInfo.setName(name);
         }
 
-        public void setStreet(String street) {
+        public void setSAStreet(String street) {
             this.contactInfo.setStreet(street);
         }
 
-        public void setHousenumber(String housenumber) {
+        public void setSAHousenumber(String housenumber) {
             this.contactInfo.setHousenumber(housenumber);
         }
 
-        public void setZipcode(String zipcode) {
+        public void setSAZipcode(String zipcode) {
             this.contactInfo.setZipcode(zipcode);
         }
 
-        public void setCity(String city) {
+        public void setSACity(String city) {
             this.contactInfo.setCity(city);
         }
 
-        public void setPhonenumber(String phonenumber) {
+        public void setSAPhonenumber(String phonenumber) {
             this.contactInfo.setPhonenumber(phonenumber);
         }
         
+        public Player getPlayer(String username, String password){
+            Player player = null;
+            for(Team team: this.getTeams()){
+                int index = team.containsPlayer(username, password);
+                if(index != -1){
+                    return team.getPlayer(index);
+                }
+            }
+            return player;
+        }
+        
+        public Coach getCoach(String username, String password){
+            for(Team team: this.getTeams()){
+                int index = team.containsCoach(username, password);
+                if(index != -1){
+                    return team.getCoach(index);
+                }
+            }
+            return null;
+        }
 	
 }
