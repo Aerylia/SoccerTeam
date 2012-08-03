@@ -31,34 +31,418 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        setupLayeredPane = new javax.swing.JLayeredPane();
+        associationPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        associationNameField = new javax.swing.JTextField();
+        associationStreetField = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        associationHousenumberField = new javax.swing.JTextField();
+        associationcityField = new javax.swing.JTextField();
+        associationZipcodeField = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        associationNextButton = new javax.swing.JButton();
+        associationExitButton = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        teamNameField = new javax.swing.JTextField();
+        coachPanel = new javax.swing.JPanel();
+        coachCheckBox = new javax.swing.JCheckBox();
+        coachExitButton = new javax.swing.JButton();
+        coachFinishButton = new javax.swing.JButton();
+        coachPreviousButton = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        coachNameField = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        coachStreetField = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        coachHousenumberField = new javax.swing.JTextField();
+        coachcityField = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        coachZipcodeField = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        coachPhonenumberField = new javax.swing.JTextField();
+        coachMaleRadioButton = new javax.swing.JRadioButton();
+        coachFemaleRadioButton = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("First Time Setup");
 
-        jLabel1.setText("First time setup ui");
+        jLabel1.setText("Welcome to \"Program name\". ");
+
+        jLabel2.setText("Please enter the required information below to setup this program.");
+
+        jLabel3.setText("Soccer Association :");
+
+        jLabel4.setText("Association Name :");
+
+        jLabel5.setText("Street :");
+
+        associationStreetField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                associationStreetFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setText("Number :");
+
+        associationcityField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                associationcityFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setText("City :");
+
+        jLabel8.setText("Zipcode :");
+
+        associationNextButton.setText("Next");
+        associationNextButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                associationNextButtonActionPerformed(evt);
+            }
+        });
+
+        associationExitButton.setText("Exit");
+
+        jLabel9.setText("Soccer Team :");
+
+        jLabel10.setText("Team Name :");
+
+        javax.swing.GroupLayout associationPanelLayout = new javax.swing.GroupLayout(associationPanel);
+        associationPanel.setLayout(associationPanelLayout);
+        associationPanelLayout.setHorizontalGroup(
+            associationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(associationPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(associationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, associationPanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(associationNextButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(associationExitButton))
+                    .addGroup(associationPanelLayout.createSequentialGroup()
+                        .addGroup(associationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel10))
+                        .addGroup(associationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(associationPanelLayout.createSequentialGroup()
+                                .addGap(109, 109, 109)
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(associationcityField))
+                            .addGroup(associationPanelLayout.createSequentialGroup()
+                                .addGap(199, 199, 199)
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(associationHousenumberField, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, associationPanelLayout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addComponent(teamNameField))))
+                    .addGroup(associationPanelLayout.createSequentialGroup()
+                        .addGroup(associationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(associationPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(associationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(associationPanelLayout.createSequentialGroup()
+                                .addComponent(associationZipcodeField, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(associationPanelLayout.createSequentialGroup()
+                                .addComponent(associationStreetField)
+                                .addGap(147, 147, 147))
+                            .addComponent(associationNameField))))
+                .addContainerGap())
+        );
+        associationPanelLayout.setVerticalGroup(
+            associationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(associationPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addGroup(associationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(associationNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(associationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(associationStreetField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(associationHousenumberField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(associationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(associationcityField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(associationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(associationZipcodeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel7)
+                        .addComponent(jLabel8)))
+                .addGap(18, 18, 18)
+                .addGroup(associationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(associationPanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(associationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(associationNextButton)
+                            .addComponent(associationExitButton)))
+                    .addGroup(associationPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addGap(18, 18, 18)
+                        .addGroup(associationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel10)
+                            .addComponent(teamNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 62, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+
+        associationPanel.setBounds(0, 0, 430, 310);
+        setupLayeredPane.add(associationPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        coachCheckBox.setText("Yes, I am the coach of this soccerteam of this soccer association.");
+        coachCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                coachCheckBoxActionPerformed(evt);
+            }
+        });
+
+        coachExitButton.setText("Exit");
+
+        coachFinishButton.setText("Finish");
+
+        coachPreviousButton.setText("Previous");
+
+        jLabel11.setText("Coach :");
+
+        jLabel12.setText("Name :");
+
+        jLabel13.setText("Gender : ");
+
+        jLabel15.setText("Street :");
+
+        coachStreetField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                coachStreetFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel16.setText("Number :");
+
+        coachcityField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                coachcityFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel17.setText("City :");
+
+        jLabel18.setText("Zipcode :");
+
+        jLabel19.setText("Phonenr. :");
+
+        coachMaleRadioButton.setText("Male");
+
+        coachFemaleRadioButton.setText("Female");
+
+        javax.swing.GroupLayout coachPanelLayout = new javax.swing.GroupLayout(coachPanel);
+        coachPanel.setLayout(coachPanelLayout);
+        coachPanelLayout.setHorizontalGroup(
+            coachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(coachPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(coachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(coachPanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(coachPreviousButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(coachFinishButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(coachExitButton))
+                    .addGroup(coachPanelLayout.createSequentialGroup()
+                        .addGroup(coachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel18))
+                        .addGroup(coachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(coachPanelLayout.createSequentialGroup()
+                                .addGap(199, 199, 199)
+                                .addComponent(jLabel16)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(coachHousenumberField))
+                            .addGroup(coachPanelLayout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(coachZipcodeField, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel17)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(coachcityField))))
+                    .addGroup(coachPanelLayout.createSequentialGroup()
+                        .addGroup(coachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel12))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(coachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(coachNameField)
+                            .addGroup(coachPanelLayout.createSequentialGroup()
+                                .addGroup(coachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(coachStreetField, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(coachPanelLayout.createSequentialGroup()
+                                        .addComponent(coachMaleRadioButton)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(coachFemaleRadioButton)))
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(coachPanelLayout.createSequentialGroup()
+                        .addGroup(coachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel11)
+                            .addComponent(coachCheckBox))
+                        .addGap(0, 71, Short.MAX_VALUE))
+                    .addGroup(coachPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel19)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(coachPhonenumberField)))
+                .addContainerGap())
+        );
+        coachPanelLayout.setVerticalGroup(
+            coachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, coachPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel11)
+                .addGap(18, 18, 18)
+                .addGroup(coachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(coachNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(coachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(coachMaleRadioButton)
+                    .addComponent(coachFemaleRadioButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(coachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(coachStreetField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel16)
+                    .addComponent(coachHousenumberField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel15))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(coachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(coachcityField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(coachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(coachZipcodeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel17)
+                        .addComponent(jLabel18)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(coachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19)
+                    .addComponent(coachPhonenumberField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(coachCheckBox)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                .addGroup(coachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(coachExitButton)
+                    .addComponent(coachFinishButton)
+                    .addComponent(coachPreviousButton))
+                .addContainerGap())
+        );
+
+        coachPanel.setBounds(0, 0, 430, 310);
+        setupLayeredPane.add(coachPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(148, 148, 148)
-                .addComponent(jLabel1)
-                .addContainerGap(167, Short.MAX_VALUE))
+                .addComponent(setupLayeredPane, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(121, 121, 121)
-                .addComponent(jLabel1)
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addComponent(setupLayeredPane, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void associationcityFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_associationcityFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_associationcityFieldActionPerformed
+
+    private void associationStreetFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_associationStreetFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_associationStreetFieldActionPerformed
+
+    private void coachStreetFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coachStreetFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_coachStreetFieldActionPerformed
+
+    private void coachcityFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coachcityFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_coachcityFieldActionPerformed
+
+    private void coachCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coachCheckBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_coachCheckBoxActionPerformed
+
+    private void associationNextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_associationNextButtonActionPerformed
+        this.setupLayeredPane.moveToFront(this.coachPanel);
+    }//GEN-LAST:event_associationNextButtonActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton associationExitButton;
+    private javax.swing.JTextField associationHousenumberField;
+    private javax.swing.JTextField associationNameField;
+    private javax.swing.JButton associationNextButton;
+    private javax.swing.JPanel associationPanel;
+    private javax.swing.JTextField associationStreetField;
+    private javax.swing.JTextField associationZipcodeField;
+    private javax.swing.JTextField associationcityField;
+    private javax.swing.JCheckBox coachCheckBox;
+    private javax.swing.JButton coachExitButton;
+    private javax.swing.JRadioButton coachFemaleRadioButton;
+    private javax.swing.JButton coachFinishButton;
+    private javax.swing.JTextField coachHousenumberField;
+    private javax.swing.JRadioButton coachMaleRadioButton;
+    private javax.swing.JTextField coachNameField;
+    private javax.swing.JPanel coachPanel;
+    private javax.swing.JTextField coachPhonenumberField;
+    private javax.swing.JButton coachPreviousButton;
+    private javax.swing.JTextField coachStreetField;
+    private javax.swing.JTextField coachZipcodeField;
+    private javax.swing.JTextField coachcityField;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLayeredPane setupLayeredPane;
+    private javax.swing.JTextField teamNameField;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,6 +5,9 @@
 package soccerTeam.control;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import soccerTeam.logic.DataPortal;
 import soccerTeam.logic.exceptions.LoginFailtException;
@@ -26,14 +29,16 @@ public class SoccerTeamController {
     
     public SoccerTeamController(){
         //TODO set stm and view etc.
-        try{
+     /*   try{
             DataManager.load(filename);
             this.loginUI = new LoginUI(this);
             this.loginUI.setVisible(true);
-        } catch (FileNotFoundException ex){ 
+        } catch (FileNotFoundException ex){ */
             this.setupUI = new FirstTimeSetupUI(this);
             setupUI.setVisible(true);
-        }
+      /*  } catch (IOException e){
+            
+        } */
     }
     
     private DataPortal getSTM(){
@@ -58,7 +63,12 @@ public class SoccerTeamController {
     }
     
     public void saveAndExit(){
-        DataManager.save(filename);
+        try {
+            DataManager.save(filename);
+        } catch (IOException ex) {
+            //TODO
+            Logger.getLogger(SoccerTeamController.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.exit();
     }
     
