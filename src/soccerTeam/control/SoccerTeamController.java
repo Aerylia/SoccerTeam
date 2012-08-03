@@ -75,4 +75,9 @@ public class SoccerTeamController {
     public void exit(){
         System.exit(-1);
     }
+
+    public void createModel(String associationName, String associationStreet, String associationHousenumber, String associationZipcode, String associationCity, String associationPhonenumber, String teamName, String coachName, boolean coachGender, String coachStreet, String coachHousenumber, String coachZipcode, String coachCity, String coachPhonenumber) {
+        //TODO
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
 }
