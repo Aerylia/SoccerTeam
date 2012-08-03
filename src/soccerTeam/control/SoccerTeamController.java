@@ -4,7 +4,13 @@
  */
 package soccerTeam.control;
 
-import soccerTeam.logic.SoccerTeamModel;
+import java.io.FileNotFoundException;
+import javax.swing.JOptionPane;
+import soccerTeam.logic.DataPortal;
+import soccerTeam.logic.exceptions.LoginFailtException;
+import soccerTeam.view.FirstTimeSetupUI;
+import soccerTeam.view.LoginUI;
+import soccerTeam.view.MainUI;
 
 /**
  *
@@ -12,34 +18,51 @@ import soccerTeam.logic.SoccerTeamModel;
  */
 public class SoccerTeamController {
     
-    private User user;
-    private SoccerTeamModel stm;
+    private String filename = "SavedDate.ser";
+    private DataPortal stm;
+    private LoginUI loginUI;
+    private FirstTimeSetupUI setupUI;
+    private MainUI ui;
     
     public SoccerTeamController(){
-        //TODO
+        //TODO set stm and view etc.
+        try{
+            DataManager.load(filename);
+            this.loginUI = new LoginUI(this);
+            this.loginUI.setVisible(true);
+        } catch (FileNotFoundException ex){ 
+            this.setupUI = new FirstTimeSetupUI(this);
+            setupUI.setVisible(true);
+        }
     }
     
-    private SoccerTeamModel getSTM(){
+    private DataPortal getSTM(){
         return this.stm;
     }
     
-    private void setUser(User user){
-        this.user = user;
+    public void login(String username, String password){
+        try {
+            this.getSTM().findUser(username, password);
+            this.loginUI.setVisible(false);
+            this.ui = new MainUI(this);
+            ui.setVisible(true);
+        } catch (LoginFailtException ex) {
+            JOptionPane.showMessageDialog(loginUI, "Login failt.\nThe username and password "
+                    + "combination is not know in our system. Please make sure you are submitted to this system.");
+        }
     }
     
-    public void login(String username, String password){
-        User user = this.getSTM().getCoach(username, password);
-        if(user == null){
-            user = this.getSTM().getPlayer(username, password);
-            if(user == null){
-                this.incorrectUsernameOrPassword(username, password);
-            }
-        }
-        this.setUser(user);
+    public void deleteAndExit(){
+        DataManager.delete(filename);
+        this.exit();
     }
-
-    private void incorrectUsernameOrPassword(String username, String password) {
-        //TODO show message or something
-        throw new UnsupportedOperationException("Not yet implemented");
+    
+    public void saveAndExit(){
+        DataManager.save(filename);
+        this.exit();
+    }
+    
+    public void exit(){
+        System.exit(-1);
     }
 }

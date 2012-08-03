@@ -33,13 +33,6 @@ public class GUI extends javax.swing.JFrame {
         loginGegevensWachtwoordField = new javax.swing.JTextField();
         LoginGegevensOKButton = new javax.swing.JButton();
         loginGegevensWijzigButton = new javax.swing.JButton();
-        login = new javax.swing.JDialog();
-        loginGebruikersnaamLabel = new javax.swing.JLabel();
-        loginWachtwoordLabel = new javax.swing.JLabel();
-        loginGebruikersnaamField = new javax.swing.JTextField();
-        loginWachtwoordField = new javax.swing.JPasswordField();
-        loginLoginButton = new javax.swing.JButton();
-        loginAnnuleerButton = new javax.swing.JButton();
         spelerToevoegen = new javax.swing.JDialog();
         spelerToevoegenStraatLabel = new javax.swing.JLabel();
         spelerToevoegenNaamLabel = new javax.swing.JLabel();
@@ -196,57 +189,6 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(LoginGegevensOKButton)
                     .addComponent(loginGegevensWijzigButton))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        login.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        login.setTitle("Login");
-
-        loginGebruikersnaamLabel.setText("Gebruikersnaam :");
-
-        loginWachtwoordLabel.setText("Wachtwoord :");
-
-        loginLoginButton.setText("Log In");
-
-        loginAnnuleerButton.setText("Annuleren");
-
-        javax.swing.GroupLayout loginLayout = new javax.swing.GroupLayout(login.getContentPane());
-        login.getContentPane().setLayout(loginLayout);
-        loginLayout.setHorizontalGroup(
-            loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(loginLayout.createSequentialGroup()
-                .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(loginLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(loginGebruikersnaamLabel)
-                            .addComponent(loginWachtwoordLabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(loginWachtwoordField)
-                            .addComponent(loginGebruikersnaamField)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginLayout.createSequentialGroup()
-                        .addGap(0, 159, Short.MAX_VALUE)
-                        .addComponent(loginLoginButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(loginAnnuleerButton)))
-                .addContainerGap())
-        );
-        loginLayout.setVerticalGroup(
-            loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(loginLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(loginGebruikersnaamLabel)
-                    .addComponent(loginGebruikersnaamField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(loginWachtwoordLabel)
-                    .addComponent(loginWachtwoordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(loginAnnuleerButton)
-                    .addComponent(loginLoginButton))
-                .addContainerGap())
         );
 
         spelerToevoegen.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -1026,20 +968,13 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JDialog login;
-    private javax.swing.JButton loginAnnuleerButton;
-    private javax.swing.JTextField loginGebruikersnaamField;
-    private javax.swing.JLabel loginGebruikersnaamLabel;
     private javax.swing.JDialog loginGegevens;
     private javax.swing.JTextField loginGegevensGebruikersnaamField;
     private javax.swing.JLabel loginGegevensGebruikersnaamLabel;
     private javax.swing.JTextField loginGegevensWachtwoordField;
     private javax.swing.JLabel loginGegevensWachtwoordPanel;
     private javax.swing.JButton loginGegevensWijzigButton;
-    private javax.swing.JButton loginLoginButton;
     private javax.swing.JMenuItem loginMenuItem;
-    private javax.swing.JPasswordField loginWachtwoordField;
-    private javax.swing.JLabel loginWachtwoordLabel;
     private javax.swing.JMenuItem logoffMenuItem;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenu optionsMenu;

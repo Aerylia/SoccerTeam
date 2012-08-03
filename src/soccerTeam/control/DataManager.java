@@ -4,6 +4,8 @@
  */
 package soccerTeam.control;
 
+import java.io.FileNotFoundException;
+
 /**
  *
  * @author Arianne
@@ -11,14 +13,17 @@ package soccerTeam.control;
 public class DataManager {
     
     public static void save(String filename){
+        // TODO
         throw new UnsupportedOperationException("Not implemented yet");
     }
     
-    public static void load(String filename){
-        throw new UnsupportedOperationException("Not implemented yet");
+    public static void load(String filename) throws FileNotFoundException{
+        // TODO
+        throw new FileNotFoundException(filename);
     }
     
     public static void delete(String filename){
+        //TODO
         throw new UnsupportedOperationException("Not implemented yet");
     }
 }
