@@ -14,12 +14,13 @@ public class SoccerAssociation {
     
         private ContactInfo contactInfo;
         private ArrayList<Team> teams;
-        
-        public SoccerAssociation(String name, String street, String housenumber, String zipcode, 
-                                                                String city, String phonenumber){
-            this.contactInfo = new ContactInfo(name, false, street, housenumber, zipcode, city, phonenumber);
-            this.teams = new ArrayList();
-        }
+
+    public SoccerAssociation(String associationName, String associationStreet, String associationHousenumber, 
+            String associationZipcode, String associationCity, String associationPhonenumber) {
+        this.contactInfo = new ContactInfo(associationName, false, associationStreet, associationHousenumber,
+                associationZipcode, associationCity, associationPhonenumber);
+        this.teams = new ArrayList();
+    }
         //Getters
         private ContactInfo getContactInfo(){
             return this.contactInfo;
@@ -98,5 +99,9 @@ public class SoccerAssociation {
             }
             return null;
         }
+
+    public void addTeam(String teamName, Coach coach) {
+        this.teams.add(new Team(teamName, coach));
+    }
 	
 }

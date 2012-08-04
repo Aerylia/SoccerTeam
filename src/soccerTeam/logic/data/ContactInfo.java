@@ -12,7 +12,7 @@ package soccerTeam.logic.data;
 public class ContactInfo {
 
     private String name;
-    private boolean gender; //true is mail, false is female
+    private boolean gender; //true is male, false is female
     private String street;
     private String housenumber; //In case 4b
     private String zipcode;

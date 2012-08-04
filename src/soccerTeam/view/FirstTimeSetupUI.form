@@ -50,7 +50,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="setupFinishButton" min="-2" max="-2" attributes="0"/>
+                          <Component id="setupFinishButton" min="-2" pref="71" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="associationExitButton" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -248,7 +248,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Number :"/>
+            <Property name="text" type="java.lang.String" value="Housenr. :"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="associationHousenumberField">
@@ -280,7 +280,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="associationExitButton">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Exit"/>
+            <Property name="text" type="java.lang.String" value="Cancel"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="associationExitButtonActionPerformed"/>
@@ -325,11 +325,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Male"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="coachMaleRadioButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="coachFemaleRadioButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Female"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="coachFemaleRadioButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel22">
           <Properties>
@@ -338,7 +344,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel23">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Number :"/>
+            <Property name="text" type="java.lang.String" value="Housenr. :"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="coachHousenumberField">
@@ -362,7 +368,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel26">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Phonenr. :"/>
+            <Property name="text" type="java.lang.String" value="Phonenumber :"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="coachPhonenumberField">

@@ -18,10 +18,16 @@ public class DataPortal{
     
     private SoccerAssociation sa;
     private User user;
-    
-    public DataPortal(String name, String street, String housenumber, String zipcode, 
-                                                                String city, String phonenumber){
-        this.sa = new SoccerAssociation(name, street, housenumber, zipcode, city, phonenumber);
+
+    public DataPortal(String associationName, String associationStreet, String associationHousenumber, 
+            String associationZipcode, String associationCity, String associationPhonenumber, String teamName, 
+            String coachName, boolean coachGender, String coachStreet, String coachHousenumber, String coachZipcode, 
+            String coachCity, String coachPhonenumber) {
+        this.sa = new SoccerAssociation(associationName, associationStreet, associationHousenumber,
+                associationZipcode, associationCity, associationPhonenumber);
+        this.user = new Coach(coachName, coachGender, coachStreet, coachHousenumber, coachZipcode,
+                coachCity, coachPhonenumber);
+        this.sa.addTeam(teamName, (Coach)this.user);
     }
     
     private SoccerAssociation getSA(){

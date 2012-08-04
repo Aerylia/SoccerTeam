@@ -92,7 +92,7 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setText("Number :");
+        jLabel6.setText("Housenr. :");
 
         associationcityField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,7 +111,7 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
             }
         });
 
-        associationExitButton.setText("Exit");
+        associationExitButton.setText("Cancel");
         associationExitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 associationExitButtonActionPerformed(evt);
@@ -131,12 +131,22 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
         jLabel21.setText("Gender : ");
 
         coachMaleRadioButton.setText("Male");
+        coachMaleRadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                coachMaleRadioButtonActionPerformed(evt);
+            }
+        });
 
         coachFemaleRadioButton.setText("Female");
+        coachFemaleRadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                coachFemaleRadioButtonActionPerformed(evt);
+            }
+        });
 
         jLabel22.setText("Street :");
 
-        jLabel23.setText("Number :");
+        jLabel23.setText("Housenr. :");
 
         coachCityField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,7 +158,7 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
 
         jLabel25.setText("Zipcode :");
 
-        jLabel26.setText("Phonenr. :");
+        jLabel26.setText("Phonenumber :");
 
         coachCheckBox.setText("Yes, I am the coach of this soccerteam of this soccer association.");
         coachCheckBox.addActionListener(new java.awt.event.ActionListener() {
@@ -174,7 +184,7 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
                 .addGroup(setupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, setupPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(setupFinishButton)
+                        .addComponent(setupFinishButton, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(associationExitButton))
                     .addGroup(setupPanelLayout.createSequentialGroup()
@@ -345,54 +355,52 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
         String teamName = this.teamNameField.getText();
         
         String coachName = this.coachNameField.getText();
+        boolean coachGender;
         String coachStreet = this.coachStreetField.getText();
         String coachHousenumber = this.coachHousenumberField.getText();
         String coachZipcode = this.coachZipcodeField.getText();
         String coachCity = this.coachCityField.getText();
         String coachPhonenumber = this.coachPhonenumberField.getText();
         
-        boolean isCoach = this.coachCheckBox.isEnabled(); //has to be true
-        try{
-            boolean coachGender = this.getMaleFemaleRadioButtonGroup();
-            if(associationName.isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please enter association name.");
-            } else if(associationStreet.isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please enter association street.");
-            } else if(associationHousenumber.isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please enter association housenumber.");
-            } else if(associationZipcode.isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please enter association zipcode.");
-            } else if(associationCity.isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please enter association city.");
-            } else if(associationPhonenumber.isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please enter association phonenumber.");
-            } else if(teamName.isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please enter a team name");
-            } else if(coachName.isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please enter the coaches name.");
-            } else if(coachStreet.isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please enter the coaches street.");
-            } else if(coachHousenumber.isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please enter the coaches housenumber.");
-            } else if(coachZipcode.isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please enter the coaches zipcode.");
-            } else if(coachCity.isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please enter the coaches city.");
-            } else if(coachPhonenumber.isEmpty()){
-                JOptionPane.showMessageDialog(this, "Please enter the coaches phonenumber.");
-            }if(!isCoach){
-                JOptionPane.showMessageDialog(this, "You must be a coach to setup this program.");
-            } else {
-                this.stc.createModel(associationName, associationStreet, associationHousenumber, 
-                        associationZipcode, associationCity, associationPhonenumber, teamName,
-                        coachName, coachGender, coachStreet, coachHousenumber, coachZipcode,
-                        coachCity, coachPhonenumber);
-            }
-            } catch (NoGenderException ex){
-            JOptionPane.showMessageDialog(this, "Please enter the coaches gender");
+        boolean isCoach = this.coachCheckBox.isSelected(); //has to be true
+  
+        if(!this.coachFemaleRadioButton.isSelected() && !this.coachMaleRadioButton.isSelected()){
+            JOptionPane.showMessageDialog(this, "Please enter the coaches gender.");
+        } else if(associationName.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please enter association name.");
+        } else if(associationStreet.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please enter association street.");
+        } else if(associationHousenumber.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please enter association housenumber.");
+        } else if(associationZipcode.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please enter association zipcode.");
+        } else if(associationCity.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please enter association city.");
+        } else if(associationPhonenumber.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please enter association phonenumber.");
+        } else if(teamName.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please enter a team name");
+        } else if(coachName.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please enter the coaches name.");
+        } else if(coachStreet.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please enter the coaches street.");
+        } else if(coachHousenumber.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please enter the coaches housenumber.");
+        } else if(coachZipcode.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please enter the coaches zipcode.");
+        } else if(coachCity.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please enter the coaches city.");
+        } else if(coachPhonenumber.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please enter the coaches phonenumber.");
+        }if(!isCoach){
+            JOptionPane.showMessageDialog(this, "You must be a coach to setup this program.");
+        } else {
+            coachGender = this.coachMaleRadioButton.isSelected(); //true is male, false is female.
+            this.stc.createModel(associationName, associationStreet, associationHousenumber, 
+                    associationZipcode, associationCity, associationPhonenumber, teamName,
+                    coachName, coachGender, coachStreet, coachHousenumber, coachZipcode,
+                    coachCity, coachPhonenumber);
         }
-        
-
     }//GEN-LAST:event_setupFinishButtonActionPerformed
 
     private void coachStreetFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coachStreetFieldActionPerformed
@@ -410,6 +418,14 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
     private void associationExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_associationExitButtonActionPerformed
         this.stc.exit();
     }//GEN-LAST:event_associationExitButtonActionPerformed
+
+    private void coachFemaleRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coachFemaleRadioButtonActionPerformed
+        this.coachMaleRadioButton.setSelected(false);
+    }//GEN-LAST:event_coachFemaleRadioButtonActionPerformed
+
+    private void coachMaleRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coachMaleRadioButtonActionPerformed
+        this.coachFemaleRadioButton.setSelected(false);
+    }//GEN-LAST:event_coachMaleRadioButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton associationExitButton;
@@ -452,7 +468,4 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
     private javax.swing.JTextField teamNameField;
     // End of variables declaration//GEN-END:variables
 
-    private boolean getMaleFemaleRadioButtonGroup() throws NoGenderException {
-        throw new UnsupportedOperationException("Not yet implemented");
-    }
 }

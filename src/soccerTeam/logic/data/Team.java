@@ -20,10 +20,11 @@ public class Team {
         private SortedMatches matches;
         
         //constructor
-        public Team(String teamName){
+        public Team(String teamName, Coach coach){
             this.setTeamName(teamName);
             this.team = new ArrayList();
             this.coaches = new ArrayList();
+            this.getCoaches().add(coach);
         }
         
         public String getTeamName(){

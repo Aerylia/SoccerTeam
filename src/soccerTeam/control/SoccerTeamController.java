@@ -76,8 +76,20 @@ public class SoccerTeamController {
         System.exit(-1);
     }
 
-    public void createModel(String associationName, String associationStreet, String associationHousenumber, String associationZipcode, String associationCity, String associationPhonenumber, String teamName, String coachName, boolean coachGender, String coachStreet, String coachHousenumber, String coachZipcode, String coachCity, String coachPhonenumber) {
+    public void createModel(String associationName, String associationStreet, String associationHousenumber, 
+            String associationZipcode, String associationCity, String associationPhonenumber, String teamName, 
+            String coachName, boolean coachGender, String coachStreet, String coachHousenumber, String coachZipcode, 
+            String coachCity, String coachPhonenumber) {
+        this.stm = new DataPortal(associationName, associationStreet, associationHousenumber,
+                associationZipcode, associationCity, associationPhonenumber, teamName, coachName,
+                coachGender, coachStreet, coachHousenumber, coachZipcode, coachCity, coachPhonenumber);
+        this.setupUI.setVisible(false);
+        this.startUpUI();
+    }
+    
+    private void startUpUI(){
         //TODO
-        throw new UnsupportedOperationException("Not yet implemented");
+        this.ui = new MainUI(this);
+        this.ui.setVisible(true);
     }
 }
