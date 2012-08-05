@@ -34,57 +34,57 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
     private void initComponents() {
 
         setupPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        welcomeLabel = new javax.swing.JLabel();
+        textLabel = new javax.swing.JLabel();
+        soccerAssociationLabel = new javax.swing.JLabel();
+        asociationNameLabel = new javax.swing.JLabel();
+        associationStreetLabel = new javax.swing.JLabel();
         associationNameField = new javax.swing.JTextField();
         associationStreetField = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
+        associationHousenumberLabel = new javax.swing.JLabel();
         associationHousenumberField = new javax.swing.JTextField();
         associationcityField = new javax.swing.JTextField();
         associationZipcodeField = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        associationCityLabel = new javax.swing.JLabel();
+        associationZipcodeLabel = new javax.swing.JLabel();
         setupFinishButton = new javax.swing.JButton();
         associationExitButton = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        soccerTeamLabel = new javax.swing.JLabel();
+        soccerTeamNameLabel = new javax.swing.JLabel();
         teamNameField = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
+        coachLabel = new javax.swing.JLabel();
+        coachNameLabel = new javax.swing.JLabel();
         coachNameField = new javax.swing.JTextField();
-        jLabel21 = new javax.swing.JLabel();
+        coachGenderLabel = new javax.swing.JLabel();
         coachMaleRadioButton = new javax.swing.JRadioButton();
         coachFemaleRadioButton = new javax.swing.JRadioButton();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
+        coachStreetLabel = new javax.swing.JLabel();
+        coachHousenumberLabel = new javax.swing.JLabel();
         coachHousenumberField = new javax.swing.JTextField();
         coachCityField = new javax.swing.JTextField();
-        jLabel24 = new javax.swing.JLabel();
+        coachCityLabel = new javax.swing.JLabel();
         coachZipcodeField = new javax.swing.JTextField();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
+        coachZipcodeLabel = new javax.swing.JLabel();
+        coachPhonenumberLabel = new javax.swing.JLabel();
         coachPhonenumberField = new javax.swing.JTextField();
         coachCheckBox = new javax.swing.JCheckBox();
         coachStreetField = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
+        associationPhonenumberLabel = new javax.swing.JLabel();
         associationPhonenumberField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("First Time Setup");
 
-        jLabel1.setText("Welcome to \"Program name\". ");
+        welcomeLabel.setText("Welcome to \"Program name\". ");
 
-        jLabel2.setText("Please enter the required information below to setup this program.");
+        textLabel.setText("Please enter the required information below to setup this program.");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel3.setText("Soccer Association :");
+        soccerAssociationLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        soccerAssociationLabel.setText("Soccer Association :");
 
-        jLabel4.setText("Association Name :");
+        asociationNameLabel.setText("Association Name :");
 
-        jLabel5.setText("Street :");
+        associationStreetLabel.setText("Street :");
 
         associationStreetField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,7 +92,7 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setText("Housenr. :");
+        associationHousenumberLabel.setText("Housenr. :");
 
         associationcityField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,9 +100,9 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setText("City :");
+        associationCityLabel.setText("City :");
 
-        jLabel8.setText("Zipcode :");
+        associationZipcodeLabel.setText("Zipcode :");
 
         setupFinishButton.setText("Finish");
         setupFinishButton.addActionListener(new java.awt.event.ActionListener() {
@@ -118,17 +118,17 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel9.setText("Soccer Team :");
+        soccerTeamLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        soccerTeamLabel.setText("Soccer Team :");
 
-        jLabel10.setText("Team Name :");
+        soccerTeamNameLabel.setText("Team Name :");
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel14.setText("Coach :");
+        coachLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        coachLabel.setText("Coach :");
 
-        jLabel20.setText("Name :");
+        coachNameLabel.setText("Name :");
 
-        jLabel21.setText("Gender : ");
+        coachGenderLabel.setText("Gender : ");
 
         coachMaleRadioButton.setText("Male");
         coachMaleRadioButton.addActionListener(new java.awt.event.ActionListener() {
@@ -144,9 +144,9 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel22.setText("Street :");
+        coachStreetLabel.setText("Street :");
 
-        jLabel23.setText("Housenr. :");
+        coachHousenumberLabel.setText("Housenr. :");
 
         coachCityField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,11 +154,11 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel24.setText("City :");
+        coachCityLabel.setText("City :");
 
-        jLabel25.setText("Zipcode :");
+        coachZipcodeLabel.setText("Zipcode :");
 
-        jLabel26.setText("Phonenumber :");
+        coachPhonenumberLabel.setText("Phonenumber :");
 
         coachCheckBox.setText("Yes, I am the coach of this soccerteam of this soccer association.");
         coachCheckBox.addActionListener(new java.awt.event.ActionListener() {
@@ -173,7 +173,7 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setText("Phonenumber :");
+        associationPhonenumberLabel.setText("Phonenumber :");
 
         javax.swing.GroupLayout setupPanelLayout = new javax.swing.GroupLayout(setupPanel);
         setupPanel.setLayout(setupPanelLayout);
@@ -189,25 +189,25 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
                         .addComponent(associationExitButton))
                     .addGroup(setupPanelLayout.createSequentialGroup()
                         .addGroup(setupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel22)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel21)
-                            .addComponent(jLabel25)
-                            .addComponent(jLabel26)
+                            .addComponent(coachStreetLabel)
+                            .addComponent(textLabel)
+                            .addComponent(coachGenderLabel)
+                            .addComponent(coachZipcodeLabel)
+                            .addComponent(coachPhonenumberLabel)
                             .addComponent(coachCheckBox)
-                            .addComponent(jLabel14)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel9))
+                            .addComponent(coachLabel)
+                            .addComponent(soccerAssociationLabel)
+                            .addComponent(welcomeLabel)
+                            .addComponent(soccerTeamLabel))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(setupPanelLayout.createSequentialGroup()
                         .addGroup(setupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel20)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel11))
+                            .addComponent(associationStreetLabel)
+                            .addComponent(associationZipcodeLabel)
+                            .addComponent(coachNameLabel)
+                            .addComponent(asociationNameLabel)
+                            .addComponent(soccerTeamNameLabel)
+                            .addComponent(associationPhonenumberLabel))
                         .addGap(21, 21, 21)
                         .addGroup(setupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(associationPhonenumberField)
@@ -215,7 +215,7 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
                             .addGroup(setupPanelLayout.createSequentialGroup()
                                 .addComponent(associationStreetField, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel6)
+                                .addComponent(associationHousenumberLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(associationHousenumberField, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(teamNameField)
@@ -224,13 +224,13 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
                             .addGroup(setupPanelLayout.createSequentialGroup()
                                 .addComponent(coachZipcodeField, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel24)
+                                .addComponent(coachCityLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(coachCityField))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, setupPanelLayout.createSequentialGroup()
                                 .addComponent(coachStreetField)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel23)
+                                .addComponent(coachHousenumberLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(coachHousenumberField, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(setupPanelLayout.createSequentialGroup()
@@ -241,7 +241,7 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
                             .addGroup(setupPanelLayout.createSequentialGroup()
                                 .addComponent(associationZipcodeField, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel7)
+                                .addComponent(associationCityLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(associationcityField)))))
                 .addContainerGap())
@@ -250,63 +250,63 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
             setupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(setupPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(welcomeLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
+                .addComponent(textLabel)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel3)
+                .addComponent(soccerAssociationLabel)
                 .addGap(18, 18, 18)
                 .addGroup(setupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
+                    .addComponent(asociationNameLabel)
                     .addComponent(associationNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(setupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(associationHousenumberField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
+                    .addComponent(associationStreetLabel)
                     .addComponent(associationStreetField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
+                    .addComponent(associationHousenumberLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(setupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(associationZipcodeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8)
+                    .addComponent(associationZipcodeLabel)
                     .addComponent(associationcityField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
+                    .addComponent(associationCityLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(setupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
+                    .addComponent(associationPhonenumberLabel)
                     .addComponent(associationPhonenumberField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(16, 16, 16)
-                .addComponent(jLabel9)
+                .addComponent(soccerTeamLabel)
                 .addGap(18, 18, 18)
                 .addGroup(setupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
+                    .addComponent(soccerTeamNameLabel)
                     .addComponent(teamNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel14)
+                .addComponent(coachLabel)
                 .addGap(18, 18, 18)
                 .addGroup(setupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel20)
+                    .addComponent(coachNameLabel)
                     .addComponent(coachNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(setupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel21)
+                    .addComponent(coachGenderLabel)
                     .addComponent(coachFemaleRadioButton)
                     .addComponent(coachMaleRadioButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(setupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel22)
-                    .addComponent(jLabel23)
+                    .addComponent(coachStreetLabel)
+                    .addComponent(coachHousenumberLabel)
                     .addComponent(coachStreetField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(coachHousenumberField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(setupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel25)
+                    .addComponent(coachZipcodeLabel)
                     .addComponent(coachZipcodeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(coachCityField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel24))
+                    .addComponent(coachCityLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(setupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel26)
+                    .addComponent(coachPhonenumberLabel)
                     .addComponent(coachPhonenumberField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(coachCheckBox)
@@ -392,7 +392,7 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Please enter the coaches city.");
         } else if(coachPhonenumber.isEmpty()){
             JOptionPane.showMessageDialog(this, "Please enter the coaches phonenumber.");
-        }if(!isCoach){
+        } else if(!isCoach){
             JOptionPane.showMessageDialog(this, "You must be a coach to setup this program.");
         } else {
             coachGender = this.coachMaleRadioButton.isSelected(); //true is male, false is female.
@@ -428,44 +428,44 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
     }//GEN-LAST:event_coachMaleRadioButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel asociationNameLabel;
+    private javax.swing.JLabel associationCityLabel;
     private javax.swing.JButton associationExitButton;
     private javax.swing.JTextField associationHousenumberField;
+    private javax.swing.JLabel associationHousenumberLabel;
     private javax.swing.JTextField associationNameField;
     private javax.swing.JTextField associationPhonenumberField;
+    private javax.swing.JLabel associationPhonenumberLabel;
     private javax.swing.JTextField associationStreetField;
+    private javax.swing.JLabel associationStreetLabel;
     private javax.swing.JTextField associationZipcodeField;
+    private javax.swing.JLabel associationZipcodeLabel;
     private javax.swing.JTextField associationcityField;
     private javax.swing.JCheckBox coachCheckBox;
     private javax.swing.JTextField coachCityField;
+    private javax.swing.JLabel coachCityLabel;
     private javax.swing.JRadioButton coachFemaleRadioButton;
+    private javax.swing.JLabel coachGenderLabel;
     private javax.swing.JTextField coachHousenumberField;
+    private javax.swing.JLabel coachHousenumberLabel;
+    private javax.swing.JLabel coachLabel;
     private javax.swing.JRadioButton coachMaleRadioButton;
     private javax.swing.JTextField coachNameField;
+    private javax.swing.JLabel coachNameLabel;
     private javax.swing.JTextField coachPhonenumberField;
+    private javax.swing.JLabel coachPhonenumberLabel;
     private javax.swing.JTextField coachStreetField;
+    private javax.swing.JLabel coachStreetLabel;
     private javax.swing.JTextField coachZipcodeField;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel coachZipcodeLabel;
     private javax.swing.JButton setupFinishButton;
     private javax.swing.JPanel setupPanel;
+    private javax.swing.JLabel soccerAssociationLabel;
+    private javax.swing.JLabel soccerTeamLabel;
+    private javax.swing.JLabel soccerTeamNameLabel;
     private javax.swing.JTextField teamNameField;
+    private javax.swing.JLabel textLabel;
+    private javax.swing.JLabel welcomeLabel;
     // End of variables declaration//GEN-END:variables
 
 }

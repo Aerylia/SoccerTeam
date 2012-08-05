@@ -56,27 +56,27 @@
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel22" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel21" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel26" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="coachStreetLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="textLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="coachGenderLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="coachZipcodeLabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="coachPhonenumberLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="coachCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="coachLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="soccerAssociationLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="welcomeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="soccerTeamLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel20" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="associationStreetLabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="associationZipcodeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="coachNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="asociationNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="soccerTeamNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="associationPhonenumberLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -85,7 +85,7 @@
                               <Group type="102" attributes="0">
                                   <Component id="associationStreetField" min="-2" pref="377" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                  <Component id="associationHousenumberLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="associationHousenumberField" min="-2" pref="79" max="-2" attributes="0"/>
                               </Group>
@@ -95,14 +95,14 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="coachZipcodeField" min="-2" pref="72" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
+                                  <Component id="coachCityLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="coachCityField" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="coachStreetField" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                                  <Component id="coachHousenumberLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="coachHousenumberField" min="-2" pref="79" max="-2" attributes="0"/>
                               </Group>
@@ -115,7 +115,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="associationZipcodeField" min="-2" pref="72" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                  <Component id="associationCityLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="associationcityField" max="32767" attributes="0"/>
                               </Group>
@@ -130,72 +130,72 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="welcomeLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="textLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                  <Component id="soccerAssociationLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="asociationNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="associationNameField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="associationHousenumberField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="associationStreetLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="associationStreetField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="associationHousenumberLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="associationZipcodeField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="associationZipcodeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="associationcityField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="associationCityLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="associationPhonenumberLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="associationPhonenumberField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                  <Component id="soccerTeamLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="soccerTeamNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="teamNameField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                  <Component id="coachLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="coachNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="coachNameField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="coachGenderLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="coachFemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="coachMaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="coachStreetLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="coachHousenumberLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="coachStreetField" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="coachHousenumberField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="coachZipcodeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="coachZipcodeField" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="coachCityField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="coachCityLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="coachPhonenumberLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="coachPhonenumberField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -211,17 +211,17 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="welcomeLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Welcome to &quot;Program name&quot;. "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="textLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Please enter the required information below to setup this program."/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="soccerAssociationLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="11" style="1"/>
@@ -229,12 +229,12 @@
             <Property name="text" type="java.lang.String" value="Soccer Association :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="asociationNameLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Association Name :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="associationStreetLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Street :"/>
           </Properties>
@@ -246,7 +246,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="associationStreetFieldActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="associationHousenumberLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Housenr. :"/>
           </Properties>
@@ -260,12 +260,12 @@
         </Component>
         <Component class="javax.swing.JTextField" name="associationZipcodeField">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="associationCityLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="City :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JLabel" name="associationZipcodeLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Zipcode :"/>
           </Properties>
@@ -286,7 +286,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="associationExitButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="soccerTeamLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="11" style="1"/>
@@ -294,14 +294,14 @@
             <Property name="text" type="java.lang.String" value="Soccer Team :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel10">
+        <Component class="javax.swing.JLabel" name="soccerTeamNameLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Team Name :"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="teamNameField">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel14">
+        <Component class="javax.swing.JLabel" name="coachLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="11" style="1"/>
@@ -309,14 +309,14 @@
             <Property name="text" type="java.lang.String" value="Coach :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel20">
+        <Component class="javax.swing.JLabel" name="coachNameLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Name :"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="coachNameField">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel21">
+        <Component class="javax.swing.JLabel" name="coachGenderLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Gender : "/>
           </Properties>
@@ -337,12 +337,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="coachFemaleRadioButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel22">
+        <Component class="javax.swing.JLabel" name="coachStreetLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Street :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel23">
+        <Component class="javax.swing.JLabel" name="coachHousenumberLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Housenr. :"/>
           </Properties>
@@ -354,19 +354,19 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="coachCityFieldActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel24">
+        <Component class="javax.swing.JLabel" name="coachCityLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="City :"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="coachZipcodeField">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel25">
+        <Component class="javax.swing.JLabel" name="coachZipcodeLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Zipcode :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel26">
+        <Component class="javax.swing.JLabel" name="coachPhonenumberLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Phonenumber :"/>
           </Properties>
@@ -386,7 +386,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="coachStreetFieldActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel11">
+        <Component class="javax.swing.JLabel" name="associationPhonenumberLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Phonenumber :"/>
           </Properties>
