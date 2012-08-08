@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import soccerTeam.logic.DataPortal;
 import soccerTeam.logic.exceptions.LoginFailtException;
@@ -31,6 +32,7 @@ public class SoccerTeamController {
         //TODO set stm and view etc.
      /*   try{
             DataManager.load(filename);
+            //set bestaand stm.
             this.loginUI = new LoginUI(this);
             this.loginUI.setVisible(true);
         } catch (FileNotFoundException ex){ */
@@ -49,31 +51,35 @@ public class SoccerTeamController {
         try {
             this.getSTM().findUser(username, password);
             this.loginUI.setVisible(false);
-            this.ui = new MainUI(this);
-            ui.setVisible(true);
+            this.ui = new MainUI(this, this.getNameUser());
+            this.getUI().setVisibility();
         } catch (LoginFailtException ex) {
             JOptionPane.showMessageDialog(loginUI, "Login failt.\nThe username and password "
-                    + "combination is not know in our system. Please make sure you are submitted to this system.");
+                    + "combination is not know in our system. Please make sure you are submitted into this system.");
         }
     }
     
-    public void deleteAndExit(){
-        DataManager.delete(filename);
-        this.exit();
+    private MainUI getUI(){
+        return this.ui;
     }
     
-    public void saveAndExit(){
+    public void deleteAndExit(JFrame window){
+        DataManager.delete(filename);
+        this.exit(window);
+    }
+    
+    public void saveAndExit(JFrame window){
         try {
             DataManager.save(filename);
         } catch (IOException ex) {
             //TODO
             Logger.getLogger(SoccerTeamController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        this.exit();
+        this.exit(window);
     }
     
-    public void exit(){
-        System.exit(-1);
+    public void exit(JFrame window){
+        window.dispose();
     }
 
     public void createModel(String associationName, String associationStreet, String associationHousenumber, 
@@ -83,13 +89,81 @@ public class SoccerTeamController {
         this.stm = new DataPortal(associationName, associationStreet, associationHousenumber,
                 associationZipcode, associationCity, associationPhonenumber, teamName, coachName,
                 coachGender, coachStreet, coachHousenumber, coachZipcode, coachCity, coachPhonenumber);
-        this.setupUI.setVisible(false);
+        this.exit(this.setupUI);
         this.startUpUI();
     }
     
     private void startUpUI(){
         //TODO
-        this.ui = new MainUI(this);
-        this.ui.setVisible(true);
+        this.ui = new MainUI(this, this.getNameUser());
+        this.getUI().setVisibility();
+    }
+    
+    public String getNameUser(){
+        return this.getSTM().getNameUser();
+    }
+
+    public String getGenderUser() {
+        return this.getSTM().getGenderUser();
+    }
+
+    public String getStreetUser() {
+        return this.getSTM().getStreetUser();
+    }
+
+    public String getHousenumberUser() {
+        return this.getSTM().getHousenumberUser();
+    }
+
+    public String getZipcodeUser() {
+        return this.getSTM().getZipcodeUser();
+    }
+
+    public String getCityUser() {
+        return this.getSTM().getCityUser();
+    }
+
+    public String getPhonenumberUser() {
+        return this.getSTM().getPhonenumberUser();
+    }
+
+    public String getTeamUser() {
+        return this.getSTM().getTeamUser();
+    }
+
+    public boolean userIsPlayer() {
+        return this.getSTM().userIsPlayer();
+    }
+
+    public boolean userIsCoach() {
+        return this.getSTM().userIsCoach();
+    }
+
+    public boolean userIsCaptain() {
+        return this.getSTM().userIsCaptain();
+    }
+
+    public String getNameSA() {
+        return this.getSTM().getNameSA();
+    }
+
+    public String getStreetSA() {
+        return this.getSTM().getStreetSA();
+    }
+
+    public String getHousenumberSA() {
+        return this.getSTM().getHousenumberSA();
+    }
+
+    public String getZipcodeSA() {
+        return this.getSTM().getZipcodeSA();
+    }
+
+    public String getCitySA() {
+        return this.getSTM().getCitySA();
+    }
+
+    public String getPhonenumberSA() {
+        return this.getSTM().getPhonenumberSA();
     }
 }

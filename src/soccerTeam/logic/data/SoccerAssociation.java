@@ -103,5 +103,24 @@ public class SoccerAssociation {
     public void addTeam(String teamName, Coach coach) {
         this.teams.add(new Team(teamName, coach));
     }
-	
+
+    public String getTeam(Coach coach) {
+        String teamName = "";
+        for(Team team:this.getTeams()){
+            if(team.containsCoach(coach) != -1){
+                teamName += team.getTeamName() + ", ";
+            }
+        }
+        return teamName;
+    }
+    
+    public String getTeam(Player player) {
+        String teamName = "";
+        for(Team team:this.getTeams()){
+            if(team.containsPlayer(player) != -1){
+                teamName += team.getTeamName() + ", ";
+            }
+        }
+        return teamName;
+    }
 }

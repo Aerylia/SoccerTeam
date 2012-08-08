@@ -124,7 +124,7 @@ public class LoginUI extends javax.swing.JFrame {
     }//GEN-LAST:event_signInButtonActionPerformed
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
-         this.stc.saveAndExit();
+         this.stc.saveAndExit(this);
     }//GEN-LAST:event_cancelButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

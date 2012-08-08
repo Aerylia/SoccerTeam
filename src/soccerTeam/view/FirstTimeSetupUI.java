@@ -416,7 +416,7 @@ public class FirstTimeSetupUI extends javax.swing.JFrame {
     }//GEN-LAST:event_coachCheckBoxActionPerformed
 
     private void associationExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_associationExitButtonActionPerformed
-        this.stc.exit();
+        this.stc.exit(this);
     }//GEN-LAST:event_associationExitButtonActionPerformed
 
     private void coachFemaleRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coachFemaleRadioButtonActionPerformed

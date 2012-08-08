@@ -86,4 +86,68 @@ public class DataPortal{
             return false;
         }
     }
+
+    public String getNameUser() {
+        return this.getUser().getName();
+    }
+
+    public String getGenderUser() {
+        if(this.getUser().getGender()){
+            return "male";
+        } else {
+            return "female";
+        }
+    }
+
+    public String getStreetUser() {
+        return this.getUser().getStreet();
+    }
+
+    public String getHousenumberUser() {
+        return this.getUser().getHousenumber();
+    }
+
+    public String getZipcodeUser() {
+        return this.getUser().getZipcode();
+    }
+
+    public String getCityUser() {
+        return this.getUser().getCity();
+    }
+
+    public String getPhonenumberUser() {
+        return this.getUser().getPhonenumber();
+    }
+
+    public String getTeamUser() {
+        if(this.getUser() instanceof Coach){
+            return this.getSA().getTeam((Coach)this.getUser());
+        } else {
+            return this.getSA().getTeam((Player)this.getUser());
+        }
+    }
+
+    public String getNameSA() {
+        return this.getSA().getSAName();
+    }
+
+    public String getStreetSA() {
+        return this.getSA().getSAStreet();
+    }
+
+    public String getHousenumberSA() {
+        return this.getSA().getSAHousenumber();
+    }
+
+    public String getZipcodeSA() {
+        return this.getSA().getSAZipcode();
+    }
+
+    public String getCitySA() {
+        return this.getSA().getSACity();
+    }
+
+    public String getPhonenumberSA() {
+        return this.getSA().getSAPhonenumber();
+    }
 }
