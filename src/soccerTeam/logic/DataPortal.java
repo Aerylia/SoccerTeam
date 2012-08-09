@@ -150,4 +150,16 @@ public class DataPortal{
     public String getPhonenumberSA() {
         return this.getSA().getSAPhonenumber();
     }
+
+    public void logoff() {
+        this.user = null;
+    }
+
+    public String getUsernameUser() {
+        return this.getUser().getUsername();
+    }
+
+    public String getPasswordUser() {
+        return this.getUser().getPassword();
+    }
 }

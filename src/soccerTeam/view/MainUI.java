@@ -36,66 +36,158 @@ public class MainUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        loginInfoDialog = new javax.swing.JDialog();
+        loginInfoPanel = new javax.swing.JPanel();
+        loginInfoIntroLabel = new javax.swing.JLabel();
+        loginInfoUsernameLabel = new javax.swing.JLabel();
+        loginInfoPasswordLabel = new javax.swing.JLabel();
+        loginInfoPasswordTextField = new javax.swing.JTextField();
+        loginInfoUsernameTextField = new javax.swing.JTextField();
+        loginInfoChangeButton = new javax.swing.JButton();
+        loginInfoOKButton = new javax.swing.JButton();
         mainTabbedPane = new javax.swing.JTabbedPane();
         profilePanel = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        profileTeamLabel = new javax.swing.JLabel();
+        profileNameLabel = new javax.swing.JLabel();
+        profileGenderLabel = new javax.swing.JLabel();
+        profileStreetLabel = new javax.swing.JLabel();
+        profileZipcodeLabel = new javax.swing.JLabel();
+        profileLogoffLabel = new javax.swing.JButton();
+        profileEditButton = new javax.swing.JButton();
         profileTeamTextField = new javax.swing.JTextField();
         profileGenderTextField = new javax.swing.JTextField();
         profileNameTextField = new javax.swing.JTextField();
         profileStreetTextField = new javax.swing.JTextField();
         profileZipcodeTextField = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        profilePhonenumberLabel = new javax.swing.JLabel();
         profilePhonenumberTextField = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        profileHousenumberLabel = new javax.swing.JLabel();
+        profileCityLabel = new javax.swing.JLabel();
         profileHousenumberTextField = new javax.swing.JTextField();
         profileCityTextField = new javax.swing.JTextField();
+        profileLoginInfoButton = new javax.swing.JButton();
         soccerAssociationPanel = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
+        soccerAssociationNameLabel = new javax.swing.JLabel();
+        soccerAssociationStreetLabel = new javax.swing.JLabel();
+        soccerAssociationZipcodeLabel = new javax.swing.JLabel();
+        soccerAssociationPhonenumberLabel = new javax.swing.JLabel();
         SoccerAssociationPhonenumberTextField = new javax.swing.JTextField();
         soccerAssociationZipcodeTextField = new javax.swing.JTextField();
         soccerAssociationStreetTextField = new javax.swing.JTextField();
         soccerAssociationNameTextField = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
+        soccerAssociationHousenumberLabel = new javax.swing.JLabel();
         soccerAssociationHousenumberTextField = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
+        soccerAssociationCityLabel = new javax.swing.JLabel();
         soccerAssociationCityTextField = new javax.swing.JTextField();
         welcomeTextLabel = new javax.swing.JLabel();
 
-        jLabel1.setText("jLabel1");
+        loginInfoIntroLabel.setText("Your current username and password are :");
+
+        loginInfoUsernameLabel.setText("Username :");
+
+        loginInfoPasswordLabel.setText("Password :");
+
+        loginInfoChangeButton.setText("Change");
+
+        loginInfoOKButton.setText("OK");
+        loginInfoOKButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginInfoOKButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout loginInfoPanelLayout = new javax.swing.GroupLayout(loginInfoPanel);
+        loginInfoPanel.setLayout(loginInfoPanelLayout);
+        loginInfoPanelLayout.setHorizontalGroup(
+            loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(loginInfoPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(loginInfoPanelLayout.createSequentialGroup()
+                        .addComponent(loginInfoIntroLabel)
+                        .addGap(0, 110, Short.MAX_VALUE))
+                    .addGroup(loginInfoPanelLayout.createSequentialGroup()
+                        .addGroup(loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(loginInfoUsernameLabel)
+                            .addComponent(loginInfoPasswordLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(loginInfoPasswordTextField)
+                            .addComponent(loginInfoUsernameTextField)))
+                    .addGroup(loginInfoPanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(loginInfoChangeButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(loginInfoOKButton, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        );
+        loginInfoPanelLayout.setVerticalGroup(
+            loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(loginInfoPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(loginInfoIntroLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(loginInfoUsernameLabel)
+                    .addComponent(loginInfoUsernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(loginInfoPasswordLabel)
+                    .addComponent(loginInfoPasswordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(loginInfoOKButton)
+                    .addComponent(loginInfoChangeButton))
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout loginInfoDialogLayout = new javax.swing.GroupLayout(loginInfoDialog.getContentPane());
+        loginInfoDialog.getContentPane().setLayout(loginInfoDialogLayout);
+        loginInfoDialogLayout.setHorizontalGroup(
+            loginInfoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginInfoDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(loginInfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        loginInfoDialogLayout.setVerticalGroup(
+            loginInfoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(loginInfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Programname");
 
-        jLabel4.setText("Team :");
+        profileTeamLabel.setText("Team :");
 
-        jLabel5.setText("Name :");
+        profileNameLabel.setText("Name :");
 
-        jLabel6.setText("Gender :");
+        profileGenderLabel.setText("Gender :");
 
-        jLabel7.setText("Street :");
+        profileStreetLabel.setText("Street :");
 
-        jLabel8.setText("Zipcode :");
+        profileZipcodeLabel.setText("Zipcode :");
 
-        jButton1.setText("Log off");
+        profileLogoffLabel.setText("Log off");
+        profileLogoffLabel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                profileLogoffLabelActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Edit");
+        profileEditButton.setText("Edit");
 
-        jLabel2.setText("Phonenr. :");
+        profilePhonenumberLabel.setText("Phonenr. :");
 
-        jLabel9.setText("Housenr. :");
+        profileHousenumberLabel.setText("Housenr. :");
 
-        jLabel10.setText("City :");
+        profileCityLabel.setText("City :");
+
+        profileLoginInfoButton.setText("Login Info");
+        profileLoginInfoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                profileLoginInfoButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout profilePanelLayout = new javax.swing.GroupLayout(profilePanel);
         profilePanel.setLayout(profilePanelLayout);
@@ -105,22 +197,24 @@ public class MainUI extends javax.swing.JFrame {
                 .addGroup(profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, profilePanelLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(profileEditButton, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1))
+                        .addComponent(profileLoginInfoButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(profileLogoffLabel))
                     .addGroup(profilePanelLayout.createSequentialGroup()
                         .addGroup(profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(profilePanelLayout.createSequentialGroup()
                                 .addGap(10, 10, 10)
                                 .addGroup(profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel8)))
+                                    .addComponent(profileTeamLabel)
+                                    .addComponent(profileNameLabel)
+                                    .addComponent(profileGenderLabel)
+                                    .addComponent(profileStreetLabel)
+                                    .addComponent(profileZipcodeLabel)))
                             .addGroup(profilePanelLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jLabel2)))
+                                .addComponent(profilePhonenumberLabel)))
                         .addGap(18, 18, 18)
                         .addGroup(profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(profileTeamTextField)
@@ -130,13 +224,13 @@ public class MainUI extends javax.swing.JFrame {
                             .addGroup(profilePanelLayout.createSequentialGroup()
                                 .addComponent(profileZipcodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel10)
+                                .addComponent(profileCityLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(profileCityTextField))
                             .addGroup(profilePanelLayout.createSequentialGroup()
                                 .addComponent(profileStreetTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel9)
+                                .addComponent(profileHousenumberLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(profileHousenumberTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)))))
                 .addContainerGap())
@@ -146,52 +240,53 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(profilePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
+                    .addComponent(profileTeamLabel)
                     .addComponent(profileTeamTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
+                    .addComponent(profileNameLabel)
                     .addComponent(profileNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
+                    .addComponent(profileGenderLabel)
                     .addComponent(profileGenderTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
+                    .addComponent(profileStreetLabel)
                     .addComponent(profileStreetTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9)
+                    .addComponent(profileHousenumberLabel)
                     .addComponent(profileHousenumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
+                    .addComponent(profileZipcodeLabel)
                     .addComponent(profileZipcodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10)
+                    .addComponent(profileCityLabel)
                     .addComponent(profileCityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(profilePhonenumberLabel)
                     .addComponent(profilePhonenumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
                 .addGroup(profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(profileLogoffLabel)
+                    .addComponent(profileLoginInfoButton)
+                    .addComponent(profileEditButton))
                 .addContainerGap())
         );
 
         mainTabbedPane.addTab("Profile", profilePanel);
 
-        jLabel3.setText("Name :");
+        soccerAssociationNameLabel.setText("Name :");
 
-        jLabel11.setText("Street :");
+        soccerAssociationStreetLabel.setText("Street :");
 
-        jLabel12.setText("Zipcode :");
+        soccerAssociationZipcodeLabel.setText("Zipcode :");
 
-        jLabel13.setText("Phonenumber :");
+        soccerAssociationPhonenumberLabel.setText("Phonenumber :");
 
-        jLabel14.setText("Housenr. :");
+        soccerAssociationHousenumberLabel.setText("Housenr. :");
 
-        jLabel15.setText("City :");
+        soccerAssociationCityLabel.setText("City :");
 
         javax.swing.GroupLayout soccerAssociationPanelLayout = new javax.swing.GroupLayout(soccerAssociationPanel);
         soccerAssociationPanel.setLayout(soccerAssociationPanelLayout);
@@ -200,10 +295,10 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(soccerAssociationPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(soccerAssociationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel13)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel12))
+                    .addComponent(soccerAssociationPhonenumberLabel)
+                    .addComponent(soccerAssociationNameLabel)
+                    .addComponent(soccerAssociationStreetLabel)
+                    .addComponent(soccerAssociationZipcodeLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(soccerAssociationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(SoccerAssociationPhonenumberTextField)
@@ -211,13 +306,13 @@ public class MainUI extends javax.swing.JFrame {
                     .addGroup(soccerAssociationPanelLayout.createSequentialGroup()
                         .addComponent(soccerAssociationStreetTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel14)
+                        .addComponent(soccerAssociationHousenumberLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(soccerAssociationHousenumberTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE))
                     .addGroup(soccerAssociationPanelLayout.createSequentialGroup()
                         .addComponent(soccerAssociationZipcodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel15)
+                        .addComponent(soccerAssociationCityLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(soccerAssociationCityTextField)))
                 .addContainerGap())
@@ -227,23 +322,23 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(soccerAssociationPanelLayout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addGroup(soccerAssociationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
+                    .addComponent(soccerAssociationNameLabel)
                     .addComponent(soccerAssociationNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(soccerAssociationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
+                    .addComponent(soccerAssociationStreetLabel)
                     .addComponent(soccerAssociationStreetTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14)
+                    .addComponent(soccerAssociationHousenumberLabel)
                     .addComponent(soccerAssociationHousenumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(soccerAssociationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel12)
+                    .addComponent(soccerAssociationZipcodeLabel)
                     .addComponent(soccerAssociationZipcodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel15)
+                    .addComponent(soccerAssociationCityLabel)
                     .addComponent(soccerAssociationCityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(soccerAssociationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
+                    .addComponent(soccerAssociationPhonenumberLabel)
                     .addComponent(SoccerAssociationPhonenumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(75, Short.MAX_VALUE))
         );
@@ -278,40 +373,64 @@ public class MainUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void profileLogoffLabelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profileLogoffLabelActionPerformed
+        this.getSTC().logoff();
+    }//GEN-LAST:event_profileLogoffLabelActionPerformed
+
+    private void loginInfoOKButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginInfoOKButtonActionPerformed
+        this.loginInfoDialog.dispose();
+    }//GEN-LAST:event_loginInfoOKButtonActionPerformed
+
+    private void profileLoginInfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profileLoginInfoButtonActionPerformed
+        this.loginInfoUsernameTextField.setText(this.getSTC().getUsernameUser());
+        this.loginInfoPasswordTextField.setText(this.getSTC().getPasswordUser());
+        this.loginInfoDialog.setSize(400, 175);
+        this.loginInfoDialog.setVisible(true);
+    }//GEN-LAST:event_profileLoginInfoButtonActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField SoccerAssociationPhonenumberTextField;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JButton loginInfoChangeButton;
+    private javax.swing.JDialog loginInfoDialog;
+    private javax.swing.JLabel loginInfoIntroLabel;
+    private javax.swing.JButton loginInfoOKButton;
+    private javax.swing.JPanel loginInfoPanel;
+    private javax.swing.JLabel loginInfoPasswordLabel;
+    private javax.swing.JTextField loginInfoPasswordTextField;
+    private javax.swing.JLabel loginInfoUsernameLabel;
+    private javax.swing.JTextField loginInfoUsernameTextField;
     private javax.swing.JTabbedPane mainTabbedPane;
+    private javax.swing.JLabel profileCityLabel;
     private javax.swing.JTextField profileCityTextField;
+    private javax.swing.JButton profileEditButton;
+    private javax.swing.JLabel profileGenderLabel;
     private javax.swing.JTextField profileGenderTextField;
+    private javax.swing.JLabel profileHousenumberLabel;
     private javax.swing.JTextField profileHousenumberTextField;
+    private javax.swing.JButton profileLoginInfoButton;
+    private javax.swing.JButton profileLogoffLabel;
+    private javax.swing.JLabel profileNameLabel;
     private javax.swing.JTextField profileNameTextField;
     private javax.swing.JPanel profilePanel;
+    private javax.swing.JLabel profilePhonenumberLabel;
     private javax.swing.JTextField profilePhonenumberTextField;
+    private javax.swing.JLabel profileStreetLabel;
     private javax.swing.JTextField profileStreetTextField;
+    private javax.swing.JLabel profileTeamLabel;
     private javax.swing.JTextField profileTeamTextField;
+    private javax.swing.JLabel profileZipcodeLabel;
     private javax.swing.JTextField profileZipcodeTextField;
+    private javax.swing.JLabel soccerAssociationCityLabel;
     private javax.swing.JTextField soccerAssociationCityTextField;
+    private javax.swing.JLabel soccerAssociationHousenumberLabel;
     private javax.swing.JTextField soccerAssociationHousenumberTextField;
+    private javax.swing.JLabel soccerAssociationNameLabel;
     private javax.swing.JTextField soccerAssociationNameTextField;
     private javax.swing.JPanel soccerAssociationPanel;
+    private javax.swing.JLabel soccerAssociationPhonenumberLabel;
+    private javax.swing.JLabel soccerAssociationStreetLabel;
     private javax.swing.JTextField soccerAssociationStreetTextField;
+    private javax.swing.JLabel soccerAssociationZipcodeLabel;
     private javax.swing.JTextField soccerAssociationZipcodeTextField;
     private javax.swing.JLabel welcomeTextLabel;
     // End of variables declaration//GEN-END:variables

@@ -2,11 +2,120 @@
 
 <Form version="1.3" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel1"/>
-      </Properties>
-    </Component>
+    <Container class="javax.swing.JDialog" name="loginInfoDialog">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Component id="loginInfoPanel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="loginInfoPanel" min="-2" max="-2" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="loginInfoPanel">
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="loginInfoIntroLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="110" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="loginInfoUsernameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="loginInfoPasswordLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="loginInfoPasswordTextField" max="32767" attributes="0"/>
+                                  <Component id="loginInfoUsernameTextField" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="loginInfoChangeButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="loginInfoOKButton" min="-2" pref="66" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="loginInfoIntroLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="loginInfoUsernameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="loginInfoUsernameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="loginInfoPasswordLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="loginInfoPasswordTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="loginInfoOKButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="loginInfoChangeButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="loginInfoIntroLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Your current username and password are :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="loginInfoUsernameLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Username :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="loginInfoPasswordLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Password :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="loginInfoPasswordTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="loginInfoUsernameTextField">
+            </Component>
+            <Component class="javax.swing.JButton" name="loginInfoChangeButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Change"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="loginInfoOKButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="OK"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginInfoOKButtonActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
@@ -76,25 +185,27 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jButton2" min="-2" pref="67" max="-2" attributes="0"/>
+                              <Component id="profileEditButton" min="-2" pref="67" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                              <Component id="profileLoginInfoButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="profileLogoffLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="profileTeamLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="profileNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="profileGenderLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="profileStreetLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="profileZipcodeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="profilePhonenumberLabel" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
@@ -106,14 +217,14 @@
                                   <Group type="102" attributes="0">
                                       <Component id="profileZipcodeTextField" min="-2" pref="55" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                                      <Component id="profileCityLabel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="profileCityTextField" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="profileStreetTextField" min="-2" pref="193" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                      <Component id="profileHousenumberLabel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="profileHousenumberTextField" pref="61" max="32767" attributes="0"/>
                                   </Group>
@@ -129,80 +240,84 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profileTeamLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="profileTeamTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profileNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="profileNameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profileGenderLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="profileGenderTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profileStreetLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="profileStreetTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profileHousenumberLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="profileHousenumberTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profileZipcodeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="profileZipcodeTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profileCityLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="profileCityTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profilePhonenumberLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="profilePhonenumberTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profileLogoffLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profileLoginInfoButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profileEditButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel4">
+            <Component class="javax.swing.JLabel" name="profileTeamLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Team :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel5">
+            <Component class="javax.swing.JLabel" name="profileNameLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Name :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel6">
+            <Component class="javax.swing.JLabel" name="profileGenderLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Gender :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel7">
+            <Component class="javax.swing.JLabel" name="profileStreetLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Street :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel8">
+            <Component class="javax.swing.JLabel" name="profileZipcodeLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Zipcode :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="profileLogoffLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Log off"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="profileLogoffLabelActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="profileEditButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Edit"/>
               </Properties>
@@ -217,19 +332,19 @@
             </Component>
             <Component class="javax.swing.JTextField" name="profileZipcodeTextField">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel2">
+            <Component class="javax.swing.JLabel" name="profilePhonenumberLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Phonenr. :"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="profilePhonenumberTextField">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel9">
+            <Component class="javax.swing.JLabel" name="profileHousenumberLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Housenr. :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel10">
+            <Component class="javax.swing.JLabel" name="profileCityLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="City :"/>
               </Properties>
@@ -237,6 +352,14 @@
             <Component class="javax.swing.JTextField" name="profileHousenumberTextField">
             </Component>
             <Component class="javax.swing.JTextField" name="profileCityTextField">
+            </Component>
+            <Component class="javax.swing.JButton" name="profileLoginInfoButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Login Info"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="profileLoginInfoButtonActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -255,10 +378,10 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="soccerAssociationPhonenumberLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="soccerAssociationNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="soccerAssociationStreetLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="soccerAssociationZipcodeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -267,14 +390,14 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="soccerAssociationStreetTextField" min="-2" pref="181" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                              <Component id="soccerAssociationHousenumberLabel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="soccerAssociationHousenumberTextField" pref="59" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="soccerAssociationZipcodeTextField" min="-2" pref="57" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                              <Component id="soccerAssociationCityLabel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="soccerAssociationCityTextField" max="32767" attributes="0"/>
                           </Group>
@@ -288,26 +411,26 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="soccerAssociationNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="soccerAssociationNameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="soccerAssociationStreetLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="soccerAssociationStreetTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="soccerAssociationHousenumberLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="soccerAssociationHousenumberTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="soccerAssociationZipcodeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="soccerAssociationZipcodeTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="soccerAssociationCityLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="soccerAssociationCityTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="soccerAssociationPhonenumberLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="SoccerAssociationPhonenumberTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="75" max="32767" attributes="0"/>
@@ -316,22 +439,22 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel3">
+            <Component class="javax.swing.JLabel" name="soccerAssociationNameLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Name :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel11">
+            <Component class="javax.swing.JLabel" name="soccerAssociationStreetLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Street :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel12">
+            <Component class="javax.swing.JLabel" name="soccerAssociationZipcodeLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Zipcode :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel13">
+            <Component class="javax.swing.JLabel" name="soccerAssociationPhonenumberLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Phonenumber :"/>
               </Properties>
@@ -344,14 +467,14 @@
             </Component>
             <Component class="javax.swing.JTextField" name="soccerAssociationNameTextField">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel14">
+            <Component class="javax.swing.JLabel" name="soccerAssociationHousenumberLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Housenr. :"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="soccerAssociationHousenumberTextField">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel15">
+            <Component class="javax.swing.JLabel" name="soccerAssociationCityLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="City :"/>
               </Properties>

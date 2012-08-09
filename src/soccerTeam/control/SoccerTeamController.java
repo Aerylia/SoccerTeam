@@ -50,13 +50,17 @@ public class SoccerTeamController {
     public void login(String username, String password){
         try {
             this.getSTM().findUser(username, password);
-            this.loginUI.setVisible(false);
+            this.loginUI.dispose();
             this.ui = new MainUI(this, this.getNameUser());
             this.getUI().setVisibility();
         } catch (LoginFailtException ex) {
             JOptionPane.showMessageDialog(loginUI, "Login failt.\nThe username and password "
                     + "combination is not know in our system. Please make sure you are submitted into this system.");
         }
+    }
+    
+    private LoginUI getLoginUI(){
+        return this.loginUI;
     }
     
     private MainUI getUI(){
@@ -165,5 +169,20 @@ public class SoccerTeamController {
 
     public String getPhonenumberSA() {
         return this.getSTM().getPhonenumberSA();
+    }
+
+    public void logoff() {
+        this.getSTM().logoff();
+        this.getUI().dispose();
+        this.loginUI = new LoginUI(this);
+        this.getLoginUI().setVisible(true);
+    }
+
+    public String getUsernameUser() {
+        return this.getSTM().getUsernameUser();
+    }
+
+    public String getPasswordUser() {
+        return this.getSTM().getPasswordUser();
     }
 }
