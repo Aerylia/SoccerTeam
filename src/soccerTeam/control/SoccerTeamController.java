@@ -198,4 +198,38 @@ public class SoccerTeamController {
         this.getSTM().changeLoginInfoUser(username, password);
     }
 
+    public void changeNameUser(String name) {
+        this.getSTM().changeNameUser(name);
+    }
+
+    public boolean changeGenderUser(String gender) {
+        try{
+            this.getSTM().changeGenderUser(gender);
+            return true;
+        } catch (IllegalArgumentException ex){
+            JOptionPane.showMessageDialog(this.getUI(), "Please enter \"male\" or \"female\" in the gender TextField.");
+            return false;
+        }
+    }
+
+    public void changeStreetUser(String street) {
+        this.getSTM().changeStreetUser(street);
+    }
+
+    public void changeHousenumberUser(String housenumber) {
+        this.getSTM().changeHousenumberUser(housenumber);
+    }
+
+    public void changeZipcodeUser(String zipcode) {
+        this.getSTM().changeZipcodeUser(zipcode);
+    }
+
+    public void changeCityUser(String city) {
+        this.getSTM().changeCityUser(city);
+    }
+
+    public void changePhonenumberUser(String phonenumber) {
+        this.getSTM().changePhonenumberUser(phonenumber);
+    }
+
 }

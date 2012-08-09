@@ -152,7 +152,7 @@ public class DataPortal{
     }
 
     public void logoff() {
-        this.user = null;
+        this.setUser(null);
     }
 
     public String getUsernameUser() {
@@ -165,6 +165,40 @@ public class DataPortal{
 
     public void changeLoginInfoUser(String username, String password) {
         this.getUser().changeLoginInfo(username, password);
+    }
+
+    public void changeNameUser(String name) {
+        this.getUser().setName(name);
+    }
+
+    public void changeGenderUser(String gender) throws IllegalArgumentException {
+        if(gender.equals("male") || gender.equals("Male")){
+            this.getUser().setGender(true);
+        } else if (gender.equals("female") || gender.equals("Female")) {
+            this.getUser().setGender(false);
+        } else {
+            throw new IllegalArgumentException();
+        }
+    }
+
+    public void changeStreetUser(String street) {
+        this.getUser().setStreet(street);
+    }
+
+    public void changeHousenumberUser(String housenumber) {
+        this.getUser().setHousenumber(housenumber);
+    }
+
+    public void changeZipcodeUser(String zipcode) {
+        this.getUser().setZipcode(zipcode);
+    }
+
+    public void changeCityUser(String city) {
+        this.getUser().setCity(city);
+    }
+
+    public void changePhonenumberUser(String phonenumber) {
+        this.getUser().setPhonenumber(phonenumber);
     }
 
 }

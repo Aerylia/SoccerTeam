@@ -4,6 +4,7 @@
  */
 package soccerTeam.view;
 
+import javax.swing.JOptionPane;
 import soccerTeam.control.SoccerTeamController;
 
 /**
@@ -37,7 +38,7 @@ public class MainUI extends javax.swing.JFrame {
     private void initComponents() {
 
         loginInfoDialog = new javax.swing.JDialog();
-        jPanel1 = new javax.swing.JPanel();
+        loginInfoPanel = new javax.swing.JPanel();
         loginInfoIntroLabel = new javax.swing.JLabel();
         loginInfoUsernameLabel = new javax.swing.JLabel();
         loginInfoPasswordLabel = new javax.swing.JLabel();
@@ -54,7 +55,7 @@ public class MainUI extends javax.swing.JFrame {
         profileStreetLabel = new javax.swing.JLabel();
         profileZipcodeLabel = new javax.swing.JLabel();
         profileLogoffLabel = new javax.swing.JButton();
-        profileEditButton = new javax.swing.JButton();
+        profileSaveButton = new javax.swing.JButton();
         profileTeamTextField = new javax.swing.JTextField();
         profileGenderTextField = new javax.swing.JTextField();
         profileNameTextField = new javax.swing.JTextField();
@@ -106,49 +107,49 @@ public class MainUI extends javax.swing.JFrame {
 
         loginInfoIntro2Label.setText("Press Cancel to close this window without saving.");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout loginInfoPanelLayout = new javax.swing.GroupLayout(loginInfoPanel);
+        loginInfoPanel.setLayout(loginInfoPanelLayout);
+        loginInfoPanelLayout.setHorizontalGroup(
+            loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(loginInfoPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginInfoPanelLayout.createSequentialGroup()
+                        .addGroup(loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(loginInfoUsernameLabel)
                             .addComponent(loginInfoPasswordLabel))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(loginInfoPasswordTextField, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(loginInfoUsernameTextField)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginInfoPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(loginInfoCancelButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(loginInfoOKButton, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(loginInfoPanelLayout.createSequentialGroup()
+                        .addGroup(loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(loginInfoIntroLabel)
                             .addComponent(loginInfoIntro2Label))
                         .addGap(0, 7, Short.MAX_VALUE))))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        loginInfoPanelLayout.setVerticalGroup(
+            loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(loginInfoPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(loginInfoIntroLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(loginInfoIntro2Label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(loginInfoUsernameLabel)
                     .addComponent(loginInfoUsernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(loginInfoPasswordLabel)
                     .addComponent(loginInfoPasswordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(loginInfoOKButton)
                     .addComponent(loginInfoCancelButton)))
         );
@@ -158,13 +159,13 @@ public class MainUI extends javax.swing.JFrame {
         loginInfoDialogLayout.setHorizontalGroup(
             loginInfoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(loginInfoDialogLayout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(loginInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         loginInfoDialogLayout.setVerticalGroup(
             loginInfoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(loginInfoDialogLayout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(loginInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -188,7 +189,12 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
 
-        profileEditButton.setText("Edit");
+        profileSaveButton.setText("Save");
+        profileSaveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                profileSaveButtonActionPerformed(evt);
+            }
+        });
 
         profilePhonenumberLabel.setText("Phonenr. :");
 
@@ -211,7 +217,7 @@ public class MainUI extends javax.swing.JFrame {
                 .addGroup(profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, profilePanelLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(profileEditButton, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(profileSaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(profileLoginInfoButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -284,7 +290,7 @@ public class MainUI extends javax.swing.JFrame {
                 .addGroup(profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(profileLogoffLabel)
                     .addComponent(profileLoginInfoButton)
-                    .addComponent(profileEditButton))
+                    .addComponent(profileSaveButton))
                 .addContainerGap())
         );
 
@@ -371,7 +377,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(welcomeTextLabel)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(mainTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 394, Short.MAX_VALUE))
+                    .addComponent(mainTabbedPane))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -408,14 +414,26 @@ public class MainUI extends javax.swing.JFrame {
         this.loginInfoDialog.dispose();
     }//GEN-LAST:event_loginInfoCancelButtonActionPerformed
 
+    private void profileSaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profileSaveButtonActionPerformed
+        if (this.getSTC().changeGenderUser(this.profileGenderTextField.getText())){
+            this.getSTC().changeNameUser(this.profileNameTextField.getText());  
+            this.getSTC().changeStreetUser(this.profileStreetTextField.getText());
+            this.getSTC().changeHousenumberUser(this.profileHousenumberTextField.getText());
+            this.getSTC().changeZipcodeUser(this.profileZipcodeTextField.getText());
+            this.getSTC().changeCityUser(this.profileCityTextField.getText());
+            this.getSTC().changePhonenumberUser(this.profilePhonenumberTextField.getText());
+            JOptionPane.showMessageDialog(this, "Changes succesfully saved.");
+        } 
+    }//GEN-LAST:event_profileSaveButtonActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField SoccerAssociationPhonenumberTextField;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton loginInfoCancelButton;
     private javax.swing.JDialog loginInfoDialog;
     private javax.swing.JLabel loginInfoIntro2Label;
     private javax.swing.JLabel loginInfoIntroLabel;
     private javax.swing.JButton loginInfoOKButton;
+    private javax.swing.JPanel loginInfoPanel;
     private javax.swing.JLabel loginInfoPasswordLabel;
     private javax.swing.JTextField loginInfoPasswordTextField;
     private javax.swing.JLabel loginInfoUsernameLabel;
@@ -423,7 +441,6 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTabbedPane mainTabbedPane;
     private javax.swing.JLabel profileCityLabel;
     private javax.swing.JTextField profileCityTextField;
-    private javax.swing.JButton profileEditButton;
     private javax.swing.JLabel profileGenderLabel;
     private javax.swing.JTextField profileGenderTextField;
     private javax.swing.JLabel profileHousenumberLabel;
@@ -435,6 +452,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JPanel profilePanel;
     private javax.swing.JLabel profilePhonenumberLabel;
     private javax.swing.JTextField profilePhonenumberTextField;
+    private javax.swing.JButton profileSaveButton;
     private javax.swing.JLabel profileStreetLabel;
     private javax.swing.JTextField profileStreetTextField;
     private javax.swing.JLabel profileTeamLabel;
