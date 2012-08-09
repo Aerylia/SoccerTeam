@@ -232,4 +232,28 @@ public class SoccerTeamController {
         this.getSTM().changePhonenumberUser(phonenumber);
     }
 
+    public void changeNameSA(String name) {
+        this.getSTM().changeNameSA(name);
+    }
+
+    public void changeStreetSA(String street) {
+        this.getSTM().changeStreetSA(street);
+    }
+
+    public void changeHousenumberSA(String housenumber) {
+        this.getSTM().changeHousenumberSA(housenumber);
+    }
+
+    public void changeZipcodeSA(String zipcode) {
+        this.getSTM().changeZipcodeSA(zipcode);
+    }
+
+    public void changeCitySA(String city) {
+        this.getSTM().changeCitySA(city);
+    }
+
+    public void changePhonenumberSA(String phonenumber) {
+        this.getSTM().changePhonenumberSA(phonenumber);
+    }
+
 }

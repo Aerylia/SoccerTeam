@@ -201,4 +201,28 @@ public class DataPortal{
         this.getUser().setPhonenumber(phonenumber);
     }
 
+    public void changeNameSA(String name) {
+        this.getSA().setSAName(name);
+    }
+
+    public void changeStreetSA(String street) {
+        this.getSA().setSAStreet(street);
+    }
+
+    public void changeHousenumberSA(String housenumber) {
+        this.getSA().setSAHousenumber(housenumber);
+    }
+
+    public void changeZipcodeSA(String zipcode) {
+        this.getSA().setSAZipcode(zipcode);
+    }
+
+    public void changeCitySA(String city) {
+        this.getSA().setSACity(city);
+    }
+
+    public void changePhonenumberSA(String phonenumber) {
+        this.getSA().setSAPhonenumber(phonenumber);
+    }
+
 }

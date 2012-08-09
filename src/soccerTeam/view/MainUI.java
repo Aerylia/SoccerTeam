@@ -55,7 +55,7 @@ public class MainUI extends javax.swing.JFrame {
         profileStreetLabel = new javax.swing.JLabel();
         profileZipcodeLabel = new javax.swing.JLabel();
         profileLogoffLabel = new javax.swing.JButton();
-        profileSaveButton = new javax.swing.JButton();
+        profileChangeSaveButton = new javax.swing.JButton();
         profileTeamTextField = new javax.swing.JTextField();
         profileGenderTextField = new javax.swing.JTextField();
         profileNameTextField = new javax.swing.JTextField();
@@ -81,6 +81,7 @@ public class MainUI extends javax.swing.JFrame {
         soccerAssociationHousenumberTextField = new javax.swing.JTextField();
         soccerAssociationCityLabel = new javax.swing.JLabel();
         soccerAssociationCityTextField = new javax.swing.JTextField();
+        soccerAssociationSaveButton = new javax.swing.JButton();
         availabilityPanel = new javax.swing.JPanel();
         availabilityIntroLabel = new javax.swing.JLabel();
         availabilityScrollPane = new javax.swing.JScrollPane();
@@ -202,10 +203,10 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
 
-        profileSaveButton.setText("Save");
-        profileSaveButton.addActionListener(new java.awt.event.ActionListener() {
+        profileChangeSaveButton.setText("Change");
+        profileChangeSaveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                profileSaveButtonActionPerformed(evt);
+                profileChangeSaveButtonActionPerformed(evt);
             }
         });
 
@@ -230,7 +231,7 @@ public class MainUI extends javax.swing.JFrame {
                 .addGroup(profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, profilePanelLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(profileSaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(profileChangeSaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(profileLoginInfoButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -303,7 +304,7 @@ public class MainUI extends javax.swing.JFrame {
                 .addGroup(profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(profileLogoffLabel)
                     .addComponent(profileLoginInfoButton)
-                    .addComponent(profileSaveButton))
+                    .addComponent(profileChangeSaveButton))
                 .addContainerGap())
         );
 
@@ -321,6 +322,13 @@ public class MainUI extends javax.swing.JFrame {
 
         soccerAssociationCityLabel.setText("City :");
 
+        soccerAssociationSaveButton.setText("Save Changes");
+        soccerAssociationSaveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                soccerAssociationSaveButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout soccerAssociationPanelLayout = new javax.swing.GroupLayout(soccerAssociationPanel);
         soccerAssociationPanel.setLayout(soccerAssociationPanelLayout);
         soccerAssociationPanelLayout.setHorizontalGroup(
@@ -328,26 +336,31 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(soccerAssociationPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(soccerAssociationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(soccerAssociationPhonenumberLabel)
-                    .addComponent(soccerAssociationNameLabel)
-                    .addComponent(soccerAssociationStreetLabel)
-                    .addComponent(soccerAssociationZipcodeLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(soccerAssociationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(SoccerAssociationPhonenumberTextField)
-                    .addComponent(soccerAssociationNameTextField)
                     .addGroup(soccerAssociationPanelLayout.createSequentialGroup()
-                        .addComponent(soccerAssociationStreetTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(soccerAssociationHousenumberLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(soccerAssociationHousenumberTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE))
-                    .addGroup(soccerAssociationPanelLayout.createSequentialGroup()
-                        .addComponent(soccerAssociationZipcodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(soccerAssociationCityLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(soccerAssociationCityTextField)))
+                        .addGroup(soccerAssociationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(soccerAssociationPhonenumberLabel)
+                            .addComponent(soccerAssociationNameLabel)
+                            .addComponent(soccerAssociationStreetLabel)
+                            .addComponent(soccerAssociationZipcodeLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(soccerAssociationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(SoccerAssociationPhonenumberTextField)
+                            .addComponent(soccerAssociationNameTextField)
+                            .addGroup(soccerAssociationPanelLayout.createSequentialGroup()
+                                .addComponent(soccerAssociationStreetTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(soccerAssociationHousenumberLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(soccerAssociationHousenumberTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE))
+                            .addGroup(soccerAssociationPanelLayout.createSequentialGroup()
+                                .addComponent(soccerAssociationZipcodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(soccerAssociationCityLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(soccerAssociationCityTextField))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, soccerAssociationPanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(soccerAssociationSaveButton)))
                 .addContainerGap())
         );
         soccerAssociationPanelLayout.setVerticalGroup(
@@ -373,7 +386,9 @@ public class MainUI extends javax.swing.JFrame {
                 .addGroup(soccerAssociationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(soccerAssociationPhonenumberLabel)
                     .addComponent(SoccerAssociationPhonenumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addComponent(soccerAssociationSaveButton)
+                .addContainerGap())
         );
 
         mainTabbedPane.addTab("SoccerAssociation", soccerAssociationPanel);
@@ -553,17 +568,54 @@ public class MainUI extends javax.swing.JFrame {
         this.loginInfoDialog.dispose();
     }//GEN-LAST:event_loginInfoCancelButtonActionPerformed
 
-    private void profileSaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profileSaveButtonActionPerformed
-        if (this.getSTC().changeGenderUser(this.profileGenderTextField.getText())){
-            this.getSTC().changeNameUser(this.profileNameTextField.getText());  
-            this.getSTC().changeStreetUser(this.profileStreetTextField.getText());
-            this.getSTC().changeHousenumberUser(this.profileHousenumberTextField.getText());
-            this.getSTC().changeZipcodeUser(this.profileZipcodeTextField.getText());
-            this.getSTC().changeCityUser(this.profileCityTextField.getText());
-            this.getSTC().changePhonenumberUser(this.profilePhonenumberTextField.getText());
-            JOptionPane.showMessageDialog(this, "Changes succesfully saved.");
-        } 
-    }//GEN-LAST:event_profileSaveButtonActionPerformed
+    private void profileChangeSaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profileChangeSaveButtonActionPerformed
+        if(this.profileChangeSaveButton.getText().equals("Change")){
+            this.profileChangeSaveButton.setText("Save");
+            
+            setFocusableProfilePanel(true);
+            
+            this.popup("You can now change your contact information.\n"
+                    + "To save press the \"Save\" button.");
+        } else {
+            if (this.getSTC().changeGenderUser(this.profileGenderTextField.getText())){
+                this.getSTC().changeNameUser(this.profileNameTextField.getText());  
+                this.getSTC().changeStreetUser(this.profileStreetTextField.getText());
+                this.getSTC().changeHousenumberUser(this.profileHousenumberTextField.getText());
+                this.getSTC().changeZipcodeUser(this.profileZipcodeTextField.getText());
+                this.getSTC().changeCityUser(this.profileCityTextField.getText());
+                this.getSTC().changePhonenumberUser(this.profilePhonenumberTextField.getText());
+                
+                setFocusableProfilePanel(false);
+
+                this.popup("Changes succesfully saved.");
+                this.profileChangeSaveButton.setText("Change");
+            }
+        }
+    }//GEN-LAST:event_profileChangeSaveButtonActionPerformed
+
+    private void setFocusableProfilePanel(boolean focusable){
+        this.profileNameTextField.setFocusable(focusable);
+        this.profileGenderTextField.setFocusable(focusable);
+        this.profileStreetTextField.setFocusable(focusable);
+        this.profileHousenumberTextField.setFocusable(focusable);
+        this.profileZipcodeTextField.setFocusable(focusable);
+        this.profileCityTextField.setFocusable(focusable);
+        this.profilePhonenumberTextField.setFocusable(focusable);
+    }
+    
+    private void popup(String message){
+        JOptionPane.showMessageDialog(this, message);
+    }
+    
+    private void soccerAssociationSaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_soccerAssociationSaveButtonActionPerformed
+        this.getSTC().changeNameSA(this.soccerAssociationNameTextField.getText());
+        this.getSTC().changeStreetSA(this.soccerAssociationStreetTextField.getText());
+        this.getSTC().changeHousenumberSA(this.soccerAssociationHousenumberTextField.getText());
+        this.getSTC().changeZipcodeSA(this.soccerAssociationZipcodeTextField.getText());
+        this.getSTC().changeCitySA(this.soccerAssociationCityTextField.getText());
+        this.getSTC().changePhonenumberSA(this.SoccerAssociationPhonenumberTextField.getText());
+        this.popup("Changes succesfully saved.");
+    }//GEN-LAST:event_soccerAssociationSaveButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField SoccerAssociationPhonenumberTextField;
@@ -590,6 +642,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTextField loginInfoUsernameTextField;
     private javax.swing.JTabbedPane mainTabbedPane;
     private javax.swing.JPanel matchStatsPanel;
+    private javax.swing.JButton profileChangeSaveButton;
     private javax.swing.JLabel profileCityLabel;
     private javax.swing.JTextField profileCityTextField;
     private javax.swing.JLabel profileGenderLabel;
@@ -603,7 +656,6 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JPanel profilePanel;
     private javax.swing.JLabel profilePhonenumberLabel;
     private javax.swing.JTextField profilePhonenumberTextField;
-    private javax.swing.JButton profileSaveButton;
     private javax.swing.JLabel profileStreetLabel;
     private javax.swing.JTextField profileStreetTextField;
     private javax.swing.JLabel profileTeamLabel;
@@ -618,6 +670,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTextField soccerAssociationNameTextField;
     private javax.swing.JPanel soccerAssociationPanel;
     private javax.swing.JLabel soccerAssociationPhonenumberLabel;
+    private javax.swing.JButton soccerAssociationSaveButton;
     private javax.swing.JLabel soccerAssociationStreetLabel;
     private javax.swing.JTextField soccerAssociationStreetTextField;
     private javax.swing.JLabel soccerAssociationZipcodeLabel;
@@ -641,7 +694,7 @@ public class MainUI extends javax.swing.JFrame {
     
     private void setVisibilityPlayer(){
         this.setProfilePanel(true);
-        this.setSoccerAssociationPanel(true);
+        this.setSoccerAssociationPanel(true, false);
         this.setAvailabilityPanel(true);
         this.setMatchStatisticsPanel(false);
         this.setTeamPanel(false);
@@ -650,7 +703,7 @@ public class MainUI extends javax.swing.JFrame {
     
     private void setVisibilityCaptain(){
         this.setProfilePanel(true);
-        this.setSoccerAssociationPanel(true);
+        this.setSoccerAssociationPanel(true, false);
         this.setAvailabilityPanel(true);
         this.setMatchStatisticsPanel(true);
         this.setTeamPanel(false);
@@ -659,7 +712,7 @@ public class MainUI extends javax.swing.JFrame {
     
     private void setVisibilityCoach(){
         this.setProfilePanel(true);
-        this.setSoccerAssociationPanel(true);
+        this.setSoccerAssociationPanel(true, true);
         this.setAvailabilityPanel(false);
         this.setMatchStatisticsPanel(true);
         this.setTeamPanel(true);
@@ -676,12 +729,15 @@ public class MainUI extends javax.swing.JFrame {
             this.profileZipcodeTextField.setText(this.getSTC().getZipcodeUser());
             this.profileCityTextField.setText(this.getSTC().getCityUser());
             this.profilePhonenumberTextField.setText(this.getSTC().getPhonenumberUser());
+            
+            this.profileTeamTextField.setFocusable(false);
+            setFocusableProfilePanel(false);
         } else {
             this.mainTabbedPane.remove(this.profilePanel);
         }
     }
 
-    private void setSoccerAssociationPanel(boolean accessAllowed) {
+    private void setSoccerAssociationPanel(boolean accessAllowed, boolean editingAllowed) {
         if(accessAllowed){
             this.soccerAssociationNameTextField.setText(this.getSTC().getNameSA());
             this.soccerAssociationStreetTextField.setText(this.getSTC().getStreetSA());
@@ -689,6 +745,16 @@ public class MainUI extends javax.swing.JFrame {
             this.soccerAssociationZipcodeTextField.setText(this.getSTC().getZipcodeSA());
             this.soccerAssociationCityTextField.setText(this.getSTC().getCitySA());
             this.SoccerAssociationPhonenumberTextField.setText(this.getSTC().getPhonenumberSA());
+            if( !editingAllowed){
+                this.soccerAssociationNameTextField.setFocusable(false);
+                this.soccerAssociationStreetTextField.setFocusable(false);
+                this.soccerAssociationHousenumberTextField.setFocusable(false);
+                this.soccerAssociationZipcodeTextField.setFocusable(false);
+                this.soccerAssociationCityTextField.setFocusable(false);
+                this.SoccerAssociationPhonenumberTextField.setFocusable(false);
+                //not allowed to edit, so don't give the bottun to save changes.
+                this.soccerAssociationPanel.remove(this.soccerAssociationSaveButton);
+            }
         } else {
             this.mainTabbedPane.remove(this.soccerAssociationPanel);
         }
