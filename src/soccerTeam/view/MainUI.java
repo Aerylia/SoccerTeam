@@ -565,22 +565,43 @@ public class MainUI extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     public void setVisibility() {
-        this.setProfilePanel(true);
-        this.setSoccerAssociationPanel(true);
         if(this.getSTC().userIsPlayer()){
-            this.setAvailabilityPanel(true);
-            this.setTeamPanel(false);
             if(this.getSTC().userIsCaptain()){
-                this.setMatchStatisticsPanel(true);
+                this.setVisibilityCaptain();
             } else {
-                this.setMatchStatisticsPanel(false);
+                this.setVisibilityPlayer();
             }
         } else if(this.getSTC().userIsCoach()){
-            this.setMatchStatisticsPanel(true);
-            this.setAvailabilityPanel(false);
-            this.setTeamPanel(true);
+            this.setVisibilityCoach();
         }
         this.setVisible(true);
+    }
+    
+    private void setVisibilityPlayer(){
+        this.setProfilePanel(true);
+        this.setSoccerAssociationPanel(true);
+        this.setAvailabilityPanel(true);
+        this.setMatchStatisticsPanel(false);
+        this.setTeamPanel(false);
+        
+    }
+    
+    private void setVisibilityCaptain(){
+        this.setProfilePanel(true);
+        this.setSoccerAssociationPanel(true);
+        this.setAvailabilityPanel(true);
+        this.setMatchStatisticsPanel(true);
+        this.setTeamPanel(false);
+        
+    }
+    
+    private void setVisibilityCoach(){
+        this.setProfilePanel(true);
+        this.setSoccerAssociationPanel(true);
+        this.setAvailabilityPanel(false);
+        this.setMatchStatisticsPanel(true);
+        this.setTeamPanel(true);
+        
     }
 
     private void setProfilePanel(boolean accessAllowed) {
