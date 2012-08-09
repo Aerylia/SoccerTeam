@@ -86,7 +86,14 @@ public class MainUI extends javax.swing.JFrame {
         availabilityScrollPane = new javax.swing.JScrollPane();
         availabilityTable = new javax.swing.JTable();
         matchStatsPanel = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         teamPanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         welcomeTextLabel = new javax.swing.JLabel();
 
         loginInfoDialog.setResizable(false);
@@ -423,28 +430,76 @@ public class MainUI extends javax.swing.JFrame {
 
         mainTabbedPane.addTab("Availability", availabilityPanel);
 
+        jLabel3.setText("TODO");
+
         javax.swing.GroupLayout matchStatsPanelLayout = new javax.swing.GroupLayout(matchStatsPanel);
         matchStatsPanel.setLayout(matchStatsPanelLayout);
         matchStatsPanelLayout.setHorizontalGroup(
             matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 389, Short.MAX_VALUE)
+            .addGroup(matchStatsPanelLayout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(jLabel3)
+                .addContainerGap(210, Short.MAX_VALUE))
         );
         matchStatsPanelLayout.setVerticalGroup(
             matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 264, Short.MAX_VALUE)
+            .addGroup(matchStatsPanelLayout.createSequentialGroup()
+                .addGap(104, 104, 104)
+                .addComponent(jLabel3)
+                .addContainerGap(146, Short.MAX_VALUE))
         );
 
         mainTabbedPane.addTab("Match Statistics", matchStatsPanel);
+
+        jLabel1.setText("Team :");
+
+        jButton1.setText("Add Player");
+
+        jButton2.setText("Change Availability");
+
+        jLabel2.setText("Matches :");
+
+        jButton3.setText("Add Match");
+
+        jButton4.setText("Create MatchTeam");
 
         javax.swing.GroupLayout teamPanelLayout = new javax.swing.GroupLayout(teamPanel);
         teamPanel.setLayout(teamPanelLayout);
         teamPanelLayout.setHorizontalGroup(
             teamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 389, Short.MAX_VALUE)
+            .addGroup(teamPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(teamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(teamPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel2))
+                    .addGroup(teamPanelLayout.createSequentialGroup()
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
+                        .addComponent(jButton4))
+                    .addGroup(teamPanelLayout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton3)))
+                .addContainerGap())
         );
         teamPanelLayout.setVerticalGroup(
             teamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 264, Short.MAX_VALUE)
+            .addGroup(teamPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(teamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(teamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(teamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton4))
+                .addContainerGap(181, Short.MAX_VALUE))
         );
 
         mainTabbedPane.addTab("Team", teamPanel);
@@ -516,6 +571,13 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JPanel availabilityPanel;
     private javax.swing.JScrollPane availabilityScrollPane;
     private javax.swing.JTable availabilityTable;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JButton loginInfoCancelButton;
     private javax.swing.JDialog loginInfoDialog;
     private javax.swing.JLabel loginInfoIntro2Label;
