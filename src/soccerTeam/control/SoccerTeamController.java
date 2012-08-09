@@ -22,7 +22,7 @@ import soccerTeam.view.MainUI;
  */
 public class SoccerTeamController {
     
-    private String filename = "SavedDate.ser";
+    private String filename = "SavedData.ser";
     private DataPortal stm;
     private LoginUI loginUI;
     private FirstTimeSetupUI setupUI;
