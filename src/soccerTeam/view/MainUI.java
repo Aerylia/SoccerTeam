@@ -37,14 +37,15 @@ public class MainUI extends javax.swing.JFrame {
     private void initComponents() {
 
         loginInfoDialog = new javax.swing.JDialog();
-        loginInfoPanel = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
         loginInfoIntroLabel = new javax.swing.JLabel();
         loginInfoUsernameLabel = new javax.swing.JLabel();
         loginInfoPasswordLabel = new javax.swing.JLabel();
         loginInfoPasswordTextField = new javax.swing.JTextField();
         loginInfoUsernameTextField = new javax.swing.JTextField();
-        loginInfoChangeButton = new javax.swing.JButton();
+        loginInfoCancelButton = new javax.swing.JButton();
         loginInfoOKButton = new javax.swing.JButton();
+        loginInfoIntro2Label = new javax.swing.JLabel();
         mainTabbedPane = new javax.swing.JTabbedPane();
         profilePanel = new javax.swing.JPanel();
         profileTeamLabel = new javax.swing.JLabel();
@@ -81,13 +82,20 @@ public class MainUI extends javax.swing.JFrame {
         soccerAssociationCityTextField = new javax.swing.JTextField();
         welcomeTextLabel = new javax.swing.JLabel();
 
-        loginInfoIntroLabel.setText("Your current username and password are :");
+        loginInfoDialog.setResizable(false);
+
+        loginInfoIntroLabel.setText("Type your new username and password  and press OK to change it.");
 
         loginInfoUsernameLabel.setText("Username :");
 
         loginInfoPasswordLabel.setText("Password :");
 
-        loginInfoChangeButton.setText("Change");
+        loginInfoCancelButton.setText("Cancel");
+        loginInfoCancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginInfoCancelButtonActionPerformed(evt);
+            }
+        });
 
         loginInfoOKButton.setText("OK");
         loginInfoOKButton.addActionListener(new java.awt.event.ActionListener() {
@@ -96,62 +104,68 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout loginInfoPanelLayout = new javax.swing.GroupLayout(loginInfoPanel);
-        loginInfoPanel.setLayout(loginInfoPanelLayout);
-        loginInfoPanelLayout.setHorizontalGroup(
-            loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(loginInfoPanelLayout.createSequentialGroup()
+        loginInfoIntro2Label.setText("Press Cancel to close this window without saving.");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(loginInfoPanelLayout.createSequentialGroup()
-                        .addComponent(loginInfoIntroLabel)
-                        .addGap(0, 110, Short.MAX_VALUE))
-                    .addGroup(loginInfoPanelLayout.createSequentialGroup()
-                        .addGroup(loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(loginInfoUsernameLabel)
                             .addComponent(loginInfoPasswordLabel))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(loginInfoPasswordTextField)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(loginInfoPasswordTextField, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(loginInfoUsernameTextField)))
-                    .addGroup(loginInfoPanelLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(loginInfoChangeButton)
+                        .addComponent(loginInfoCancelButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(loginInfoOKButton, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(loginInfoOKButton, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(loginInfoIntroLabel)
+                            .addComponent(loginInfoIntro2Label))
+                        .addGap(0, 7, Short.MAX_VALUE))))
         );
-        loginInfoPanelLayout.setVerticalGroup(
-            loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(loginInfoPanelLayout.createSequentialGroup()
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(loginInfoIntroLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(loginInfoIntro2Label)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(loginInfoUsernameLabel)
                     .addComponent(loginInfoUsernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(loginInfoPasswordLabel)
                     .addComponent(loginInfoPasswordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(loginInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(loginInfoOKButton)
-                    .addComponent(loginInfoChangeButton))
-                .addContainerGap())
+                    .addComponent(loginInfoCancelButton)))
         );
 
         javax.swing.GroupLayout loginInfoDialogLayout = new javax.swing.GroupLayout(loginInfoDialog.getContentPane());
         loginInfoDialog.getContentPane().setLayout(loginInfoDialogLayout);
         loginInfoDialogLayout.setHorizontalGroup(
             loginInfoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginInfoDialogLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(loginInfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(loginInfoDialogLayout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         loginInfoDialogLayout.setVerticalGroup(
             loginInfoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(loginInfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(loginInfoDialogLayout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -232,7 +246,7 @@ public class MainUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(profileHousenumberLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(profileHousenumberTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)))))
+                                .addComponent(profileHousenumberTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         profilePanelLayout.setVerticalGroup(
@@ -308,7 +322,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(soccerAssociationHousenumberLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(soccerAssociationHousenumberTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE))
+                        .addComponent(soccerAssociationHousenumberTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE))
                     .addGroup(soccerAssociationPanelLayout.createSequentialGroup()
                         .addComponent(soccerAssociationZipcodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -357,7 +371,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(welcomeTextLabel)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(mainTabbedPane))
+                    .addComponent(mainTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 394, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -378,23 +392,30 @@ public class MainUI extends javax.swing.JFrame {
     }//GEN-LAST:event_profileLogoffLabelActionPerformed
 
     private void loginInfoOKButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginInfoOKButtonActionPerformed
+        this.getSTC().changeLoginInfoUser(this.loginInfoUsernameTextField.getText(),
+                                          this.loginInfoPasswordTextField.getText());
         this.loginInfoDialog.dispose();
     }//GEN-LAST:event_loginInfoOKButtonActionPerformed
 
     private void profileLoginInfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profileLoginInfoButtonActionPerformed
         this.loginInfoUsernameTextField.setText(this.getSTC().getUsernameUser());
         this.loginInfoPasswordTextField.setText(this.getSTC().getPasswordUser());
-        this.loginInfoDialog.setSize(400, 175);
+        this.loginInfoDialog.setSize(450, 200);
         this.loginInfoDialog.setVisible(true);
     }//GEN-LAST:event_profileLoginInfoButtonActionPerformed
 
+    private void loginInfoCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginInfoCancelButtonActionPerformed
+        this.loginInfoDialog.dispose();
+    }//GEN-LAST:event_loginInfoCancelButtonActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField SoccerAssociationPhonenumberTextField;
-    private javax.swing.JButton loginInfoChangeButton;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton loginInfoCancelButton;
     private javax.swing.JDialog loginInfoDialog;
+    private javax.swing.JLabel loginInfoIntro2Label;
     private javax.swing.JLabel loginInfoIntroLabel;
     private javax.swing.JButton loginInfoOKButton;
-    private javax.swing.JPanel loginInfoPanel;
     private javax.swing.JLabel loginInfoPasswordLabel;
     private javax.swing.JTextField loginInfoPasswordTextField;
     private javax.swing.JLabel loginInfoUsernameLabel;

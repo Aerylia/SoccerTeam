@@ -73,12 +73,14 @@ public class SoccerTeamController {
     }
     
     public void saveAndExit(JFrame window){
+        /*
         try {
             DataManager.save(filename);
         } catch (IOException ex) {
             //TODO
             Logger.getLogger(SoccerTeamController.class.getName()).log(Level.SEVERE, null, ex);
         }
+        */
         this.exit(window);
     }
     
@@ -185,4 +187,9 @@ public class SoccerTeamController {
     public String getPasswordUser() {
         return this.getSTM().getPasswordUser();
     }
+
+    public void changeLoginInfoUser(String username, String password) {
+        this.getSTM().changeLoginInfoUser(username, password);
+    }
+
 }

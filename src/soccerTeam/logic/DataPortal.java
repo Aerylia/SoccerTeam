@@ -162,4 +162,9 @@ public class DataPortal{
     public String getPasswordUser() {
         return this.getUser().getPassword();
     }
+
+    public void changeLoginInfoUser(String username, String password) {
+        this.getUser().changeLoginInfo(username, password);
+    }
+
 }
