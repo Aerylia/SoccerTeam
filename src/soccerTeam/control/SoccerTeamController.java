@@ -39,7 +39,7 @@ public class SoccerTeamController {
             this.setupUI = new FirstTimeSetupUI(this);
             setupUI.setVisible(true);
       /*  } catch (IOException e){
-            
+            //TODO do something
         } */
     }
     
@@ -57,6 +57,10 @@ public class SoccerTeamController {
             JOptionPane.showMessageDialog(loginUI, "Login failt.\nThe username and password "
                     + "combination is not know in our system. Please make sure you are submitted into this system.");
         }
+    }
+    
+    private FirstTimeSetupUI getSetupUI(){
+        return this.setupUI;
     }
     
     private LoginUI getLoginUI(){
@@ -95,7 +99,9 @@ public class SoccerTeamController {
         this.stm = new DataPortal(associationName, associationStreet, associationHousenumber,
                 associationZipcode, associationCity, associationPhonenumber, teamName, coachName,
                 coachGender, coachStreet, coachHousenumber, coachZipcode, coachCity, coachPhonenumber);
-        this.exit(this.setupUI);
+        JOptionPane.showMessageDialog(this.getSetupUI(), "Your username and passoword are set to :\n"
+                + "Username : \t" + this.getUsernameUser() + "\nPassword : \t" + this.getPasswordUser());
+        this.exit(this.getSetupUI());
         this.startUpUI();
     }
     
