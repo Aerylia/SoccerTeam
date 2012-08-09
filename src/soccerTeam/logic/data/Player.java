@@ -4,6 +4,8 @@
  */
 package soccerTeam.logic.data;
 
+import soccerTeam.logic.exceptions.ToMuchYellowCardsException;
+
 /**
  *
  * @author Arianne
@@ -41,6 +43,10 @@ public class Player implements User{
 		return this.suspentionInfo;
 	}
         
+        private ContactInfo getContactInfo(){
+            return this.contactInfo;
+        }
+        
         private LoginInfo getLoginInfo(){
             return this.loginInfo;
         }
@@ -55,73 +61,73 @@ public class Player implements User{
         
         @Override
         public String getName(){
-            return this.contactInfo.getName();
+            return this.getContactInfo().getName();
         }
 
         @Override
         public boolean getGender(){
-            return this.contactInfo.getGender();
+            return this.getContactInfo().getGender();
         }
 
         @Override
         public String getStreet(){
-            return this.contactInfo.getStreet();
+            return this.getContactInfo().getStreet();
         }
 
         @Override
         public String getHousenumber(){
-            return this.contactInfo.getHousenumber();
+            return this.getContactInfo().getHousenumber();
         }
 
         @Override
         public String getZipcode(){
-            return this.contactInfo.getZipcode();
+            return this.getContactInfo().getZipcode();
         }
         
         @Override
         public String getCity(){
-            return this.contactInfo.getCity();
+            return this.getContactInfo().getCity();
         }
 
         @Override
         public String getPhonenumber(){
-            return this.contactInfo.getPhonenumber();
+            return this.getContactInfo().getPhonenumber();
         }
         
 	//Setters
         @Override
         public void setName(String name) {
-            this.contactInfo.setName(name);
+            this.getContactInfo().setName(name);
         }
 
         @Override
         public void setGender(boolean gender) {
-            this.contactInfo.setGender(gender);
+            this.getContactInfo().setGender(gender);
         }
 
         @Override
         public void setStreet(String street) {
-            this.contactInfo.setStreet(street);
+            this.getContactInfo().setStreet(street);
         }
 
         @Override
         public void setHousenumber(String housenumber) {
-            this.contactInfo.setHousenumber(housenumber);
+            this.getContactInfo().setHousenumber(housenumber);
         }
         
         @Override
         public void setZipcode(String zipcode) {
-            this.contactInfo.setZipcode(zipcode);
+            this.getContactInfo().setZipcode(zipcode);
         }
 
         @Override
         public void setCity(String city) {
-            this.contactInfo.setCity(city);
+            this.getContactInfo().setCity(city);
         }
 
         @Override
         public void setPhonenumber(String phonenumber) {
-            this.contactInfo.setPhonenumber(phonenumber);
+            this.getContactInfo().setPhonenumber(phonenumber);
         }
         
 	private void setGoalkeeper(boolean goalkeeper){
@@ -178,4 +184,13 @@ public class Player implements User{
             return this;
         }
 
+        public void matchPassed(){
+            if(this.getSuspentionInfo().getTimeSuspended() != 0){
+                this.getSuspentionInfo().matchPassed();
+            }
+        }
+        
+        public void setSuspended(int yellowCards, int redCards) throws ToMuchYellowCardsException {
+            this.getSuspentionInfo().setSuspended(yellowCards, redCards);
+        }
 }

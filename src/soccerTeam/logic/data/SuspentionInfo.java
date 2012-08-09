@@ -4,7 +4,6 @@
  */
 package soccerTeam.logic.data;
 
-import soccerTeam.logic.exceptions.NoExistingMatchException;
 import soccerTeam.logic.exceptions.ToMuchYellowCardsException;
 
 /**
@@ -32,32 +31,42 @@ public class SuspentionInfo {
 	}
 	
 	//Setters	
-	public void setYellowCards(int amount){
+	private void setYellowCards(int amount){
 		this.numberOfYellowCards = amount;
 	}
 	
-	public void setTimeSuspended(int numberOfMatches){
+	private void setTimeSuspended(int numberOfMatches){
 		this.timeSuspended = numberOfMatches;
 	}
 	
 	//Methods
-	public void resetYellowCards(){
+	private void resetYellowCards(){
 		this.setYellowCards(0);
 	}
 	
-	public void addYellowCards(int amount){
+	private void addYellowCards(int amount){
 		this.setYellowCards(getYellowCards() + amount);
 	}
 	
 	public void matchPassed(){
-		int time = getTimeSuspended();
+		int time = this.getTimeSuspended();
 		if(time > 0){
 			this.setTimeSuspended(time-1);			
 		}
 	}
         
-        public void setSuspended(int yellowCards, int redCards, Match match){
-            //TODO
-            throw new UnsupportedOperationException("Not implemented yet");
+        public void setSuspended(int yellowCards, int redCards) throws ToMuchYellowCardsException{
+            if(yellowCards > 2){
+                throw new ToMuchYellowCardsException();
+            }
+            if(redCards != 0 || yellowCards > 1){
+                this.setTimeSuspended(2);
+                this.resetYellowCards();
+            } else if(yellowCards != 0){
+                this.addYellowCards(yellowCards);
+                if(this.getYellowCards() > 2){
+                    this.setTimeSuspended(1);
+                }
+            }
         }
 }
