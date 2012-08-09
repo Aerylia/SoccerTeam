@@ -81,6 +81,12 @@ public class MainUI extends javax.swing.JFrame {
         soccerAssociationHousenumberTextField = new javax.swing.JTextField();
         soccerAssociationCityLabel = new javax.swing.JLabel();
         soccerAssociationCityTextField = new javax.swing.JTextField();
+        availabilityPanel = new javax.swing.JPanel();
+        availabilityIntroLabel = new javax.swing.JLabel();
+        availabilityScrollPane = new javax.swing.JScrollPane();
+        availabilityTable = new javax.swing.JTable();
+        matchStatsPanel = new javax.swing.JPanel();
+        teamPanel = new javax.swing.JPanel();
         welcomeTextLabel = new javax.swing.JLabel();
 
         loginInfoDialog.setResizable(false);
@@ -360,10 +366,88 @@ public class MainUI extends javax.swing.JFrame {
                 .addGroup(soccerAssociationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(soccerAssociationPhonenumberLabel)
                     .addComponent(SoccerAssociationPhonenumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(109, Short.MAX_VALUE))
         );
 
         mainTabbedPane.addTab("SoccerAssociation", soccerAssociationPanel);
+
+        availabilityIntroLabel.setText("You are available for these matches :");
+
+        availabilityTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Date", "Time", "Opponents", "Location"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        availabilityTable.getTableHeader().setReorderingAllowed(false);
+        availabilityScrollPane.setViewportView(availabilityTable);
+
+        javax.swing.GroupLayout availabilityPanelLayout = new javax.swing.GroupLayout(availabilityPanel);
+        availabilityPanel.setLayout(availabilityPanelLayout);
+        availabilityPanelLayout.setHorizontalGroup(
+            availabilityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(availabilityPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(availabilityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(availabilityScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
+                    .addGroup(availabilityPanelLayout.createSequentialGroup()
+                        .addComponent(availabilityIntroLabel)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        availabilityPanelLayout.setVerticalGroup(
+            availabilityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(availabilityPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(availabilityIntroLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(availabilityScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE))
+        );
+
+        mainTabbedPane.addTab("Availability", availabilityPanel);
+
+        javax.swing.GroupLayout matchStatsPanelLayout = new javax.swing.GroupLayout(matchStatsPanel);
+        matchStatsPanel.setLayout(matchStatsPanelLayout);
+        matchStatsPanelLayout.setHorizontalGroup(
+            matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 389, Short.MAX_VALUE)
+        );
+        matchStatsPanelLayout.setVerticalGroup(
+            matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 264, Short.MAX_VALUE)
+        );
+
+        mainTabbedPane.addTab("Match Statistics", matchStatsPanel);
+
+        javax.swing.GroupLayout teamPanelLayout = new javax.swing.GroupLayout(teamPanel);
+        teamPanel.setLayout(teamPanelLayout);
+        teamPanelLayout.setHorizontalGroup(
+            teamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 389, Short.MAX_VALUE)
+        );
+        teamPanelLayout.setVerticalGroup(
+            teamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 264, Short.MAX_VALUE)
+        );
+
+        mainTabbedPane.addTab("Team", teamPanel);
 
         welcomeTextLabel.setText("Welcome \"username\".");
 
@@ -428,6 +512,10 @@ public class MainUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField SoccerAssociationPhonenumberTextField;
+    private javax.swing.JLabel availabilityIntroLabel;
+    private javax.swing.JPanel availabilityPanel;
+    private javax.swing.JScrollPane availabilityScrollPane;
+    private javax.swing.JTable availabilityTable;
     private javax.swing.JButton loginInfoCancelButton;
     private javax.swing.JDialog loginInfoDialog;
     private javax.swing.JLabel loginInfoIntro2Label;
@@ -439,6 +527,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel loginInfoUsernameLabel;
     private javax.swing.JTextField loginInfoUsernameTextField;
     private javax.swing.JTabbedPane mainTabbedPane;
+    private javax.swing.JPanel matchStatsPanel;
     private javax.swing.JLabel profileCityLabel;
     private javax.swing.JTextField profileCityTextField;
     private javax.swing.JLabel profileGenderLabel;
@@ -471,6 +560,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTextField soccerAssociationStreetTextField;
     private javax.swing.JLabel soccerAssociationZipcodeLabel;
     private javax.swing.JTextField soccerAssociationZipcodeTextField;
+    private javax.swing.JPanel teamPanel;
     private javax.swing.JLabel welcomeTextLabel;
     // End of variables declaration//GEN-END:variables
 
@@ -478,13 +568,17 @@ public class MainUI extends javax.swing.JFrame {
         this.setProfilePanel(true);
         this.setSoccerAssociationPanel(true);
         if(this.getSTC().userIsPlayer()){
+            this.setAvailabilityPanel(true);
+            this.setTeamPanel(false);
             if(this.getSTC().userIsCaptain()){
-                //set maintaining panel true
+                this.setMatchStatisticsPanel(true);
             } else {
-                //set maintaining panel false
+                this.setMatchStatisticsPanel(false);
             }
         } else if(this.getSTC().userIsCoach()){
-            //TODO
+            this.setMatchStatisticsPanel(true);
+            this.setAvailabilityPanel(false);
+            this.setTeamPanel(true);
         }
         this.setVisible(true);
     }
@@ -514,6 +608,30 @@ public class MainUI extends javax.swing.JFrame {
             this.SoccerAssociationPhonenumberTextField.setText(this.getSTC().getPhonenumberSA());
         } else {
             this.mainTabbedPane.remove(this.soccerAssociationPanel);
+        }
+    }
+
+    private void setAvailabilityPanel(boolean accessAllowed) {
+        if(accessAllowed){
+            //TODO get and set availability of user
+        } else {
+            this.mainTabbedPane.remove(this.availabilityPanel);
+        }
+    }
+
+    private void setMatchStatisticsPanel(boolean accessAllowed) {
+        if (accessAllowed) {
+            //TODO not sure yet if something needs to be done.
+        } else {
+            this.mainTabbedPane.remove(this.matchStatsPanel);
+        }
+    }
+
+    private void setTeamPanel(boolean accessAllowed) {
+        if (accessAllowed) {
+            //TODO not sure yet if something needs to be done.
+        } else {
+            this.mainTabbedPane.remove(this.teamPanel);
         }
     }
 }
