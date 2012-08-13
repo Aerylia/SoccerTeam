@@ -4,8 +4,6 @@
  */
 package soccerTeam.control;
 
-import soccerTeam.view.GUI;
-
 /**
  *
  * @author Arianne
