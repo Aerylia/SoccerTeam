@@ -4,6 +4,7 @@
   <NonVisualComponents>
     <Container class="javax.swing.JDialog" name="loginInfoDialog">
       <Properties>
+        <Property name="defaultCloseOperation" type="int" value="2"/>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
 
@@ -131,6 +132,460 @@
             </Component>
           </SubComponents>
         </Container>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="addPlayerDialog">
+      <Properties>
+        <Property name="defaultCloseOperation" type="int" value="2"/>
+        <Property name="title" type="java.lang.String" value="Add Player"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="addPlayerPhonenumberLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="addPlayerNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="addPlayerGenderLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="addPlayerStreetLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="addPlayerZipcodeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="addPlayerTeamLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="addPlayerPhonenumberTextField" max="32767" attributes="0"/>
+                                      <Component id="addPlayerNameTextField" alignment="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="addPlayerStreetTextField" max="32767" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="addPlayerHousenumberLabel" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="addPlayerHousenumberTextField" min="-2" pref="42" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="addPlayerZipcodeTextField" min="-2" pref="59" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="addPlayerCityLabel" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="addPlayerCityTextField" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="addPlayerTeamComboBox" min="-2" pref="196" max="-2" attributes="0"/>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="0" pref="10" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="addPlayerFemaleRadioButton" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="addPlayerMaleRadioButton" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="addPlayerIntroLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="79" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="addPlayerSaveButton" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="addPlayerCancelButton" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="addPlayerIntroLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="addPlayerNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="addPlayerNameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="addPlayerGenderLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="addPlayerFemaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="addPlayerMaleRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="addPlayerStreetLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="addPlayerStreetTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="addPlayerHousenumberTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="addPlayerHousenumberLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="addPlayerZipcodeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="addPlayerZipcodeTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="addPlayerCityTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="addPlayerCityLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="addPlayerPhonenumberLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="addPlayerPhonenumberTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="addPlayerTeamLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="addPlayerTeamComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="53" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="addPlayerCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="addPlayerSaveButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="addPlayerIntroLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Please enter the required information below to add a new player."/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="addPlayerGenderLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Gender :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="addPlayerNameLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Name :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="addPlayerStreetLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Street :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="addPlayerZipcodeLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Zipcode :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="addPlayerPhonenumberLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Phonenumber :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="addPlayerTeamLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Team :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="addPlayerPhonenumberTextField">
+        </Component>
+        <Component class="javax.swing.JTextField" name="addPlayerZipcodeTextField">
+        </Component>
+        <Component class="javax.swing.JComboBox" name="addPlayerTeamComboBox">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addPlayerTeamComboBoxActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox(this.getSTC().getDisplayableTeam())"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JTextField" name="addPlayerStreetTextField">
+        </Component>
+        <Component class="javax.swing.JTextField" name="addPlayerNameTextField">
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="addPlayerFemaleRadioButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Female"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addPlayerFemaleRadioButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="addPlayerMaleRadioButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Male"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addPlayerMaleRadioButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="addPlayerCancelButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancel"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addPlayerCancelButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="addPlayerSaveButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Save"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addPlayerSaveButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="addPlayerHousenumberTextField">
+        </Component>
+        <Component class="javax.swing.JLabel" name="addPlayerHousenumberLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Housenr. :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="addPlayerCityTextField">
+        </Component>
+        <Component class="javax.swing.JLabel" name="addPlayerCityLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="City :"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="changeAvailabilityDialog">
+      <Properties>
+        <Property name="defaultCloseOperation" type="int" value="2"/>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[600, 400]"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="changeAvailabilityHiddenTeamIndexLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="changeAvailabilitySetUnavailableButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="changeAvailabilitySetAvailableButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="changeAvailabilityCancelButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="changeAvailabilityMatchScrollPane" min="-2" pref="250" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="changeAvailabilityPlayerScrollPane" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="changeAvailabilityIntroLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                          <Component id="changeAvailabilityMatchLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="changeAvailabilityPlayersLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="changeAvailabilityIntroLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="changeAvailabilityMatchLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="changeAvailabilityPlayersLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="changeAvailabilityMatchScrollPane" pref="0" max="32767" attributes="0"/>
+                      <Component id="changeAvailabilityPlayerScrollPane" pref="254" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="changeAvailabilityCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="changeAvailabilitySetAvailableButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="changeAvailabilitySetUnavailableButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="changeAvailabilityHiddenTeamIndexLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="changeAvailabilityIntroLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Please select first select a match, then select a player to set his or her availability."/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="changeAvailabilityMatchLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Match :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="changeAvailabilityPlayersLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Players :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="changeAvailabilityCancelButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancel"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="changeAvailabilityCancelButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="changeAvailabilitySetAvailableButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Set Available"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="changeAvailabilitySetAvailableButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="changeAvailabilitySetUnavailableButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Set Unavailable"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="changeAvailabilitySetUnavailableButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="changeAvailabilityMatchScrollPane">
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="changeAvailabilityMatchTable">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    this.getSTC().getDisplayableMatches(-1),&#xa;    new String [] {&#xa;        &quot;Date&quot;, &quot;Time&quot;, &quot;Opponents&quot;, &quot;Location&quot;&#xa;    }&#xa;)" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="changeAvailabilityMatchTable.setColumnSelectionAllowed(false);&#xa;changeAvailabilityMatchTable.setCellSelectionEnabled(false);&#xa;changeAvailabilityMatchTable.setRowSelectionAllowed(true);"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="changeAvailabilityPlayerScrollPane">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JList" name="changeAvailabilityPlayerList">
+              <Properties>
+                <Property name="model" preCode="changeAvailabilityPlayerList.setListData(this.getSTC().getDisplayablePlayers(-1));"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="changeAvailabilityHiddenTeamIndexLabel">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="changeAvailabilityHiddenTeamIndexLabel.setVisible(false);"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="teamSelectionDialog">
+      <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[200, 150]"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="teamSelectionOKButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="teamSelectionCancelButton" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="teamSelectionIntroLabel" max="32767" attributes="0"/>
+                              <Component id="teamSelectionTeamComboBox" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="teamSelectionIntroLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="teamSelectionTeamComboBox" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="15" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="teamSelectionCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="teamSelectionOKButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="teamSelectionIntroLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Please select a team :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="teamSelectionCancelButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancel"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="teamSelectionCancelButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="teamSelectionOKButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="OK"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="teamSelectionOKButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="teamSelectionTeamComboBox">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="teamSelectionTeamComboBoxActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox(this.getSTC().getDisplayableTeam())"/>
+          </AuxValues>
+        </Component>
       </SubComponents>
     </Container>
   </NonVisualComponents>
@@ -663,19 +1118,27 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <Component id="teamTeamLabel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                              <Component id="teamMatchesLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                              <Component id="teamChangeAvailabilityButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace pref="123" max="32767" attributes="0"/>
-                              <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                              <Component id="teamCreateMatchTeamButton" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                              <Component id="teamAddPlayerButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                              <Component id="teamnAddMatchButton" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="teamAssignCaptainButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="teamAssignGoalkeeperButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="teamDismissGoalkeeperButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -687,53 +1150,80 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="teamTeamLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="teamMatchesLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="teamAddPlayerButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="teamnAddMatchButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="teamChangeAvailabilityButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="teamCreateMatchTeamButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="181" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="teamAssignCaptainButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="teamAssignGoalkeeperButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="teamDismissGoalkeeperButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="94" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="teamTeamLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Team :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="teamAddPlayerButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Add Player"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="teamAddPlayerButtonActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="teamChangeAvailabilityButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Change Availability"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="teamChangeAvailabilityButtonActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel2">
+            <Component class="javax.swing.JLabel" name="teamMatchesLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Matches :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton3">
+            <Component class="javax.swing.JButton" name="teamnAddMatchButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Add Match"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton4">
+            <Component class="javax.swing.JButton" name="teamCreateMatchTeamButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Create MatchTeam"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="teamAssignCaptainButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Assign Captain"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="teamAssignGoalkeeperButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Assign Goalkeeper"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="teamDismissGoalkeeperButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Dismiss Goalkeeper"/>
               </Properties>
             </Component>
           </SubComponents>

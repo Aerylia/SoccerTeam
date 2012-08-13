@@ -47,6 +47,44 @@ public class MainUI extends javax.swing.JFrame {
         loginInfoCancelButton = new javax.swing.JButton();
         loginInfoOKButton = new javax.swing.JButton();
         loginInfoIntro2Label = new javax.swing.JLabel();
+        addPlayerDialog = new javax.swing.JDialog();
+        addPlayerIntroLabel = new javax.swing.JLabel();
+        addPlayerGenderLabel = new javax.swing.JLabel();
+        addPlayerNameLabel = new javax.swing.JLabel();
+        addPlayerStreetLabel = new javax.swing.JLabel();
+        addPlayerZipcodeLabel = new javax.swing.JLabel();
+        addPlayerPhonenumberLabel = new javax.swing.JLabel();
+        addPlayerTeamLabel = new javax.swing.JLabel();
+        addPlayerPhonenumberTextField = new javax.swing.JTextField();
+        addPlayerZipcodeTextField = new javax.swing.JTextField();
+        addPlayerTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeam());
+        addPlayerStreetTextField = new javax.swing.JTextField();
+        addPlayerNameTextField = new javax.swing.JTextField();
+        addPlayerFemaleRadioButton = new javax.swing.JRadioButton();
+        addPlayerMaleRadioButton = new javax.swing.JRadioButton();
+        addPlayerCancelButton = new javax.swing.JButton();
+        addPlayerSaveButton = new javax.swing.JButton();
+        addPlayerHousenumberTextField = new javax.swing.JTextField();
+        addPlayerHousenumberLabel = new javax.swing.JLabel();
+        addPlayerCityTextField = new javax.swing.JTextField();
+        addPlayerCityLabel = new javax.swing.JLabel();
+        changeAvailabilityDialog = new javax.swing.JDialog();
+        changeAvailabilityIntroLabel = new javax.swing.JLabel();
+        changeAvailabilityMatchLabel = new javax.swing.JLabel();
+        changeAvailabilityPlayersLabel = new javax.swing.JLabel();
+        changeAvailabilityCancelButton = new javax.swing.JButton();
+        changeAvailabilitySetAvailableButton = new javax.swing.JButton();
+        changeAvailabilitySetUnavailableButton = new javax.swing.JButton();
+        changeAvailabilityMatchScrollPane = new javax.swing.JScrollPane();
+        changeAvailabilityMatchTable = new javax.swing.JTable();
+        changeAvailabilityPlayerScrollPane = new javax.swing.JScrollPane();
+        changeAvailabilityPlayerList = new javax.swing.JList();
+        changeAvailabilityHiddenTeamIndexLabel = new javax.swing.JLabel();
+        teamSelectionDialog = new javax.swing.JDialog();
+        teamSelectionIntroLabel = new javax.swing.JLabel();
+        teamSelectionCancelButton = new javax.swing.JToggleButton();
+        teamSelectionOKButton = new javax.swing.JToggleButton();
+        teamSelectionTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeam());
         mainTabbedPane = new javax.swing.JTabbedPane();
         profilePanel = new javax.swing.JPanel();
         profileTeamLabel = new javax.swing.JLabel();
@@ -89,14 +127,18 @@ public class MainUI extends javax.swing.JFrame {
         matchStatsPanel = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         teamPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        teamTeamLabel = new javax.swing.JLabel();
+        teamAddPlayerButton = new javax.swing.JButton();
+        teamChangeAvailabilityButton = new javax.swing.JButton();
+        teamMatchesLabel = new javax.swing.JLabel();
+        teamnAddMatchButton = new javax.swing.JButton();
+        teamCreateMatchTeamButton = new javax.swing.JButton();
+        teamAssignCaptainButton = new javax.swing.JButton();
+        teamAssignGoalkeeperButton = new javax.swing.JButton();
+        teamDismissGoalkeeperButton = new javax.swing.JButton();
         welcomeTextLabel = new javax.swing.JLabel();
 
+        loginInfoDialog.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         loginInfoDialog.setResizable(false);
 
         loginInfoIntroLabel.setText("Type your new username and password  and press OK to change it.");
@@ -180,6 +222,312 @@ public class MainUI extends javax.swing.JFrame {
             loginInfoDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(loginInfoDialogLayout.createSequentialGroup()
                 .addComponent(loginInfoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        addPlayerDialog.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        addPlayerDialog.setTitle("Add Player");
+
+        addPlayerIntroLabel.setText("Please enter the required information below to add a new player.");
+
+        addPlayerGenderLabel.setText("Gender :");
+
+        addPlayerNameLabel.setText("Name :");
+
+        addPlayerStreetLabel.setText("Street :");
+
+        addPlayerZipcodeLabel.setText("Zipcode :");
+
+        addPlayerPhonenumberLabel.setText("Phonenumber :");
+
+        addPlayerTeamLabel.setText("Team :");
+
+        addPlayerTeamComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addPlayerTeamComboBoxActionPerformed(evt);
+            }
+        });
+
+        addPlayerFemaleRadioButton.setText("Female");
+        addPlayerFemaleRadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addPlayerFemaleRadioButtonActionPerformed(evt);
+            }
+        });
+
+        addPlayerMaleRadioButton.setText("Male");
+        addPlayerMaleRadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addPlayerMaleRadioButtonActionPerformed(evt);
+            }
+        });
+
+        addPlayerCancelButton.setText("Cancel");
+        addPlayerCancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addPlayerCancelButtonActionPerformed(evt);
+            }
+        });
+
+        addPlayerSaveButton.setText("Save");
+        addPlayerSaveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addPlayerSaveButtonActionPerformed(evt);
+            }
+        });
+
+        addPlayerHousenumberLabel.setText("Housenr. :");
+
+        addPlayerCityLabel.setText("City :");
+
+        javax.swing.GroupLayout addPlayerDialogLayout = new javax.swing.GroupLayout(addPlayerDialog.getContentPane());
+        addPlayerDialog.getContentPane().setLayout(addPlayerDialogLayout);
+        addPlayerDialogLayout.setHorizontalGroup(
+            addPlayerDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addPlayerDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(addPlayerDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addPlayerDialogLayout.createSequentialGroup()
+                        .addGroup(addPlayerDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(addPlayerPhonenumberLabel)
+                            .addComponent(addPlayerNameLabel)
+                            .addComponent(addPlayerGenderLabel)
+                            .addComponent(addPlayerStreetLabel)
+                            .addComponent(addPlayerZipcodeLabel)
+                            .addComponent(addPlayerTeamLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(addPlayerDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(addPlayerDialogLayout.createSequentialGroup()
+                                .addGroup(addPlayerDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(addPlayerPhonenumberTextField)
+                                    .addComponent(addPlayerNameTextField)
+                                    .addGroup(addPlayerDialogLayout.createSequentialGroup()
+                                        .addComponent(addPlayerStreetTextField)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(addPlayerHousenumberLabel)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(addPlayerHousenumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(addPlayerDialogLayout.createSequentialGroup()
+                                        .addComponent(addPlayerZipcodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(addPlayerCityLabel)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(addPlayerCityTextField))
+                                    .addGroup(addPlayerDialogLayout.createSequentialGroup()
+                                        .addComponent(addPlayerTeamComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(0, 10, 10))
+                            .addGroup(addPlayerDialogLayout.createSequentialGroup()
+                                .addComponent(addPlayerFemaleRadioButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(addPlayerMaleRadioButton)
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(addPlayerDialogLayout.createSequentialGroup()
+                        .addGroup(addPlayerDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(addPlayerDialogLayout.createSequentialGroup()
+                                .addComponent(addPlayerIntroLabel)
+                                .addGap(0, 79, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addPlayerDialogLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(addPlayerSaveButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(addPlayerCancelButton)))
+                        .addContainerGap())))
+        );
+        addPlayerDialogLayout.setVerticalGroup(
+            addPlayerDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addPlayerDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(addPlayerIntroLabel)
+                .addGap(18, 18, 18)
+                .addGroup(addPlayerDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addPlayerNameLabel)
+                    .addComponent(addPlayerNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(addPlayerDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addPlayerGenderLabel)
+                    .addComponent(addPlayerFemaleRadioButton)
+                    .addComponent(addPlayerMaleRadioButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(addPlayerDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addPlayerStreetLabel)
+                    .addComponent(addPlayerStreetTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addPlayerHousenumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addPlayerHousenumberLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(addPlayerDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addPlayerZipcodeLabel)
+                    .addComponent(addPlayerZipcodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addPlayerCityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addPlayerCityLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(addPlayerDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addPlayerPhonenumberLabel)
+                    .addComponent(addPlayerPhonenumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(addPlayerDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addPlayerTeamLabel)
+                    .addComponent(addPlayerTeamComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addGroup(addPlayerDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addPlayerCancelButton)
+                    .addComponent(addPlayerSaveButton))
+                .addContainerGap())
+        );
+
+        changeAvailabilityDialog.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        changeAvailabilityDialog.setMinimumSize(new java.awt.Dimension(600, 400));
+
+        changeAvailabilityIntroLabel.setText("Please select first select a match, then select a player to set his or her availability.");
+
+        changeAvailabilityMatchLabel.setText("Match :");
+
+        changeAvailabilityPlayersLabel.setText("Players :");
+
+        changeAvailabilityCancelButton.setText("Cancel");
+        changeAvailabilityCancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                changeAvailabilityCancelButtonActionPerformed(evt);
+            }
+        });
+
+        changeAvailabilitySetAvailableButton.setText("Set Available");
+        changeAvailabilitySetAvailableButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                changeAvailabilitySetAvailableButtonActionPerformed(evt);
+            }
+        });
+
+        changeAvailabilitySetUnavailableButton.setText("Set Unavailable");
+        changeAvailabilitySetUnavailableButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                changeAvailabilitySetUnavailableButtonActionPerformed(evt);
+            }
+        });
+
+        changeAvailabilityMatchTable.setModel(new javax.swing.table.DefaultTableModel(
+            this.getSTC().getDisplayableMatches(-1),
+            new String [] {
+                "Date", "Time", "Opponents", "Location"
+            }
+        ));
+        changeAvailabilityMatchTable.setColumnSelectionAllowed(false);
+        changeAvailabilityMatchTable.setCellSelectionEnabled(false);
+        changeAvailabilityMatchTable.setRowSelectionAllowed(true);
+        changeAvailabilityMatchScrollPane.setViewportView(changeAvailabilityMatchTable);
+
+        changeAvailabilityPlayerList.setListData(this.getSTC().getDisplayablePlayers(-1));
+        changeAvailabilityPlayerScrollPane.setViewportView(changeAvailabilityPlayerList);
+
+        changeAvailabilityHiddenTeamIndexLabel.setVisible(false);
+
+        javax.swing.GroupLayout changeAvailabilityDialogLayout = new javax.swing.GroupLayout(changeAvailabilityDialog.getContentPane());
+        changeAvailabilityDialog.getContentPane().setLayout(changeAvailabilityDialogLayout);
+        changeAvailabilityDialogLayout.setHorizontalGroup(
+            changeAvailabilityDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(changeAvailabilityDialogLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(changeAvailabilityDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(changeAvailabilityDialogLayout.createSequentialGroup()
+                        .addComponent(changeAvailabilityHiddenTeamIndexLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(changeAvailabilitySetUnavailableButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(changeAvailabilitySetAvailableButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(changeAvailabilityCancelButton)
+                        .addContainerGap())
+                    .addGroup(changeAvailabilityDialogLayout.createSequentialGroup()
+                        .addComponent(changeAvailabilityMatchScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(changeAvailabilityPlayerScrollPane)
+                        .addContainerGap())
+                    .addGroup(changeAvailabilityDialogLayout.createSequentialGroup()
+                        .addComponent(changeAvailabilityIntroLabel)
+                        .addContainerGap())
+                    .addGroup(changeAvailabilityDialogLayout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addComponent(changeAvailabilityMatchLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(changeAvailabilityPlayersLabel)
+                        .addGap(81, 81, 81))))
+        );
+        changeAvailabilityDialogLayout.setVerticalGroup(
+            changeAvailabilityDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(changeAvailabilityDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(changeAvailabilityIntroLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(changeAvailabilityDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(changeAvailabilityMatchLabel)
+                    .addComponent(changeAvailabilityPlayersLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(changeAvailabilityDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(changeAvailabilityMatchScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(changeAvailabilityPlayerScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(changeAvailabilityDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(changeAvailabilityCancelButton)
+                    .addComponent(changeAvailabilitySetAvailableButton)
+                    .addComponent(changeAvailabilitySetUnavailableButton)
+                    .addComponent(changeAvailabilityHiddenTeamIndexLabel))
+                .addContainerGap())
+        );
+
+        teamSelectionDialog.setMinimumSize(new java.awt.Dimension(200, 150));
+
+        teamSelectionIntroLabel.setText("Please select a team :");
+
+        teamSelectionCancelButton.setText("Cancel");
+        teamSelectionCancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                teamSelectionCancelButtonActionPerformed(evt);
+            }
+        });
+
+        teamSelectionOKButton.setText("OK");
+        teamSelectionOKButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                teamSelectionOKButtonActionPerformed(evt);
+            }
+        });
+
+        teamSelectionTeamComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                teamSelectionTeamComboBoxActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout teamSelectionDialogLayout = new javax.swing.GroupLayout(teamSelectionDialog.getContentPane());
+        teamSelectionDialog.getContentPane().setLayout(teamSelectionDialogLayout);
+        teamSelectionDialogLayout.setHorizontalGroup(
+            teamSelectionDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(teamSelectionDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(teamSelectionDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, teamSelectionDialogLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(teamSelectionOKButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(teamSelectionCancelButton))
+                    .addGroup(teamSelectionDialogLayout.createSequentialGroup()
+                        .addGroup(teamSelectionDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(teamSelectionIntroLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(teamSelectionTeamComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        teamSelectionDialogLayout.setVerticalGroup(
+            teamSelectionDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(teamSelectionDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(teamSelectionIntroLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(teamSelectionTeamComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addGroup(teamSelectionDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(teamSelectionCancelButton)
+                    .addComponent(teamSelectionOKButton))
                 .addContainerGap())
         );
 
@@ -466,17 +814,33 @@ public class MainUI extends javax.swing.JFrame {
 
         mainTabbedPane.addTab("Match Statistics", matchStatsPanel);
 
-        jLabel1.setText("Team :");
+        teamTeamLabel.setText("Team :");
 
-        jButton1.setText("Add Player");
+        teamAddPlayerButton.setText("Add Player");
+        teamAddPlayerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                teamAddPlayerButtonActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Change Availability");
+        teamChangeAvailabilityButton.setText("Change Availability");
+        teamChangeAvailabilityButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                teamChangeAvailabilityButtonActionPerformed(evt);
+            }
+        });
 
-        jLabel2.setText("Matches :");
+        teamMatchesLabel.setText("Matches :");
 
-        jButton3.setText("Add Match");
+        teamnAddMatchButton.setText("Add Match");
 
-        jButton4.setText("Create MatchTeam");
+        teamCreateMatchTeamButton.setText("Create MatchTeam");
+
+        teamAssignCaptainButton.setText("Assign Captain");
+
+        teamAssignGoalkeeperButton.setText("Assign Goalkeeper");
+
+        teamDismissGoalkeeperButton.setText("Dismiss Goalkeeper");
 
         javax.swing.GroupLayout teamPanelLayout = new javax.swing.GroupLayout(teamPanel);
         teamPanel.setLayout(teamPanelLayout);
@@ -486,17 +850,23 @@ public class MainUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(teamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(teamPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addComponent(teamTeamLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2))
+                        .addComponent(teamMatchesLabel))
                     .addGroup(teamPanelLayout.createSequentialGroup()
-                        .addComponent(jButton2)
+                        .addComponent(teamChangeAvailabilityButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
-                        .addComponent(jButton4))
+                        .addComponent(teamCreateMatchTeamButton))
                     .addGroup(teamPanelLayout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(teamAddPlayerButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3)))
+                        .addComponent(teamnAddMatchButton))
+                    .addGroup(teamPanelLayout.createSequentialGroup()
+                        .addGroup(teamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(teamAssignCaptainButton)
+                            .addComponent(teamAssignGoalkeeperButton)
+                            .addComponent(teamDismissGoalkeeperButton))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         teamPanelLayout.setVerticalGroup(
@@ -504,17 +874,23 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(teamPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(teamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
+                    .addComponent(teamTeamLabel)
+                    .addComponent(teamMatchesLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(teamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3))
+                    .addComponent(teamAddPlayerButton)
+                    .addComponent(teamnAddMatchButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(teamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton4))
-                .addContainerGap(181, Short.MAX_VALUE))
+                    .addComponent(teamChangeAvailabilityButton)
+                    .addComponent(teamCreateMatchTeamButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(teamAssignCaptainButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(teamAssignGoalkeeperButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(teamDismissGoalkeeperButton)
+                .addContainerGap(94, Short.MAX_VALUE))
         );
 
         mainTabbedPane.addTab("Team", teamPanel);
@@ -603,7 +979,7 @@ public class MainUI extends javax.swing.JFrame {
         this.profilePhonenumberTextField.setFocusable(focusable);
     }
     
-    private void popup(String message){
+    public void popup(String message){
         JOptionPane.showMessageDialog(this, message);
     }
     
@@ -617,18 +993,149 @@ public class MainUI extends javax.swing.JFrame {
         this.popup("Changes succesfully saved.");
     }//GEN-LAST:event_soccerAssociationSaveButtonActionPerformed
 
+    private void addPlayerCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPlayerCancelButtonActionPerformed
+        this.addPlayerDialog.dispose();
+    }//GEN-LAST:event_addPlayerCancelButtonActionPerformed
+
+    private void addPlayerFemaleRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPlayerFemaleRadioButtonActionPerformed
+        this.addPlayerMaleRadioButton.setSelected(false);
+    }//GEN-LAST:event_addPlayerFemaleRadioButtonActionPerformed
+
+    private void addPlayerMaleRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPlayerMaleRadioButtonActionPerformed
+        this.addPlayerFemaleRadioButton.setSelected(false);
+    }//GEN-LAST:event_addPlayerMaleRadioButtonActionPerformed
+
+    private void teamAddPlayerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teamAddPlayerButtonActionPerformed
+        this.addPlayerDialog.setSize(500, 300);
+        this.addPlayerDialog.setVisible(true);
+    }//GEN-LAST:event_teamAddPlayerButtonActionPerformed
+
+    private void addPlayerTeamComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPlayerTeamComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addPlayerTeamComboBoxActionPerformed
+
+    private void addPlayerSaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPlayerSaveButtonActionPerformed
+        String playerName = this.addPlayerNameTextField.getText();
+        boolean playerGender;
+        String playerStreet = this.addPlayerStreetTextField.getText();
+        String playerHousenumber = this.addPlayerHousenumberTextField.getText();
+        String playerZipcode = this.addPlayerZipcodeTextField.getText();
+        String playerCity = this.addPlayerCityTextField.getText();
+        String playerPhonenumber = this.addPlayerPhonenumberTextField.getText();
+        int teamIndex = this.addPlayerTeamComboBox.getSelectedIndex();
+  
+        if(!this.addPlayerFemaleRadioButton.isSelected() && !this.addPlayerMaleRadioButton.isSelected()){
+            this.popup("Please enter the player's gender.");
+        } else if(playerName.isEmpty()){
+            this.popup("Please enter the player's name.");
+        } else if(playerStreet.isEmpty()){
+            this.popup("Please enter the player's street.");
+        } else if(playerHousenumber.isEmpty()){
+            this.popup("Please enter the player's housenumber.");
+        } else if(playerZipcode.isEmpty()){
+            this.popup("Please enter the player's zipcode.");
+        } else if(playerCity.isEmpty()){
+            this.popup("Please enter the player's city.");
+        } else if(playerPhonenumber.isEmpty()){
+            this.popup("Please enter the player's phonenumber.");
+        } else {
+            playerGender = this.addPlayerMaleRadioButton.isSelected(); //true is male, false is female.
+            String[] loginInfo;
+            loginInfo = this.getSTC().createPlayer(teamIndex, playerName, playerGender, playerStreet, playerHousenumber, 
+                    playerZipcode, playerCity, playerPhonenumber);
+            this.popup("Player succesfully added. His/her login information is:\n"
+                     + "Username :\t " + loginInfo[0] + "\nPassword :\t " + loginInfo[1]);
+            this.addPlayerDialog.dispose();
+        }
+
+    }//GEN-LAST:event_addPlayerSaveButtonActionPerformed
+
+    private void teamChangeAvailabilityButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teamChangeAvailabilityButtonActionPerformed
+        this.teamSelectionDialog.setVisible(true);
+    }//GEN-LAST:event_teamChangeAvailabilityButtonActionPerformed
+
+    private void teamSelectionTeamComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teamSelectionTeamComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_teamSelectionTeamComboBoxActionPerformed
+
+    private void teamSelectionCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teamSelectionCancelButtonActionPerformed
+        this.teamSelectionDialog.dispose();
+    }//GEN-LAST:event_teamSelectionCancelButtonActionPerformed
+
+    private void teamSelectionOKButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teamSelectionOKButtonActionPerformed
+        int teamIndex = this.teamSelectionTeamComboBox.getSelectedIndex();
+        this.changeAvailabilityHiddenTeamIndexLabel.setText(new Integer(teamIndex).toString());
+        String[][] matches = this.getSTC().getDisplayableMatches(teamIndex);
+        if(matches.length > 0){
+            this.changeAvailabilityMatchTable.setModel(new javax.swing.table.DefaultTableModel(
+                    matches, new String [] { "Date", "Time", "Opponents", "Location" }));
+            String[] players = this.getSTC().getDisplayablePlayers(teamIndex);
+            if(players.length > 0){
+                this.changeAvailabilityPlayerList.setListData(players);
+                this.changeAvailabilityDialog.setVisible(true);
+            } else {
+                this.popup("There are no players known in this Team, you are not capable of changing the availability because of that.");
+                this.changeAvailabilityDialog.dispose();
+            }
+        } else {
+            this.popup("There are no matches known for this Team, you are not capable of changing the availability because of that.");
+            this.changeAvailabilityDialog.dispose();
+        }
+    }//GEN-LAST:event_teamSelectionOKButtonActionPerformed
+
+    private void changeAvailabilityCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeAvailabilityCancelButtonActionPerformed
+        this.changeAvailabilityDialog.dispose();
+    }//GEN-LAST:event_changeAvailabilityCancelButtonActionPerformed
+
+    private void changeAvailabilitySetAvailableButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeAvailabilitySetAvailableButtonActionPerformed
+        this.getSTC().setAvailable(Integer.parseInt(this.changeAvailabilityHiddenTeamIndexLabel.getText()),
+                this.changeAvailabilityMatchTable.getSelectedRow(), this.changeAvailabilityPlayerList.getSelectedIndex());
+    }//GEN-LAST:event_changeAvailabilitySetAvailableButtonActionPerformed
+
+    private void changeAvailabilitySetUnavailableButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeAvailabilitySetUnavailableButtonActionPerformed
+        this.getSTC().setUnavailable(Integer.parseInt(this.changeAvailabilityHiddenTeamIndexLabel.getText()), 
+                this.changeAvailabilityMatchTable.getSelectedRow(), this.changeAvailabilityPlayerList.getSelectedIndex());
+    }//GEN-LAST:event_changeAvailabilitySetUnavailableButtonActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField SoccerAssociationPhonenumberTextField;
+    private javax.swing.JButton addPlayerCancelButton;
+    private javax.swing.JLabel addPlayerCityLabel;
+    private javax.swing.JTextField addPlayerCityTextField;
+    private javax.swing.JDialog addPlayerDialog;
+    private javax.swing.JRadioButton addPlayerFemaleRadioButton;
+    private javax.swing.JLabel addPlayerGenderLabel;
+    private javax.swing.JLabel addPlayerHousenumberLabel;
+    private javax.swing.JTextField addPlayerHousenumberTextField;
+    private javax.swing.JLabel addPlayerIntroLabel;
+    private javax.swing.JRadioButton addPlayerMaleRadioButton;
+    private javax.swing.JLabel addPlayerNameLabel;
+    private javax.swing.JTextField addPlayerNameTextField;
+    private javax.swing.JLabel addPlayerPhonenumberLabel;
+    private javax.swing.JTextField addPlayerPhonenumberTextField;
+    private javax.swing.JButton addPlayerSaveButton;
+    private javax.swing.JLabel addPlayerStreetLabel;
+    private javax.swing.JTextField addPlayerStreetTextField;
+    private javax.swing.JComboBox addPlayerTeamComboBox;
+    private javax.swing.JLabel addPlayerTeamLabel;
+    private javax.swing.JLabel addPlayerZipcodeLabel;
+    private javax.swing.JTextField addPlayerZipcodeTextField;
     private javax.swing.JLabel availabilityIntroLabel;
     private javax.swing.JPanel availabilityPanel;
     private javax.swing.JScrollPane availabilityScrollPane;
     private javax.swing.JTable availabilityTable;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton changeAvailabilityCancelButton;
+    private javax.swing.JDialog changeAvailabilityDialog;
+    private javax.swing.JLabel changeAvailabilityHiddenTeamIndexLabel;
+    private javax.swing.JLabel changeAvailabilityIntroLabel;
+    private javax.swing.JLabel changeAvailabilityMatchLabel;
+    private javax.swing.JScrollPane changeAvailabilityMatchScrollPane;
+    private javax.swing.JTable changeAvailabilityMatchTable;
+    private javax.swing.JList changeAvailabilityPlayerList;
+    private javax.swing.JScrollPane changeAvailabilityPlayerScrollPane;
+    private javax.swing.JLabel changeAvailabilityPlayersLabel;
+    private javax.swing.JButton changeAvailabilitySetAvailableButton;
+    private javax.swing.JButton changeAvailabilitySetUnavailableButton;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JButton loginInfoCancelButton;
     private javax.swing.JDialog loginInfoDialog;
@@ -675,7 +1182,21 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTextField soccerAssociationStreetTextField;
     private javax.swing.JLabel soccerAssociationZipcodeLabel;
     private javax.swing.JTextField soccerAssociationZipcodeTextField;
+    private javax.swing.JButton teamAddPlayerButton;
+    private javax.swing.JButton teamAssignCaptainButton;
+    private javax.swing.JButton teamAssignGoalkeeperButton;
+    private javax.swing.JButton teamChangeAvailabilityButton;
+    private javax.swing.JButton teamCreateMatchTeamButton;
+    private javax.swing.JButton teamDismissGoalkeeperButton;
+    private javax.swing.JLabel teamMatchesLabel;
     private javax.swing.JPanel teamPanel;
+    private javax.swing.JToggleButton teamSelectionCancelButton;
+    private javax.swing.JDialog teamSelectionDialog;
+    private javax.swing.JLabel teamSelectionIntroLabel;
+    private javax.swing.JToggleButton teamSelectionOKButton;
+    private javax.swing.JComboBox teamSelectionTeamComboBox;
+    private javax.swing.JLabel teamTeamLabel;
+    private javax.swing.JButton teamnAddMatchButton;
     private javax.swing.JLabel welcomeTextLabel;
     // End of variables declaration//GEN-END:variables
 
