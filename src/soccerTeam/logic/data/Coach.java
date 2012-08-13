@@ -25,8 +25,8 @@ public class Coach implements User{
         }
 
         @Override
-        public boolean getGender(){
-            return this.contactInfo.getGender();
+        public String getGender(){
+            return this.contactInfo.gender();
         }
 
         @Override

@@ -4,7 +4,7 @@
  */
 package soccerTeam.logic.exceptions;
 
-import soccerTeam.logic.CorrectDate;
+import soccerTeam.logic.data.CorrectDate;
 
 /**
  *

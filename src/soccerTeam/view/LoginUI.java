@@ -115,14 +115,18 @@ public class LoginUI extends javax.swing.JFrame {
         String username = this.usernameTextField.getText();
         String password = new String(this.passwordTextField.getPassword());
         if(username.isEmpty()){
-            JOptionPane.showMessageDialog(this, "Please enter your username.");
+            this.popup("Please enter your username.");
         } else if (password.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Please enter your password.");
+            this.popup("Please enter your password.");
         } else {
             this.stc.login(username, password);
         }
     }//GEN-LAST:event_signInButtonActionPerformed
 
+    public void popup(String message){
+        JOptionPane.showMessageDialog(this, message);
+    }
+    
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
          this.stc.saveAndExit(this);
     }//GEN-LAST:event_cancelButtonActionPerformed

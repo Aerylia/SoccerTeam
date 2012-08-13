@@ -36,6 +36,7 @@ public class Player implements User{
                 this.setGoalkeeper(false);
                 this.setCaptain(false);
                 this.suspentionInfo = new SuspentionInfo();
+                this.loginInfo = new LoginInfo(name, phonenumber);
 	}
 	
 	//Getters
@@ -65,8 +66,8 @@ public class Player implements User{
         }
 
         @Override
-        public boolean getGender(){
-            return this.getContactInfo().getGender();
+        public String getGender(){
+            return this.getContactInfo().gender();
         }
 
         @Override
@@ -182,6 +183,11 @@ public class Player implements User{
         @Override
         public User getUser() {
             return this;
+        }
+        
+        @Override
+        public String toString(){
+            return this.getContactInfo().toString();
         }
 
         public void matchPassed(){

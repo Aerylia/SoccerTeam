@@ -5,6 +5,7 @@
 package soccerTeam.logic;
 
 
+import soccerTeam.logic.data.CorrectDate;
 import java.util.ArrayList;
 import java.util.Iterator;
 import soccerTeam.logic.data.Match;
@@ -83,4 +84,12 @@ public class SortedMatches{
         public int contains(Match match){
             return this.getMatches().indexOf(match);
         }
+
+    public int size() {
+        return this.getMatches().size();
+    }
+
+    public Match get(int index) {
+        return this.getMatches().get(index);
+    }
 }

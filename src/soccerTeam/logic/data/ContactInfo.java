@@ -4,6 +4,8 @@
  */
 package soccerTeam.logic.data;
 
+import soccerTeam.logic.Util;
+
 /**
  *
  * @author Arianne
@@ -84,4 +86,19 @@ public class ContactInfo {
     public String getPhonenumber(){
         return this.phonenumber;
     }
+    
+    public String gender(){
+        if(this.getGender()){
+            return "male";
+        } else {
+            return "female";
+        }
+    }
+    
+    @Override
+    public String toString(){
+        return Util.concat('\t', this.getName(), this.gender(), this.getStreet(), this.getHousenumber(),
+                this.getZipcode(), this.getCity(), this.getPhonenumber());
+    }
+    
 }

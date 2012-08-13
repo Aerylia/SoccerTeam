@@ -4,6 +4,7 @@
  */
 package soccerTeam.logic.data;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -122,5 +123,44 @@ public class SoccerAssociation {
             }
         }
         return teamName;
+    }
+
+    private int getAmountOfTeams() {
+        return this.getTeams().size();
+    }
+
+    public String[] getDisplayableTeams() {
+        String[] teamNames;
+        teamNames = new String[this.getAmountOfTeams()];
+        int index = 0;
+        for(Team team: this.getTeams()){
+            teamNames[index] = team.toString();
+            index ++;
+        }
+        return teamNames;
+    }
+    
+    public void addPlayerToTeam(int teamIndex, Player player){
+        Team team = this.getTeams().get(teamIndex);
+        boolean succeeded = team.addPlayerToTeam(player);
+        while(!succeeded){ //If not succeeded try again
+            succeeded = team.addPlayerToTeam(player);
+        }
+    }
+
+    public String[][] displayMatchesOfTeam(int index) {
+        return this.getTeams().get(index).getDisplayableMatches();
+    }
+
+    public String[] displayPlayersOfTeam(int index) {
+        return this.getTeams().get(index).displayPlayers();
+    }
+
+    public void setAvailable(int teamIndex, int matchIndex, int playerIndex) {
+        this.getTeams().get(teamIndex).setAvailable(matchIndex, playerIndex);
+    }
+    
+    public void setUnavailable(int teamIndex, int matchIndex, int playerIndex){
+        this.getTeams().get(teamIndex).setUnavailable(matchIndex, playerIndex);
     }
 }

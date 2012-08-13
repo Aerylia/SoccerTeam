@@ -22,6 +22,9 @@ public abstract class Event {
         return this.startTime;
     }
     
+    public Time getEndTime(){
+        return this.startTime;
+    }
     public abstract void print();
     
 }

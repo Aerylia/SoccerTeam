@@ -5,7 +5,6 @@
 package soccerTeam.logic.data;
 
 import java.util.ArrayList;
-import soccerTeam.logic.CorrectDate;
 
 /**
  *
@@ -15,6 +14,7 @@ public abstract class Match {
     
         private Team team;
     	private CorrectDate date;
+        private Time time;
 	private String location;
 	private String opponents;
 	private ArrayList<Player> matchTeam;
@@ -22,9 +22,10 @@ public abstract class Match {
         private MatchStatistics matchStats;
 	
 	//Constructors
-	public Match(Team team, CorrectDate date, String opponents, String location){
+	public Match(Team team, CorrectDate date, Time time, String opponents, String location){
                 this.setTeam(team);
 		this.setDate(date);
+                this.setTime(time);
 		this.setOpponents(opponents);
 		this.setLocation(location);
                 this.matchTeam = new ArrayList();
@@ -44,6 +45,10 @@ public abstract class Match {
 	public CorrectDate getDate(){
 		return this.date;
 	}
+        
+        public Time getTime(){
+            return this.time;
+        }
 
 	public String getLocation(){
 		return this.location;
@@ -61,6 +66,10 @@ public abstract class Match {
 	public void setDate(CorrectDate date){
 		this.date = date;
 	}
+        
+        private void setTime(Time time) {
+            this.time = time;
+        }
 	
 	public void setLocation(String location){
 		this.location = location;
@@ -106,4 +115,37 @@ public abstract class Match {
         private void setMatchStats(MatchStatistics matchStats) {
             this.matchStats = matchStats;
         }
+
+        protected String date() {
+            return this.getDate().toString();
+        }
+        
+        protected String time(){
+            return this.getTime().toString();
+        }
+
+        public String[] displayAvailablePlayers() {
+            String [] players;
+            players = new String [this.getAvailablePlayers().size()];
+            int index = 0;
+            for(Player player: this.getAvailablePlayers()){
+                players[index] = player.toString();
+                index++;
+            }
+            return players;
+        }
+
+    public void setAvailable(Player player) {
+        if(!this.availablePlayers.contains(player)){
+            this.availablePlayers.add(player);
+        }
+    }
+    
+    public void setUnavailable(Player player){
+        if(this.availablePlayers.contains(player)){
+            this.availablePlayers.remove(player);
+        }
+    }
+
+
 }

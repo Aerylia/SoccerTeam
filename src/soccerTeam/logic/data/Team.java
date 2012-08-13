@@ -25,6 +25,7 @@ public class Team {
             this.team = new ArrayList();
             this.coaches = new ArrayList();
             this.getCoaches().add(coach);
+            this.matches = new SortedMatches();
         }
         
         public String getTeamName(){
@@ -33,6 +34,10 @@ public class Team {
         
         private ArrayList<Player> getTeam(){
             return this.team;
+        }
+        
+        private SortedMatches getMatches(){
+            return this.matches;
         }
         
         private ArrayList<Coach> getCoaches(){
@@ -124,4 +129,45 @@ public class Team {
         Coach getCoach(int index) {
             return this.getCoaches().get(index);
         }
+        
+        @Override
+        public String toString(){
+            return this.getTeamName();
+        }
+
+        public String[][] getDisplayableMatches() {
+            String[][] matchNames;
+            matchNames = new String[this.getMatches().size()][4];
+            for(int i = 0; i < this.getMatches().size(); i++){
+                Match match = this.getMatches().get(i);
+                matchNames[i][0] = match.date();
+                matchNames[i][1] = match.time();
+                matchNames[i][2] = match.getOpponents();
+                matchNames[i][3] = match.getLocation();
+            }
+            return matchNames;
+        }
+
+        public String[] getAvailablePlayers(int index) {
+            return this.getMatches().get(index).displayAvailablePlayers();
+        }
+
+        public String[] displayPlayers() {
+            String [] players;
+            players = new String[this.getTeam().size()]; 
+            int index = 0;
+            for(Player player : this.getTeam()){
+                players[index] = player.toString();
+                index ++;
+            }
+            return players;
+        }
+
+    public void setAvailable(int matchIndex, int playerIndex) {
+        this.getMatches().get(matchIndex).setAvailable(this.getPlayer(playerIndex));
+    }
+    
+    public void setUnavailable(int matchIndex, int playerIndex){
+        this.getMatches().get(matchIndex).setUnavailable(this.getPlayer(playerIndex));
+    }
 }

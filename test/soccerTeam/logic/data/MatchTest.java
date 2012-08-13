@@ -7,7 +7,6 @@ package soccerTeam.logic.data;
 import java.util.ArrayList;
 import org.junit.*;
 import static org.junit.Assert.*;
-import soccerTeam.logic.CorrectDate;
 
 /**
  *

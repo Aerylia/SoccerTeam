@@ -4,12 +4,13 @@
  */
 package soccerTeam.control;
 
+import java.awt.Component;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ComboBoxModel;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import soccerTeam.logic.DataPortal;
 import soccerTeam.logic.exceptions.LoginFailtException;
 import soccerTeam.view.FirstTimeSetupUI;
@@ -47,18 +48,6 @@ public class SoccerTeamController {
         return this.stm;
     }
     
-    public void login(String username, String password){
-        try {
-            this.getSTM().findUser(username, password);
-            this.loginUI.dispose();
-            this.ui = new MainUI(this, this.getNameUser());
-            this.getUI().setVisibility();
-        } catch (LoginFailtException ex) {
-            JOptionPane.showMessageDialog(loginUI, "Login failt.\nThe username and password "
-                    + "combination is not know in our system. Please make sure you are submitted into this system.");
-        }
-    }
-    
     private FirstTimeSetupUI getSetupUI(){
         return this.setupUI;
     }
@@ -91,6 +80,18 @@ public class SoccerTeamController {
     public void exit(JFrame window){
         window.dispose();
     }
+    
+    public void login(String username, String password){
+        try {
+            this.getSTM().findUser(username, password);
+            this.loginUI.dispose();
+            this.ui = new MainUI(this, this.getNameUser());
+            this.getUI().setVisibility();
+        } catch (LoginFailtException ex) {
+            this.getLoginUI().popup("Login failt.\nThe username and password "
+                    + "combination is not know in our system. Please make sure you are submitted into this system.");
+        }
+    }
 
     public void createModel(String associationName, String associationStreet, String associationHousenumber, 
             String associationZipcode, String associationCity, String associationPhonenumber, String teamName, 
@@ -99,10 +100,10 @@ public class SoccerTeamController {
         this.stm = new DataPortal(associationName, associationStreet, associationHousenumber,
                 associationZipcode, associationCity, associationPhonenumber, teamName, coachName,
                 coachGender, coachStreet, coachHousenumber, coachZipcode, coachCity, coachPhonenumber);
-        JOptionPane.showMessageDialog(this.getSetupUI(), "Your username and passoword are set to :\n"
-                + "Username : \t" + this.getUsernameUser() + "\nPassword : \t" + this.getPasswordUser());
         this.exit(this.getSetupUI());
         this.startUpUI();
+        this.getSetupUI().popup("Your username and passoword are set to :\n"
+                + "Username : \t" + this.getUsernameUser() + "\nPassword : \t" + this.getPasswordUser());
     }
     
     private void startUpUI(){
@@ -207,7 +208,7 @@ public class SoccerTeamController {
             this.getSTM().changeGenderUser(gender);
             return true;
         } catch (IllegalArgumentException ex){
-            JOptionPane.showMessageDialog(this.getUI(), "Please enter \"male\" or \"female\" in the gender TextField.");
+            this.getUI().popup( "Please enter \"male\" or \"female\" in the gender TextField.");
             return false;
         }
     }
@@ -256,4 +257,37 @@ public class SoccerTeamController {
         this.getSTM().changePhonenumberSA(phonenumber);
     }
 
+    public String[] getDisplayableTeam(){
+        return this.getSTM().getDisplayableTeam();
+    }
+
+    public String[] createPlayer(int teamIndex, String playerName, boolean playerGender, String playerStreet, 
+            String playerHousenumber, String playerZipcode, String playerCity, String playerPhonenumber) {
+        return this.getSTM().createPlayer(teamIndex, playerName, playerGender, playerStreet, playerHousenumber, 
+                playerZipcode, playerCity, playerPhonenumber);
+    }
+
+    public String[][] getDisplayableMatches(int index) {
+        if(index != -1){
+            return this.getSTM().getDisplayableMatches(index);
+        } else {
+            return new String[0][4];
+        }
+    }
+    
+    public String[] getDisplayablePlayers(int index){
+        if(index != -1){
+            return this.getSTM().getDisplayablePlayers(index);
+        } else {
+            return new String[0];
+        }
+    }
+
+    public void setAvailable(int teamIndex, int matchIndex, int playerIndex) {
+        this.getSTM().setAvailable(teamIndex, matchIndex, playerIndex);
+    }
+    
+    public void setUnavailable(int teamIndex, int matchIndex, int playerIndex){
+        this.getSTM().setUnavailable(teamIndex, matchIndex, playerIndex);
+    }
 }

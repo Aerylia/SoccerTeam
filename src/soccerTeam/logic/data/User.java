@@ -14,7 +14,7 @@ public interface User {
     
     public User getUser();
     public String getName();
-    public boolean getGender();
+    public String getGender();
     public String getStreet();
     public String getHousenumber();
     public String getZipcode();

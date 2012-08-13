@@ -4,10 +4,9 @@
  */
 package soccerTeam.logic;
 
-import soccerTeam.logic.data.Coach;
-import soccerTeam.logic.data.Player;
-import soccerTeam.logic.data.SoccerAssociation;
-import soccerTeam.logic.data.User;
+import java.lang.reflect.Array;
+import javax.swing.ComboBoxModel;
+import soccerTeam.logic.data.*;
 import soccerTeam.logic.exceptions.LoginFailtException;
 
 /**
@@ -92,11 +91,7 @@ public class DataPortal{
     }
 
     public String getGenderUser() {
-        if(this.getUser().getGender()){
-            return "male";
-        } else {
-            return "female";
-        }
+        return this.getUser().getGender();
     }
 
     public String getStreetUser() {
@@ -223,6 +218,36 @@ public class DataPortal{
 
     public void changePhonenumberSA(String phonenumber) {
         this.getSA().setSAPhonenumber(phonenumber);
+    }
+
+    public String[] getDisplayableTeam() {
+       return this.getSA().getDisplayableTeams();
+    }
+
+    public String[] createPlayer(int teamIndex, String playerName, boolean playerGender, 
+                String playerStreet, String playerHousenumber, String playerZipcode, 
+                String playerCity, String playerPhonenumber) {
+        Player player = new Player(playerName, playerGender, playerStreet,
+                playerHousenumber, playerZipcode, playerCity, playerPhonenumber);
+        this.getSA().addPlayerToTeam(teamIndex, player );
+        String[] loginInfo = {player.getUsername(), player.getPassword()}; 
+        return loginInfo;
+    }
+
+    public String[][] getDisplayableMatches(int index) {
+        return this.getSA().displayMatchesOfTeam(index);
+    }
+
+    public String[] getDisplayablePlayers(int index) {
+        return this.getSA().displayPlayersOfTeam(index);
+    }
+
+    public void setAvailable(int teamIndex, int matchIndex, int playerIndex) {
+        this.getSA().setAvailable(teamIndex, matchIndex,playerIndex);
+    }
+    
+    public void setUnavailable(int teamIndex, int matchIndex, int playerIndex){
+        this.getSA().setUnavailable(teamIndex, matchIndex, playerIndex);
     }
 
 }
