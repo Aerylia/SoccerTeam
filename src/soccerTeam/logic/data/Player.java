@@ -187,7 +187,14 @@ public class Player implements User{
         
         @Override
         public String toString(){
-            return this.getContactInfo().toString();
+            String string = new String();
+            if(isCaptain()){
+                string += "Captain\t";
+            }
+            if(isGoalkeeper()){
+                string += "Goalkeeper\t";
+            }
+            return string + this.getContactInfo().toString();
         }
 
         public void matchPassed(){

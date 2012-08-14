@@ -290,4 +290,16 @@ public class SoccerTeamController {
     public void setUnavailable(int teamIndex, int matchIndex, int playerIndex){
         this.getSTM().setUnavailable(teamIndex, matchIndex, playerIndex);
     }
+    
+    public String[] getAllPlayers(int index){
+        if(index > -1){
+            return this.getSTM().getAllPlayers(index); 
+        } else {
+            return new String[0];
+        }
+    }
+
+    public void assignCaptain(int teamIndex, int playerIndex) {
+        this.getSTM().assignCaptain(teamIndex, playerIndex);
+    }
 }

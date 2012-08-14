@@ -19,39 +19,43 @@ public class Coach implements User{
                 this.loginInfo = new LoginInfo(name, phonenumber);
 	}
         
+        private ContactInfo getContactInfo(){
+            return this.contactInfo;
+        }
+        
         @Override
         public String getName(){
-            return this.contactInfo.getName();
+            return this.getContactInfo().getName();
         }
 
         @Override
         public String getGender(){
-            return this.contactInfo.gender();
+            return this.getContactInfo().gender();
         }
 
         @Override
         public String getStreet(){
-            return this.contactInfo.getStreet();
+            return this.getContactInfo().getStreet();
         }
 
         @Override
         public String getHousenumber(){
-            return this.contactInfo.getHousenumber();
+            return this.getContactInfo().getHousenumber();
         }
         
         @Override
         public String getZipcode(){
-            return this.contactInfo.getZipcode();
+            return this.getContactInfo().getZipcode();
         }
 
         @Override
         public String getCity(){
-            return this.contactInfo.getCity();
+            return this.getContactInfo().getCity();
         }
 
         @Override
         public String getPhonenumber(){
-            return this.contactInfo.getPhonenumber();
+            return this.getContactInfo().getPhonenumber();
         }
         
         private LoginInfo getLoginInfo(){
@@ -60,37 +64,37 @@ public class Coach implements User{
         
         @Override
         public void setName(String name) {
-            this.contactInfo.setName(name);
+            this.getContactInfo().setName(name);
         }
 
         @Override
         public void setGender(boolean gender) {
-            this.contactInfo.setGender(gender);
+            this.getContactInfo().setGender(gender);
         }
 
         @Override
         public void setStreet(String street) {
-            this.contactInfo.setStreet(street);
+            this.getContactInfo().setStreet(street);
         }
 
         @Override
         public void setHousenumber(String housenumber) {
-            this.contactInfo.setHousenumber(housenumber);
+            this.getContactInfo().setHousenumber(housenumber);
         }
 
         @Override
         public void setZipcode(String zipcode) {
-            this.contactInfo.setZipcode(zipcode);
+            this.getContactInfo().setZipcode(zipcode);
         }
 
         @Override
         public void setCity(String city) {
-            this.contactInfo.setCity(city);
+            this.getContactInfo().setCity(city);
         }
 
         @Override
         public void setPhonenumber(String phonenumber) {
-            this.contactInfo.setPhonenumber(phonenumber);
+            this.getContactInfo().setPhonenumber(phonenumber);
         }
         
         @Override
@@ -112,6 +116,11 @@ public class Coach implements User{
         @Override
         public User getUser() {
             return this;
+        }
+        
+        @Override
+        public String toString(){
+            return "Coach\t" + this.getContactInfo().toString();
         }
 
 }

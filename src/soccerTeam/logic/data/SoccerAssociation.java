@@ -163,4 +163,12 @@ public class SoccerAssociation {
     public void setUnavailable(int teamIndex, int matchIndex, int playerIndex){
         this.getTeams().get(teamIndex).setUnavailable(matchIndex, playerIndex);
     }
+
+    public String[] getAllPlayers(int index) {
+        return this.getTeams().get(index).getAllPlayers();
+    }
+
+    public void assignCaptain(int teamIndex, int playerIndex) {
+        this.getTeams().get(teamIndex).assignCaptain(playerIndex);
+    }
 }

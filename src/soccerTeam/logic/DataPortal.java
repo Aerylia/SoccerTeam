@@ -250,4 +250,12 @@ public class DataPortal{
         this.getSA().setUnavailable(teamIndex, matchIndex, playerIndex);
     }
 
+    public String[] getAllPlayers(int index) {
+        return this.getSA().getAllPlayers(index);
+    }
+
+    public void assignCaptain(int teamIndex, int playerIndex) {
+        this.getSA().assignCaptain(teamIndex, playerIndex);
+    }
+
 }

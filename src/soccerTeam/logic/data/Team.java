@@ -72,17 +72,17 @@ public class Team {
             return this.getCoaches().indexOf(coach);
         }
         
-        public void assignCaptain(Player player){
+        public void assignCaptain(int playerIndex){
             dismissCaptain();
-            player.assignToCaptain();
+            this.getPlayer(playerIndex).assignToCaptain();
         }
         
-        public void assignGoalkeeper(Player player){
-            player.assignToGoalkeeper();
+        public void assignGoalkeeper(int playerIndex){
+            this.getPlayer(playerIndex).assignToGoalkeeper();
         }
         
-        public void dismissGoalkeeper(Player player){
-            player.dismissFromGoalkeeper();
+        public void dismissGoalkeeper(int playerIndex){
+            this.getPlayer(playerIndex).dismissFromGoalkeeper();
         }
         
         private void dismissCaptain(){
@@ -169,5 +169,15 @@ public class Team {
     
     public void setUnavailable(int matchIndex, int playerIndex){
         this.getMatches().get(matchIndex).setUnavailable(this.getPlayer(playerIndex));
+    }
+
+    public String[] getAllPlayers() {
+        String [] players = new String[this.getTeam().size()];
+        int index = 0;
+        for(Player player : this.getTeam()){
+            players[index] = player.toString();
+            index ++;
+        }
+        return players;
     }
 }

@@ -5,6 +5,7 @@
 package soccerTeam.view;
 
 import javax.swing.JOptionPane;
+import javax.swing.ListModel;
 import soccerTeam.control.SoccerTeamController;
 
 /**
@@ -85,6 +86,16 @@ public class MainUI extends javax.swing.JFrame {
         teamSelectionCancelButton = new javax.swing.JToggleButton();
         teamSelectionOKButton = new javax.swing.JToggleButton();
         teamSelectionTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeam());
+        teamSelectionAssignCaptainOKButton = new javax.swing.JButton();
+        teamSelectionAssignGoalkeeperOKButton = new javax.swing.JButton();
+        teamSelectionDismissGoalkeeperOKButton = new javax.swing.JButton();
+        assignCaptainDialog = new javax.swing.JDialog();
+        assignCaptainIntroLabel = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        assignCaptainPlayerList = new javax.swing.JList(this.getSTC().getAllPlayers(-1));
+        assignCaptainCancelButton = new javax.swing.JButton();
+        assignCaptainAssignButton = new javax.swing.JButton();
+        assignCaptainHiddenTeamIndexLabel = new javax.swing.JLabel();
         mainTabbedPane = new javax.swing.JTabbedPane();
         profilePanel = new javax.swing.JPanel();
         profileTeamLabel = new javax.swing.JLabel();
@@ -498,6 +509,17 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
 
+        teamSelectionAssignCaptainOKButton.setText("OK");
+        teamSelectionAssignCaptainOKButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                teamSelectionAssignCaptainOKButtonActionPerformed(evt);
+            }
+        });
+
+        teamSelectionAssignGoalkeeperOKButton.setText("OK");
+
+        teamSelectionDismissGoalkeeperOKButton.setText("OK");
+
         javax.swing.GroupLayout teamSelectionDialogLayout = new javax.swing.GroupLayout(teamSelectionDialog.getContentPane());
         teamSelectionDialog.getContentPane().setLayout(teamSelectionDialogLayout);
         teamSelectionDialogLayout.setHorizontalGroup(
@@ -506,15 +528,20 @@ public class MainUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(teamSelectionDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, teamSelectionDialogLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 6, Short.MAX_VALUE)
+                        .addComponent(teamSelectionDismissGoalkeeperOKButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(teamSelectionAssignGoalkeeperOKButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(teamSelectionAssignCaptainOKButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(teamSelectionOKButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(teamSelectionCancelButton))
                     .addGroup(teamSelectionDialogLayout.createSequentialGroup()
-                        .addGroup(teamSelectionDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(teamSelectionIntroLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(teamSelectionTeamComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(teamSelectionIntroLabel)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(teamSelectionTeamComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         teamSelectionDialogLayout.setVerticalGroup(
@@ -524,10 +551,70 @@ public class MainUI extends javax.swing.JFrame {
                 .addComponent(teamSelectionIntroLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(teamSelectionTeamComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(teamSelectionDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(teamSelectionCancelButton)
-                    .addComponent(teamSelectionOKButton))
+                    .addComponent(teamSelectionOKButton)
+                    .addComponent(teamSelectionAssignCaptainOKButton)
+                    .addComponent(teamSelectionAssignGoalkeeperOKButton)
+                    .addComponent(teamSelectionDismissGoalkeeperOKButton))
+                .addContainerGap())
+        );
+
+        assignCaptainDialog.setMinimumSize(new java.awt.Dimension(200, 500));
+
+        assignCaptainIntroLabel.setText("Please choose a player to assign him/her as captain.");
+
+        jScrollPane1.setViewportView(assignCaptainPlayerList);
+
+        assignCaptainCancelButton.setText("Cancel");
+        assignCaptainCancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                assignCaptainCancelButtonActionPerformed(evt);
+            }
+        });
+
+        assignCaptainAssignButton.setText("Assign");
+        assignCaptainAssignButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                assignCaptainAssignButtonActionPerformed(evt);
+            }
+        });
+
+        assignCaptainHiddenTeamIndexLabel.setVisible(false);
+
+        javax.swing.GroupLayout assignCaptainDialogLayout = new javax.swing.GroupLayout(assignCaptainDialog.getContentPane());
+        assignCaptainDialog.getContentPane().setLayout(assignCaptainDialogLayout);
+        assignCaptainDialogLayout.setHorizontalGroup(
+            assignCaptainDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(assignCaptainDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(assignCaptainDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(assignCaptainDialogLayout.createSequentialGroup()
+                        .addGroup(assignCaptainDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jScrollPane1)
+                            .addComponent(assignCaptainIntroLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, assignCaptainDialogLayout.createSequentialGroup()
+                        .addComponent(assignCaptainHiddenTeamIndexLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(assignCaptainAssignButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(assignCaptainCancelButton)))
+                .addContainerGap())
+        );
+        assignCaptainDialogLayout.setVerticalGroup(
+            assignCaptainDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(assignCaptainDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(assignCaptainIntroLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(assignCaptainDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(assignCaptainCancelButton)
+                    .addComponent(assignCaptainAssignButton)
+                    .addComponent(assignCaptainHiddenTeamIndexLabel))
                 .addContainerGap())
         );
 
@@ -837,6 +924,11 @@ public class MainUI extends javax.swing.JFrame {
         teamCreateMatchTeamButton.setText("Create MatchTeam");
 
         teamAssignCaptainButton.setText("Assign Captain");
+        teamAssignCaptainButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                teamAssignCaptainButtonActionPerformed(evt);
+            }
+        });
 
         teamAssignGoalkeeperButton.setText("Assign Goalkeeper");
 
@@ -1051,6 +1143,10 @@ public class MainUI extends javax.swing.JFrame {
     }//GEN-LAST:event_addPlayerSaveButtonActionPerformed
 
     private void teamChangeAvailabilityButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teamChangeAvailabilityButtonActionPerformed
+        this.teamSelectionOKButton.setVisible(true);
+        this.teamSelectionAssignCaptainOKButton.setVisible(false);
+        this.teamSelectionAssignGoalkeeperOKButton.setVisible(false);
+        this.teamSelectionDismissGoalkeeperOKButton.setVisible(false);
         this.teamSelectionDialog.setVisible(true);
     }//GEN-LAST:event_teamChangeAvailabilityButtonActionPerformed
 
@@ -1097,6 +1193,42 @@ public class MainUI extends javax.swing.JFrame {
                 this.changeAvailabilityMatchTable.getSelectedRow(), this.changeAvailabilityPlayerList.getSelectedIndex());
     }//GEN-LAST:event_changeAvailabilitySetUnavailableButtonActionPerformed
 
+    private void teamAssignCaptainButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teamAssignCaptainButtonActionPerformed
+        this.teamSelectionOKButton.setVisible(false);
+        this.teamSelectionAssignCaptainOKButton.setVisible(true);
+        this.teamSelectionAssignGoalkeeperOKButton.setVisible(false);
+        this.teamSelectionDismissGoalkeeperOKButton.setVisible(false);
+        this.teamSelectionDialog.setVisible(true);
+    }//GEN-LAST:event_teamAssignCaptainButtonActionPerformed
+
+    private void assignCaptainCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignCaptainCancelButtonActionPerformed
+        this.assignCaptainDialog.dispose();
+    }//GEN-LAST:event_assignCaptainCancelButtonActionPerformed
+
+    private void teamSelectionAssignCaptainOKButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teamSelectionAssignCaptainOKButtonActionPerformed
+        this.assignCaptainHiddenTeamIndexLabel.setText(new Integer(this.teamSelectionTeamComboBox.getSelectedIndex()).toString());
+        this.teamSelectionDialog.dispose();
+        
+        String[] players = this.getSTC().getAllPlayers(Integer.parseInt(this.assignCaptainHiddenTeamIndexLabel.getText()));
+        if(players.length > 0){
+            this.assignCaptainPlayerList.setListData(players);
+            this.assignCaptainDialog.setVisible(true);
+        } else {
+            this.popup("There are no players known in this team. Please select another team if possible.");
+        }
+    }//GEN-LAST:event_teamSelectionAssignCaptainOKButtonActionPerformed
+
+    private void assignCaptainAssignButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignCaptainAssignButtonActionPerformed
+        int playerIndex = this.assignCaptainPlayerList.getSelectedIndex();
+        if(playerIndex > 0){
+            this.getSTC().assignCaptain(Integer.parseInt(this.assignCaptainHiddenTeamIndexLabel.getText()), 
+                playerIndex);
+            this.assignCaptainDialog.dispose();
+        } else {
+            this.popup("Please select a player to assign him/her as Captain of the soccerteam.");
+        }
+    }//GEN-LAST:event_assignCaptainAssignButtonActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField SoccerAssociationPhonenumberTextField;
     private javax.swing.JButton addPlayerCancelButton;
@@ -1120,6 +1252,12 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel addPlayerTeamLabel;
     private javax.swing.JLabel addPlayerZipcodeLabel;
     private javax.swing.JTextField addPlayerZipcodeTextField;
+    private javax.swing.JButton assignCaptainAssignButton;
+    private javax.swing.JButton assignCaptainCancelButton;
+    private javax.swing.JDialog assignCaptainDialog;
+    private javax.swing.JLabel assignCaptainHiddenTeamIndexLabel;
+    private javax.swing.JLabel assignCaptainIntroLabel;
+    private javax.swing.JList assignCaptainPlayerList;
     private javax.swing.JLabel availabilityIntroLabel;
     private javax.swing.JPanel availabilityPanel;
     private javax.swing.JScrollPane availabilityScrollPane;
@@ -1137,6 +1275,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JButton changeAvailabilitySetAvailableButton;
     private javax.swing.JButton changeAvailabilitySetUnavailableButton;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton loginInfoCancelButton;
     private javax.swing.JDialog loginInfoDialog;
     private javax.swing.JLabel loginInfoIntro2Label;
@@ -1190,8 +1329,11 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JButton teamDismissGoalkeeperButton;
     private javax.swing.JLabel teamMatchesLabel;
     private javax.swing.JPanel teamPanel;
+    private javax.swing.JButton teamSelectionAssignCaptainOKButton;
+    private javax.swing.JButton teamSelectionAssignGoalkeeperOKButton;
     private javax.swing.JToggleButton teamSelectionCancelButton;
     private javax.swing.JDialog teamSelectionDialog;
+    private javax.swing.JButton teamSelectionDismissGoalkeeperOKButton;
     private javax.swing.JLabel teamSelectionIntroLabel;
     private javax.swing.JToggleButton teamSelectionOKButton;
     private javax.swing.JComboBox teamSelectionTeamComboBox;
