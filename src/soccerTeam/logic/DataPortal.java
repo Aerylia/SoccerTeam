@@ -220,42 +220,82 @@ public class DataPortal{
         this.getSA().setSAPhonenumber(phonenumber);
     }
 
-    public String[] getDisplayableTeam() {
+    public Object[] getDisplayableTeam() {
        return this.getSA().getDisplayableTeams();
     }
 
-    public String[] createPlayer(int teamIndex, String playerName, boolean playerGender, 
+    public String[] createPlayer(Object team, String playerName, boolean playerGender, 
                 String playerStreet, String playerHousenumber, String playerZipcode, 
                 String playerCity, String playerPhonenumber) {
         Player player = new Player(playerName, playerGender, playerStreet,
                 playerHousenumber, playerZipcode, playerCity, playerPhonenumber);
-        this.getSA().addPlayerToTeam(teamIndex, player );
-        String[] loginInfo = {player.getUsername(), player.getPassword()}; 
-        return loginInfo;
+        if (team instanceof Team){
+            ((Team)team).addPlayerToTeam(player);
+            String[] loginInfo = {player.getUsername(), player.getPassword()}; 
+            return loginInfo;
+        } else {
+            throw new IllegalArgumentException("The new players team is not a Team.");
+        }
     }
 
-    public String[][] getDisplayableMatches(int index) {
-        return this.getSA().displayMatchesOfTeam(index);
+    public String[][] getDisplayableMatches(Object team) {
+        if (team instanceof Team){
+            return ((Team)team).getDisplayableMatches();
+        } else {
+            throw new IllegalArgumentException("The given team was not a Team.");
+        }
     }
 
-    public String[] getDisplayablePlayers(int index) {
-        return this.getSA().displayPlayersOfTeam(index);
+    public Object[] getDisplayablePlayers(Object team) {
+        if(team instanceof Team){
+            return ((Team)team).getAllPlayers();
+        } else {
+            throw new IllegalArgumentException("The given team was not a Team");
+        }
     }
 
-    public void setAvailable(int teamIndex, int matchIndex, int playerIndex) {
-        this.getSA().setAvailable(teamIndex, matchIndex,playerIndex);
+    public void setAvailable(Object match, Object player) {
+        if(player instanceof Player){
+            if(match instanceof Match){
+                ((Match)match).setAvailable((Player)player);
+            } else {
+                throw new IllegalArgumentException("The given match was not a Match");
+            }
+        } else {
+            throw new IllegalArgumentException("The given player was not a Player");
+        }
     }
     
-    public void setUnavailable(int teamIndex, int matchIndex, int playerIndex){
-        this.getSA().setUnavailable(teamIndex, matchIndex, playerIndex);
+    public void setUnavailable(Object match, Object player){
+        if(player instanceof Player){
+            if(match instanceof Match){
+                ((Match)match).setUnavailable((Player)player);
+            } else {
+                throw new IllegalArgumentException("The given match was not a Match");
+            }
+        } else {
+            throw new IllegalArgumentException("The given player was not a Player");
+        }
     }
 
-    public String[] getAllPlayers(int index) {
-        return this.getSA().getAllPlayers(index);
+    public Object[] getAllPlayers(Object team) {
+        if(team instanceof Team){
+            return ((Team)team).getAllPlayers();
+        } else {
+            throw new IllegalArgumentException("The given team is not a Team.");
+        }
     }
 
-    public void assignCaptain(int teamIndex, int playerIndex) {
-        this.getSA().assignCaptain(teamIndex, playerIndex);
+    public void assignCaptain(Object team, Object player) {
+        if (player instanceof Player){
+            if (team instanceof Team){
+                ((Team)team).assignCaptain((Player)player);
+            } else {
+                throw new IllegalArgumentException("The given team is not a Team.");
+            }
+        } else {
+            throw new IllegalArgumentException("The given team is not a Team.");
+        }
     }
 
 }

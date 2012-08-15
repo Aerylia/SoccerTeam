@@ -72,17 +72,17 @@ public class Team {
             return this.getCoaches().indexOf(coach);
         }
         
-        public void assignCaptain(int playerIndex){
+        public void assignCaptain(Player player){
             dismissCaptain();
-            this.getPlayer(playerIndex).assignToCaptain();
+            player.assignToCaptain();
         }
         
-        public void assignGoalkeeper(int playerIndex){
-            this.getPlayer(playerIndex).assignToGoalkeeper();
+        public void assignGoalkeeper(Player player){
+            player.assignToGoalkeeper();
         }
         
-        public void dismissGoalkeeper(int playerIndex){
-            this.getPlayer(playerIndex).dismissFromGoalkeeper();
+        public void dismissGoalkeeper(Player player){
+            player.dismissFromGoalkeeper();
         }
         
         private void dismissCaptain(){
@@ -148,36 +148,7 @@ public class Team {
             return matchNames;
         }
 
-        public String[] getAvailablePlayers(int index) {
-            return this.getMatches().get(index).displayAvailablePlayers();
+        public Object[] getAllPlayers() {
+            return this.getTeam().toArray();
         }
-
-        public String[] displayPlayers() {
-            String [] players;
-            players = new String[this.getTeam().size()]; 
-            int index = 0;
-            for(Player player : this.getTeam()){
-                players[index] = player.toString();
-                index ++;
-            }
-            return players;
-        }
-
-    public void setAvailable(int matchIndex, int playerIndex) {
-        this.getMatches().get(matchIndex).setAvailable(this.getPlayer(playerIndex));
-    }
-    
-    public void setUnavailable(int matchIndex, int playerIndex){
-        this.getMatches().get(matchIndex).setUnavailable(this.getPlayer(playerIndex));
-    }
-
-    public String[] getAllPlayers() {
-        String [] players = new String[this.getTeam().size()];
-        int index = 0;
-        for(Player player : this.getTeam()){
-            players[index] = player.toString();
-            index ++;
-        }
-        return players;
-    }
 }

@@ -257,49 +257,50 @@ public class SoccerTeamController {
         this.getSTM().changePhonenumberSA(phonenumber);
     }
 
-    public String[] getDisplayableTeam(){
+    public Object[] getDisplayableTeam(){
         return this.getSTM().getDisplayableTeam();
     }
 
-    public String[] createPlayer(int teamIndex, String playerName, boolean playerGender, String playerStreet, 
+    public String[] createPlayer(Object team, String playerName, boolean playerGender, String playerStreet, 
             String playerHousenumber, String playerZipcode, String playerCity, String playerPhonenumber) {
-        return this.getSTM().createPlayer(teamIndex, playerName, playerGender, playerStreet, playerHousenumber, 
+        return this.getSTM().createPlayer(team, playerName, playerGender, playerStreet, playerHousenumber, 
                 playerZipcode, playerCity, playerPhonenumber);
     }
 
-    public String[][] getDisplayableMatches(int index) {
-        if(index != -1){
-            return this.getSTM().getDisplayableMatches(index);
+    public String[][] getDisplayableMatches(Object team) {
+        //TODO
+        if(team != null){
+            return this.getSTM().getDisplayableMatches(team);
         } else {
             return new String[0][4];
         }
     }
     
-    public String[] getDisplayablePlayers(int index){
-        if(index != -1){
-            return this.getSTM().getDisplayablePlayers(index);
+    public Object[] getDisplayablePlayers(Object team){
+        if(team != null){
+            return this.getSTM().getDisplayablePlayers(team);
         } else {
             return new String[0];
         }
     }
 
-    public void setAvailable(int teamIndex, int matchIndex, int playerIndex) {
-        this.getSTM().setAvailable(teamIndex, matchIndex, playerIndex);
+    public void setAvailable(Object match, Object player) {
+        this.getSTM().setAvailable(match, player);        
     }
     
-    public void setUnavailable(int teamIndex, int matchIndex, int playerIndex){
-        this.getSTM().setUnavailable(teamIndex, matchIndex, playerIndex);
+    public void setUnavailable(Object match, Object player){
+        this.getSTM().setUnavailable(match, player);
     }
     
-    public String[] getAllPlayers(int index){
-        if(index > -1){
-            return this.getSTM().getAllPlayers(index); 
+    public Object[] getAllPlayers(Object team){
+        if(team != null){
+            return this.getSTM().getAllPlayers(team); 
         } else {
             return new String[0];
         }
     }
 
-    public void assignCaptain(int teamIndex, int playerIndex) {
-        this.getSTM().assignCaptain(teamIndex, playerIndex);
+    public void assignCaptain(Object team, Object player) {
+        this.getSTM().assignCaptain(team, player);
     }
 }

@@ -81,6 +81,7 @@ public class MainUI extends javax.swing.JFrame {
         changeAvailabilityPlayerScrollPane = new javax.swing.JScrollPane();
         changeAvailabilityPlayerList = new javax.swing.JList();
         changeAvailabilityHiddenTeamIndexLabel = new javax.swing.JLabel();
+        changeAvailabilityTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeam());
         teamSelectionDialog = new javax.swing.JDialog();
         teamSelectionIntroLabel = new javax.swing.JLabel();
         teamSelectionCancelButton = new javax.swing.JToggleButton();
@@ -96,6 +97,7 @@ public class MainUI extends javax.swing.JFrame {
         assignCaptainCancelButton = new javax.swing.JButton();
         assignCaptainAssignButton = new javax.swing.JButton();
         assignCaptainHiddenTeamIndexLabel = new javax.swing.JLabel();
+        assignCaptainTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeam());
         mainTabbedPane = new javax.swing.JTabbedPane();
         profilePanel = new javax.swing.JPanel();
         profileTeamLabel = new javax.swing.JLabel();
@@ -389,7 +391,7 @@ public class MainUI extends javax.swing.JFrame {
         changeAvailabilityDialog.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         changeAvailabilityDialog.setMinimumSize(new java.awt.Dimension(600, 400));
 
-        changeAvailabilityIntroLabel.setText("Please select first select a match, then select a player to set his or her availability.");
+        changeAvailabilityIntroLabel.setText("Please select select a team first, then a match and then select a player to set his or her availability.");
 
         changeAvailabilityMatchLabel.setText("Match :");
 
@@ -432,36 +434,56 @@ public class MainUI extends javax.swing.JFrame {
 
         changeAvailabilityHiddenTeamIndexLabel.setVisible(false);
 
+        changeAvailabilityTeamComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                changeAvailabilityTeamComboBoxItemStateChanged(evt);
+            }
+        });
+        changeAvailabilityTeamComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                changeAvailabilityTeamComboBoxActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout changeAvailabilityDialogLayout = new javax.swing.GroupLayout(changeAvailabilityDialog.getContentPane());
         changeAvailabilityDialog.getContentPane().setLayout(changeAvailabilityDialogLayout);
         changeAvailabilityDialogLayout.setHorizontalGroup(
             changeAvailabilityDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(changeAvailabilityDialogLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addContainerGap()
                 .addGroup(changeAvailabilityDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(changeAvailabilityDialogLayout.createSequentialGroup()
-                        .addComponent(changeAvailabilityHiddenTeamIndexLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(changeAvailabilitySetUnavailableButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(changeAvailabilitySetAvailableButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(changeAvailabilityCancelButton)
-                        .addContainerGap())
                     .addGroup(changeAvailabilityDialogLayout.createSequentialGroup()
                         .addComponent(changeAvailabilityMatchScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(changeAvailabilityPlayerScrollPane)
-                        .addContainerGap())
+                        .addGroup(changeAvailabilityDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(changeAvailabilityDialogLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(changeAvailabilityPlayersLabel)
+                                .addGap(81, 81, 81))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, changeAvailabilityDialogLayout.createSequentialGroup()
+                                .addComponent(changeAvailabilityHiddenTeamIndexLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(changeAvailabilityDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(changeAvailabilityPlayerScrollPane)
+                                    .addGroup(changeAvailabilityDialogLayout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(changeAvailabilitySetUnavailableButton)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(changeAvailabilitySetAvailableButton)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(changeAvailabilityCancelButton)))
+                                .addContainerGap())))
                     .addGroup(changeAvailabilityDialogLayout.createSequentialGroup()
                         .addComponent(changeAvailabilityIntroLabel)
-                        .addContainerGap())
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(changeAvailabilityDialogLayout.createSequentialGroup()
-                        .addGap(68, 68, 68)
-                        .addComponent(changeAvailabilityMatchLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(changeAvailabilityPlayersLabel)
-                        .addGap(81, 81, 81))))
+                        .addGroup(changeAvailabilityDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(changeAvailabilityTeamComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(changeAvailabilityDialogLayout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(changeAvailabilityMatchLabel)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())))
         );
         changeAvailabilityDialogLayout.setVerticalGroup(
             changeAvailabilityDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -469,20 +491,27 @@ public class MainUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(changeAvailabilityIntroLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(changeAvailabilityDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(changeAvailabilityMatchLabel)
-                    .addComponent(changeAvailabilityPlayersLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(changeAvailabilityTeamComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addGroup(changeAvailabilityDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(changeAvailabilityDialogLayout.createSequentialGroup()
+                        .addGroup(changeAvailabilityDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(changeAvailabilityMatchLabel)
+                            .addComponent(changeAvailabilityPlayersLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(changeAvailabilityMatchScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(changeAvailabilityPlayerScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(changeAvailabilityDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(changeAvailabilityMatchScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(changeAvailabilityPlayerScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(changeAvailabilityDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(changeAvailabilityCancelButton)
-                    .addComponent(changeAvailabilitySetAvailableButton)
-                    .addComponent(changeAvailabilitySetUnavailableButton)
-                    .addComponent(changeAvailabilityHiddenTeamIndexLabel))
-                .addContainerGap())
+                    .addGroup(changeAvailabilityDialogLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(changeAvailabilityHiddenTeamIndexLabel))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, changeAvailabilityDialogLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                        .addGroup(changeAvailabilityDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(changeAvailabilityCancelButton)
+                            .addComponent(changeAvailabilitySetAvailableButton)
+                            .addComponent(changeAvailabilitySetUnavailableButton))
+                        .addContainerGap())))
         );
 
         teamSelectionDialog.setMinimumSize(new java.awt.Dimension(200, 150));
@@ -519,6 +548,11 @@ public class MainUI extends javax.swing.JFrame {
         teamSelectionAssignGoalkeeperOKButton.setText("OK");
 
         teamSelectionDismissGoalkeeperOKButton.setText("OK");
+        teamSelectionDismissGoalkeeperOKButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                teamSelectionDismissGoalkeeperOKButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout teamSelectionDialogLayout = new javax.swing.GroupLayout(teamSelectionDialog.getContentPane());
         teamSelectionDialog.getContentPane().setLayout(teamSelectionDialogLayout);
@@ -563,7 +597,7 @@ public class MainUI extends javax.swing.JFrame {
 
         assignCaptainDialog.setMinimumSize(new java.awt.Dimension(200, 500));
 
-        assignCaptainIntroLabel.setText("Please choose a player to assign him/her as captain.");
+        assignCaptainIntroLabel.setText("Please choose a team and a player to assign him/her as captain.");
 
         jScrollPane1.setViewportView(assignCaptainPlayerList);
 
@@ -583,6 +617,12 @@ public class MainUI extends javax.swing.JFrame {
 
         assignCaptainHiddenTeamIndexLabel.setVisible(false);
 
+        assignCaptainTeamComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                assignCaptainTeamComboBoxActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout assignCaptainDialogLayout = new javax.swing.GroupLayout(assignCaptainDialog.getContentPane());
         assignCaptainDialog.getContentPane().setLayout(assignCaptainDialogLayout);
         assignCaptainDialogLayout.setHorizontalGroup(
@@ -600,7 +640,8 @@ public class MainUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(assignCaptainAssignButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(assignCaptainCancelButton)))
+                        .addComponent(assignCaptainCancelButton))
+                    .addComponent(assignCaptainTeamComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         assignCaptainDialogLayout.setVerticalGroup(
@@ -608,8 +649,10 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(assignCaptainDialogLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(assignCaptainIntroLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(assignCaptainTeamComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(assignCaptainDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(assignCaptainCancelButton)
@@ -1229,6 +1272,27 @@ public class MainUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_assignCaptainAssignButtonActionPerformed
 
+    private void teamSelectionDismissGoalkeeperOKButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teamSelectionDismissGoalkeeperOKButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_teamSelectionDismissGoalkeeperOKButtonActionPerformed
+
+    private void changeAvailabilityTeamComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeAvailabilityTeamComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_changeAvailabilityTeamComboBoxActionPerformed
+
+    private void changeAvailabilityTeamComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_changeAvailabilityTeamComboBoxItemStateChanged
+        int index = this.changeAvailabilityTeamComboBox.getSelectedIndex();
+        if(index > 0 ){
+            //set everything
+        } else {
+            //set everything on nothing.
+        }
+    }//GEN-LAST:event_changeAvailabilityTeamComboBoxItemStateChanged
+
+    private void assignCaptainTeamComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignCaptainTeamComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_assignCaptainTeamComboBoxActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField SoccerAssociationPhonenumberTextField;
     private javax.swing.JButton addPlayerCancelButton;
@@ -1258,6 +1322,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel assignCaptainHiddenTeamIndexLabel;
     private javax.swing.JLabel assignCaptainIntroLabel;
     private javax.swing.JList assignCaptainPlayerList;
+    private javax.swing.JComboBox assignCaptainTeamComboBox;
     private javax.swing.JLabel availabilityIntroLabel;
     private javax.swing.JPanel availabilityPanel;
     private javax.swing.JScrollPane availabilityScrollPane;
@@ -1274,6 +1339,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel changeAvailabilityPlayersLabel;
     private javax.swing.JButton changeAvailabilitySetAvailableButton;
     private javax.swing.JButton changeAvailabilitySetUnavailableButton;
+    private javax.swing.JComboBox changeAvailabilityTeamComboBox;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton loginInfoCancelButton;

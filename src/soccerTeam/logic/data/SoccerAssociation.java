@@ -57,27 +57,27 @@ public class SoccerAssociation {
         
 	//Setters
         public void setSAName(String name) {
-            this.contactInfo.setName(name);
+            this.getContactInfo().setName(name);
         }
 
         public void setSAStreet(String street) {
-            this.contactInfo.setStreet(street);
+            this.getContactInfo().setStreet(street);
         }
 
         public void setSAHousenumber(String housenumber) {
-            this.contactInfo.setHousenumber(housenumber);
+            this.getContactInfo().setHousenumber(housenumber);
         }
 
         public void setSAZipcode(String zipcode) {
-            this.contactInfo.setZipcode(zipcode);
+            this.getContactInfo().setZipcode(zipcode);
         }
 
         public void setSACity(String city) {
-            this.contactInfo.setCity(city);
+            this.getContactInfo().setCity(city);
         }
 
         public void setSAPhonenumber(String phonenumber) {
-            this.contactInfo.setPhonenumber(phonenumber);
+            this.getContactInfo().setPhonenumber(phonenumber);
         }
         
         public Player getPlayer(String username, String password){
@@ -125,50 +125,12 @@ public class SoccerAssociation {
         return teamName;
     }
 
-    private int getAmountOfTeams() {
-        return this.getTeams().size();
-    }
-
-    public String[] getDisplayableTeams() {
-        String[] teamNames;
-        teamNames = new String[this.getAmountOfTeams()];
-        int index = 0;
-        for(Team team: this.getTeams()){
-            teamNames[index] = team.toString();
-            index ++;
-        }
-        return teamNames;
-    }
-    
-    public void addPlayerToTeam(int teamIndex, Player player){
-        Team team = this.getTeams().get(teamIndex);
-        boolean succeeded = team.addPlayerToTeam(player);
-        while(!succeeded){ //If not succeeded try again
-            succeeded = team.addPlayerToTeam(player);
-        }
+    public Object[] getDisplayableTeams() {
+        return this.getTeams().toArray();
     }
 
     public String[][] displayMatchesOfTeam(int index) {
         return this.getTeams().get(index).getDisplayableMatches();
     }
 
-    public String[] displayPlayersOfTeam(int index) {
-        return this.getTeams().get(index).displayPlayers();
-    }
-
-    public void setAvailable(int teamIndex, int matchIndex, int playerIndex) {
-        this.getTeams().get(teamIndex).setAvailable(matchIndex, playerIndex);
-    }
-    
-    public void setUnavailable(int teamIndex, int matchIndex, int playerIndex){
-        this.getTeams().get(teamIndex).setUnavailable(matchIndex, playerIndex);
-    }
-
-    public String[] getAllPlayers(int index) {
-        return this.getTeams().get(index).getAllPlayers();
-    }
-
-    public void assignCaptain(int teamIndex, int playerIndex) {
-        this.getTeams().get(teamIndex).assignCaptain(playerIndex);
-    }
 }

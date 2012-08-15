@@ -371,34 +371,49 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="changeAvailabilityHiddenTeamIndexLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="changeAvailabilitySetUnavailableButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="changeAvailabilitySetAvailableButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="changeAvailabilityCancelButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
                           <Component id="changeAvailabilityMatchScrollPane" min="-2" pref="250" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="changeAvailabilityPlayerScrollPane" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="changeAvailabilityPlayersLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="changeAvailabilityHiddenTeamIndexLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="changeAvailabilityPlayerScrollPane" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <Component id="changeAvailabilitySetUnavailableButton" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="changeAvailabilitySetAvailableButton" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="changeAvailabilityCancelButton" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="changeAvailabilityIntroLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-                          <Component id="changeAvailabilityMatchLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="changeAvailabilityPlayersLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="changeAvailabilityTeamComboBox" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                  <Component id="changeAvailabilityMatchLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -410,23 +425,34 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="changeAvailabilityIntroLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="changeAvailabilityMatchLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="changeAvailabilityPlayersLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="changeAvailabilityTeamComboBox" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="changeAvailabilityMatchLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="changeAvailabilityPlayersLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="changeAvailabilityMatchScrollPane" min="-2" pref="229" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="changeAvailabilityPlayerScrollPane" min="-2" pref="229" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="changeAvailabilityMatchScrollPane" pref="0" max="32767" attributes="0"/>
-                      <Component id="changeAvailabilityPlayerScrollPane" pref="254" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="changeAvailabilityHiddenTeamIndexLabel" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace pref="41" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="changeAvailabilityCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="changeAvailabilitySetAvailableButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="changeAvailabilitySetUnavailableButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="changeAvailabilityCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="changeAvailabilitySetAvailableButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="changeAvailabilitySetUnavailableButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="changeAvailabilityHiddenTeamIndexLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -434,7 +460,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="changeAvailabilityIntroLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Please select first select a match, then select a player to set his or her availability."/>
+            <Property name="text" type="java.lang.String" value="Please select select a team first, then a match and then select a player to set his or her availability."/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="changeAvailabilityMatchLabel">
@@ -504,6 +530,15 @@
         <Component class="javax.swing.JLabel" name="changeAvailabilityHiddenTeamIndexLabel">
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="changeAvailabilityHiddenTeamIndexLabel.setVisible(false);"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="changeAvailabilityTeamComboBox">
+          <Events>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="changeAvailabilityTeamComboBoxItemStateChanged"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="changeAvailabilityTeamComboBoxActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox(this.getSTC().getDisplayableTeam())"/>
           </AuxValues>
         </Component>
       </SubComponents>
@@ -610,6 +645,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="OK"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="teamSelectionDismissGoalkeeperOKButtonActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -640,6 +678,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="assignCaptainCancelButton" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="assignCaptainTeamComboBox" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -650,8 +689,10 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="assignCaptainIntroLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="assignCaptainTeamComboBox" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" pref="205" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="179" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="assignCaptainCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -666,7 +707,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="assignCaptainIntroLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Please choose a player to assign him/her as captain."/>
+            <Property name="text" type="java.lang.String" value="Please choose a team and a player to assign him/her as captain."/>
           </Properties>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -702,6 +743,14 @@
         <Component class="javax.swing.JLabel" name="assignCaptainHiddenTeamIndexLabel">
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="assignCaptainHiddenTeamIndexLabel.setVisible(false);"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="assignCaptainTeamComboBox">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="assignCaptainTeamComboBoxActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox(this.getSTC().getDisplayableTeam())"/>
           </AuxValues>
         </Component>
       </SubComponents>
