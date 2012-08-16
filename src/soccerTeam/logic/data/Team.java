@@ -96,10 +96,6 @@ public class Team {
             //Somthing with get all suspended players out.
             return this.getTeam();
         }
-        
-        public void changeAvailability(Player player, Match match){
-            match.changeAvailability(player);
-        }
 
         public int containsPlayer(String username, String password) {
             int index = 0;
@@ -164,4 +160,8 @@ public class Team {
             }
             return goalkeepers.toArray();
         }
+
+    public void addMatch(Team team, int day, int month, int year, int hour, int minutes, String opponents, String location) {
+        this.getMatches().add(new Match(team, new CorrectDate(day, month, year), new Time(hour, minutes, 0), opponents, location));
+    }
 }

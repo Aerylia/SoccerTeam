@@ -4,9 +4,8 @@
  */
 package soccerTeam.view;
 
-import javax.swing.JOptionPane;
-import javax.swing.ListModel;
-import javax.swing.ListSelectionModel;
+import java.util.List;
+import javax.swing.*;
 import javax.swing.table.TableModel;
 import soccerTeam.control.SoccerTeamController;
 
@@ -108,6 +107,40 @@ public class MainUI extends javax.swing.JFrame {
         dismissGoalkeeperGoalkeeperList = new javax.swing.JList(this.getSTC().getGoalkeepers(null));
         dismissGoalkeeperCancelButton = new javax.swing.JButton();
         dismissGoalkeeperDismissButton = new javax.swing.JButton();
+        addMatchDialog = new javax.swing.JDialog();
+        addMatchIntroLabel = new javax.swing.JLabel();
+        addMatchTeamLabel = new javax.swing.JLabel();
+        addMatchTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeam());
+        addMatchDateLabel = new javax.swing.JLabel();
+        addMatchDayTextField = new javax.swing.JTextField();
+        addMatchMonthTextField = new javax.swing.JTextField();
+        addMatchYearTextField = new javax.swing.JTextField();
+        addMatchMinusLabel1 = new javax.swing.JLabel();
+        addMatchMinusLabel2 = new javax.swing.JLabel();
+        addMatchTimeLabel = new javax.swing.JLabel();
+        addMatchDoubleDotLabel = new javax.swing.JLabel();
+        addMatchHourTextField = new javax.swing.JTextField();
+        addMatchMinutesTextField = new javax.swing.JTextField();
+        addMatchOpponentLabel = new javax.swing.JLabel();
+        addMatchLocationLabel = new javax.swing.JLabel();
+        addMatchOpponentsTextField = new javax.swing.JTextField();
+        addMatchLocationTextField = new javax.swing.JTextField();
+        addMatchCancelButton = new javax.swing.JButton();
+        addMatchOKButton = new javax.swing.JButton();
+        createMatchteamDialog = new javax.swing.JDialog();
+        createMatchteamIntroLabel = new javax.swing.JLabel();
+        createMatchteamDeselectButton = new javax.swing.JButton();
+        createMatchteamSelectButton = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        createMatchteamAvailableList = new javax.swing.JList(new Object[0]);
+        jScrollPane4 = new javax.swing.JScrollPane();
+        createMatchteamSelectedList = new javax.swing.JList(new Object[15]);
+        createMatchteamCancelButton = new javax.swing.JButton();
+        createMatchteamOKButton = new javax.swing.JButton();
+        createMatchteamTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeam());
+        createMatchteamTeamLabel = new javax.swing.JLabel();
+        createMatchteamMatchLabel = new javax.swing.JLabel();
+        createMatchteamMatchComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableMatches(null));
         mainTabbedPane = new javax.swing.JTabbedPane();
         profilePanel = new javax.swing.JPanel();
         profileTeamLabel = new javax.swing.JLabel();
@@ -724,6 +757,237 @@ public class MainUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        addMatchIntroLabel.setText("Please enter the required information below to add a new match.");
+
+        addMatchTeamLabel.setText("Team :");
+
+        addMatchDateLabel.setText("Date :");
+
+        addMatchMinusLabel1.setText("-");
+
+        addMatchMinusLabel2.setText("-");
+
+        addMatchTimeLabel.setText("Time : ");
+
+        addMatchDoubleDotLabel.setText(":");
+
+        addMatchOpponentLabel.setText("Opponents :");
+
+        addMatchLocationLabel.setText("Location :");
+
+        addMatchCancelButton.setText("Cancel");
+        addMatchCancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addMatchCancelButtonActionPerformed(evt);
+            }
+        });
+
+        addMatchOKButton.setText("Add Match");
+        addMatchOKButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addMatchOKButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout addMatchDialogLayout = new javax.swing.GroupLayout(addMatchDialog.getContentPane());
+        addMatchDialog.getContentPane().setLayout(addMatchDialogLayout);
+        addMatchDialogLayout.setHorizontalGroup(
+            addMatchDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addMatchDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(addMatchDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addMatchDialogLayout.createSequentialGroup()
+                        .addGroup(addMatchDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(addMatchOpponentLabel)
+                            .addComponent(addMatchTeamLabel)
+                            .addComponent(addMatchTimeLabel)
+                            .addComponent(addMatchDateLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(addMatchDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(addMatchDialogLayout.createSequentialGroup()
+                                .addGroup(addMatchDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(addMatchHourTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
+                                    .addComponent(addMatchDayTextField))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(addMatchDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(addMatchMinusLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(addMatchDoubleDotLabel))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(addMatchDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(addMatchMonthTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 21, Short.MAX_VALUE)
+                                    .addComponent(addMatchMinutesTextField))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(addMatchMinusLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(addMatchYearTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(addMatchOpponentsTextField)
+                            .addComponent(addMatchTeamComboBox, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addMatchDialogLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(addMatchOKButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(addMatchCancelButton))
+                    .addGroup(addMatchDialogLayout.createSequentialGroup()
+                        .addGroup(addMatchDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(addMatchDialogLayout.createSequentialGroup()
+                                .addComponent(addMatchLocationLabel)
+                                .addGap(23, 23, 23)
+                                .addComponent(addMatchLocationTextField))
+                            .addComponent(addMatchIntroLabel))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        addMatchDialogLayout.setVerticalGroup(
+            addMatchDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addMatchDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(addMatchIntroLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(addMatchDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addMatchTeamLabel)
+                    .addComponent(addMatchTeamComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(addMatchDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addMatchDateLabel)
+                    .addComponent(addMatchDayTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addMatchMinusLabel1)
+                    .addComponent(addMatchMonthTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addMatchMinusLabel2)
+                    .addComponent(addMatchYearTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(addMatchDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addMatchTimeLabel)
+                    .addComponent(addMatchDoubleDotLabel)
+                    .addComponent(addMatchHourTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addMatchMinutesTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(addMatchDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addMatchOpponentLabel)
+                    .addComponent(addMatchOpponentsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(addMatchDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addMatchLocationLabel)
+                    .addComponent(addMatchLocationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(addMatchDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addMatchCancelButton)
+                    .addComponent(addMatchOKButton))
+                .addContainerGap())
+        );
+
+        createMatchteamIntroLabel.setText("Please choose a match team from the following :");
+
+        createMatchteamDeselectButton.setText("<< Deselect");
+        createMatchteamDeselectButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createMatchteamDeselectButtonActionPerformed(evt);
+            }
+        });
+
+        createMatchteamSelectButton.setText("Select >>");
+        createMatchteamSelectButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createMatchteamSelectButtonActionPerformed(evt);
+            }
+        });
+
+        createMatchteamAvailableList.setDragEnabled(false);
+        jScrollPane3.setViewportView(createMatchteamAvailableList);
+
+        jScrollPane4.setViewportView(createMatchteamSelectedList);
+
+        createMatchteamCancelButton.setText("Cancel");
+        createMatchteamCancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createMatchteamCancelButtonActionPerformed(evt);
+            }
+        });
+
+        createMatchteamOKButton.setText("OK");
+
+        createMatchteamTeamComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                createMatchteamTeamComboBoxItemStateChanged(evt);
+            }
+        });
+
+        createMatchteamTeamLabel.setText("Team :");
+
+        createMatchteamMatchLabel.setText("Match :");
+
+        createMatchteamMatchComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                createMatchteamMatchComboBoxItemStateChanged(evt);
+            }
+        });
+
+        javax.swing.GroupLayout createMatchteamDialogLayout = new javax.swing.GroupLayout(createMatchteamDialog.getContentPane());
+        createMatchteamDialog.getContentPane().setLayout(createMatchteamDialogLayout);
+        createMatchteamDialogLayout.setHorizontalGroup(
+            createMatchteamDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(createMatchteamDialogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(createMatchteamDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(createMatchteamDialogLayout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(createMatchteamDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(createMatchteamSelectButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(createMatchteamDeselectButton, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(createMatchteamDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, createMatchteamDialogLayout.createSequentialGroup()
+                                .addComponent(createMatchteamOKButton, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(createMatchteamCancelButton))
+                            .addComponent(jScrollPane4)))
+                    .addGroup(createMatchteamDialogLayout.createSequentialGroup()
+                        .addGroup(createMatchteamDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(createMatchteamIntroLabel)
+                            .addGroup(createMatchteamDialogLayout.createSequentialGroup()
+                                .addGroup(createMatchteamDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(createMatchteamMatchLabel)
+                                    .addComponent(createMatchteamTeamLabel))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(createMatchteamDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(createMatchteamTeamComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(createMatchteamMatchComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        createMatchteamDialogLayout.setVerticalGroup(
+            createMatchteamDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(createMatchteamDialogLayout.createSequentialGroup()
+                .addGroup(createMatchteamDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(createMatchteamDialogLayout.createSequentialGroup()
+                        .addGap(126, 126, 126)
+                        .addComponent(createMatchteamSelectButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(createMatchteamDeselectButton)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(createMatchteamDialogLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(createMatchteamIntroLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(createMatchteamDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(createMatchteamTeamComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(createMatchteamTeamLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(createMatchteamDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(createMatchteamMatchLabel)
+                            .addComponent(createMatchteamMatchComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(createMatchteamDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+                            .addComponent(jScrollPane4))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(createMatchteamDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(createMatchteamCancelButton)
+                    .addComponent(createMatchteamOKButton))
+                .addContainerGap())
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Programname");
 
@@ -1278,6 +1542,8 @@ public class MainUI extends javax.swing.JFrame {
     }//GEN-LAST:event_addPlayerSaveButtonActionPerformed
 
     private void teamChangeAvailabilityButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teamChangeAvailabilityButtonActionPerformed
+        this.changeAvailabilityMatchList.setListData(
+                this.getSTC().getDisplayableMatches(this.changeAvailabilityTeamComboBox.getSelectedItem()));
         this.changeAvailabilityDialog.setVisible(true);
     }//GEN-LAST:event_teamChangeAvailabilityButtonActionPerformed
 
@@ -1359,11 +1625,20 @@ public class MainUI extends javax.swing.JFrame {
     }//GEN-LAST:event_teamDismissGoalkeeperButtonActionPerformed
 
     private void teamnAddMatchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teamnAddMatchButtonActionPerformed
-        // TODO add your handling code here:
+        this.addMatchDayTextField.setText("dd");
+        this.addMatchMonthTextField.setText("mm");
+        this.addMatchYearTextField.setText("yyyy");
+        this.addMatchHourTextField.setText("hh");
+        this.addMatchMinutesTextField.setText("mm");
+        this.addMatchDialog.setVisible(true);
     }//GEN-LAST:event_teamnAddMatchButtonActionPerformed
 
     private void teamCreateMatchTeamButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teamCreateMatchTeamButtonActionPerformed
-        // TODO add your handling code here:
+        this.createMatchteamMatchComboBox.setModel(new DefaultComboBoxModel(
+                this.getSTC().getDisplayableMatches(this.createMatchteamTeamComboBox.getSelectedItem())));
+        this.createMatchteamAvailableList.setListData(this.getSTC().getAvailablePlayers(
+                this.createMatchteamTeamComboBox.getSelectedItem()));
+        this.createMatchteamDialog.setVisible(true);
     }//GEN-LAST:event_teamCreateMatchTeamButtonActionPerformed
 
     private void assignCaptainTeamComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_assignCaptainTeamComboBoxItemStateChanged
@@ -1409,8 +1684,94 @@ public class MainUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_dismissGoalkeeperDismissButtonActionPerformed
 
+    private void addMatchOKButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addMatchOKButtonActionPerformed
+        try{
+            Object team = this.addMatchTeamComboBox.getSelectedItem();
+            int day = Integer.parseInt(this.addMatchDayTextField.getText());
+            int month = Integer.parseInt(this.addMatchMonthTextField.getText());
+            int year = Integer.parseInt(this.addMatchYearTextField.getText());
+            int hour = Integer.parseInt(this.addMatchHourTextField.getText());
+            int minutes = Integer.parseInt(this.addMatchMinutesTextField.getText());
+            String opponents = this.addMatchOpponentsTextField.getText();
+            String location = this.addMatchLocationTextField.getText();
+            if (team == null){
+                this.popup("Please select a team.");
+            } else if(opponents.isEmpty()){
+                this.popup("Please enter the name of the opponents.");
+            } else if(location.isEmpty()){
+                this.popup("Please enter the matchlocation.");
+            } else {
+                this.getSTC().addMatchToTeam(team, day, month, year, hour, minutes, opponents, location);
+                this.addMatchDialog.dispose();
+            }
+            
+        } catch (NumberFormatException e){
+            this.popup("Please only use numbers in the date and time fields.");
+        }
+    }//GEN-LAST:event_addMatchOKButtonActionPerformed
+
+    private void addMatchCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addMatchCancelButtonActionPerformed
+        this.addMatchDialog.dispose();
+    }//GEN-LAST:event_addMatchCancelButtonActionPerformed
+
+    private void createMatchteamTeamComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_createMatchteamTeamComboBoxItemStateChanged
+        this.createMatchteamTeamComboBox.setModel(new DefaultComboBoxModel(
+                this.getSTC().getAvailablePlayers(this.createMatchteamTeamComboBox.getSelectedItem())));
+    }//GEN-LAST:event_createMatchteamTeamComboBoxItemStateChanged
+
+    private void createMatchteamMatchComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_createMatchteamMatchComboBoxItemStateChanged
+        this.createMatchteamAvailableList.setListData(
+                this.getSTC().getAvailablePlayers(this.createMatchteamMatchComboBox.getSelectedItem()));
+    }//GEN-LAST:event_createMatchteamMatchComboBoxItemStateChanged
+
+    private void createMatchteamSelectButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createMatchteamSelectButtonActionPerformed
+        List selection = this.createMatchteamAvailableList.getSelectedValuesList();
+        for(int index = 0; index < this.createMatchteamSelectedList.getModel().getSize(); index++){ 
+            if ( !selection.contains(this.createMatchteamSelectedList.getModel().getElementAt(index))){
+                selection.add(this.createMatchteamSelectedList.getModel().getElementAt(index));
+            }
+        }
+        this.createMatchteamSelectedList.setListData(selection.toArray());
+        this.createMatchteamAvailableList.clearSelection();
+    }//GEN-LAST:event_createMatchteamSelectButtonActionPerformed
+
+    private void createMatchteamDeselectButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createMatchteamDeselectButtonActionPerformed
+        List selection = this.createMatchteamSelectedList.getSelectedValuesList();
+        Object[] newList = new Object[this.createMatchteamSelectedList.getModel().getSize()];
+        for(int index = 0; index < this.createMatchteamSelectedList.getModel().getSize(); index ++){
+            if ( !selection.contains(this.createMatchteamSelectedList.getModel().getElementAt(index))){
+                newList[index] = this.createMatchteamSelectedList.getModel().getElementAt(index);
+            }
+        }
+        this.createMatchteamSelectedList.setListData(newList);
+    }//GEN-LAST:event_createMatchteamDeselectButtonActionPerformed
+
+    private void createMatchteamCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createMatchteamCancelButtonActionPerformed
+        this.createMatchteamDialog.dispose();
+    }//GEN-LAST:event_createMatchteamCancelButtonActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField SoccerAssociationPhonenumberTextField;
+    private javax.swing.JButton addMatchCancelButton;
+    private javax.swing.JLabel addMatchDateLabel;
+    private javax.swing.JTextField addMatchDayTextField;
+    private javax.swing.JDialog addMatchDialog;
+    private javax.swing.JLabel addMatchDoubleDotLabel;
+    private javax.swing.JTextField addMatchHourTextField;
+    private javax.swing.JLabel addMatchIntroLabel;
+    private javax.swing.JLabel addMatchLocationLabel;
+    private javax.swing.JTextField addMatchLocationTextField;
+    private javax.swing.JLabel addMatchMinusLabel1;
+    private javax.swing.JLabel addMatchMinusLabel2;
+    private javax.swing.JTextField addMatchMinutesTextField;
+    private javax.swing.JTextField addMatchMonthTextField;
+    private javax.swing.JButton addMatchOKButton;
+    private javax.swing.JLabel addMatchOpponentLabel;
+    private javax.swing.JTextField addMatchOpponentsTextField;
+    private javax.swing.JComboBox addMatchTeamComboBox;
+    private javax.swing.JLabel addMatchTeamLabel;
+    private javax.swing.JLabel addMatchTimeLabel;
+    private javax.swing.JTextField addMatchYearTextField;
     private javax.swing.JButton addPlayerCancelButton;
     private javax.swing.JLabel addPlayerCityLabel;
     private javax.swing.JTextField addPlayerCityTextField;
@@ -1464,6 +1825,18 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JButton changeAvailabilitySetUnavailableButton;
     private javax.swing.JComboBox changeAvailabilityTeamComboBox;
     private javax.swing.JLabel changeAvailabilityTeamLabel;
+    private javax.swing.JList createMatchteamAvailableList;
+    private javax.swing.JButton createMatchteamCancelButton;
+    private javax.swing.JButton createMatchteamDeselectButton;
+    private javax.swing.JDialog createMatchteamDialog;
+    private javax.swing.JLabel createMatchteamIntroLabel;
+    private javax.swing.JComboBox createMatchteamMatchComboBox;
+    private javax.swing.JLabel createMatchteamMatchLabel;
+    private javax.swing.JButton createMatchteamOKButton;
+    private javax.swing.JButton createMatchteamSelectButton;
+    private javax.swing.JList createMatchteamSelectedList;
+    private javax.swing.JComboBox createMatchteamTeamComboBox;
+    private javax.swing.JLabel createMatchteamTeamLabel;
     private javax.swing.JButton dismissGoalkeeperCancelButton;
     private javax.swing.JDialog dismissGoalkeeperDialog;
     private javax.swing.JButton dismissGoalkeeperDismissButton;
@@ -1474,6 +1847,8 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JButton loginInfoCancelButton;
     private javax.swing.JDialog loginInfoDialog;
     private javax.swing.JLabel loginInfoIntro2Label;

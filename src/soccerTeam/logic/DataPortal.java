@@ -331,4 +331,47 @@ public class DataPortal{
         }
     }
 
+    public void addMatchToTeam(Object team, int day, int month, int year, int hour, int minutes, String opponents, String location) {
+        if(team instanceof Team){
+            if (!this.checkDate(day, month, year) && !this.checkTime(hour, minutes)){
+                throw new IllegalArgumentException();
+            } else {
+                ((Team)team).addMatch((Team)team, day, month, year, hour, minutes, opponents, location);
+            }
+        } else {
+            throw new IllegalArgumentException("The given team was not a Team.");
+        }
+    }
+    
+    private boolean checkDate(int day, int month, int year){
+        if(month > 12 || month < 0){
+            return false;
+        } else if (day < 0){
+            return false;
+        } else if( (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
+                && day > 31){
+            return false;
+        } else if( (month == 4 || month == 6 || month == 9 || month == 11) && day > 30){
+            return false;
+        } else if (month == 2 && day > 28){
+            if(day == 28 && year%4 == 0 && (year%400 == 0 || year%100 != 0)) {
+                return true;
+            } else {
+                return false; 
+            }
+        } else {
+            return true;
+        }
+    }
+
+    private boolean checkTime(int hour, int minutes) {
+        if ( hour < 0 || hour > 23){
+            return false;
+        } else if ( minutes < 0 || minutes > 59){
+            return false;
+        } else {
+            return true;
+        }
+    }
+
 }

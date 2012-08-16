@@ -10,9 +10,8 @@ import java.util.ArrayList;
  *
  * @author Arianne
  */
-public abstract class Match {
+public class Match {
     
-        private Team team;
     	private CorrectDate date;
         private Time time;
 	private String location;
@@ -23,21 +22,16 @@ public abstract class Match {
 	
 	//Constructors
 	public Match(Team team, CorrectDate date, Time time, String opponents, String location){
-                this.setTeam(team);
 		this.setDate(date);
                 this.setTime(time);
 		this.setOpponents(opponents);
 		this.setLocation(location);
                 this.matchTeam = new ArrayList();
                 this.availablePlayers = new ArrayList();
-                this.setAvailablePlayers();
+                this.setAvailablePlayers(team);
 	}
 
 	//getters
-        private Team getTeam(){
-            return this.team;
-        }
-        
         private ArrayList<Player> getAvailablePlayers(){
             return this.availablePlayers;
         }
@@ -83,29 +77,14 @@ public abstract class Match {
 		this.matchTeam = matchTeam;
 	}
         
-        private void setTeam(Team team){
-            this.team = team;
-        }
-
 	//Methods
-        private void setAvailablePlayers(){
-            this.availablePlayers = this.getTeam().getNonSuspendedPlayers(this);
+        private void setAvailablePlayers(Team team){
+            this.availablePlayers = team.getNonSuspendedPlayers(this);
         }
         
         @Override
 	public String toString(){
-            //TODO
-		throw new UnsupportedOperationException("Not implemented yet.");
-	}
-
-        void changeAvailability(Player player) {
-            //TODO suspention check.
-            int index = this.getAvailablePlayers().indexOf(player);
-            if(index == -1){
-                this.getAvailablePlayers().add(player); //mits hij niet suspended is.
-            } else {
-                this.getAvailablePlayers().remove(index);
-            }
+            return this.getDate().toString() + "\t" + this.getTime().toString() + "\t" + this.getOpponents() + "\t" +  this.getLocation();
         }
         
         public void addMatchStats(/*stuffies*/){
@@ -128,17 +107,17 @@ public abstract class Match {
             return this.getAvailablePlayers().toArray();
         }
 
-    public void setAvailable(Player player) {
-        if(!this.availablePlayers.contains(player)){
-            this.availablePlayers.add(player);
+        public void setAvailable(Player player) {
+            if(!this.availablePlayers.contains(player)){
+                this.availablePlayers.add(player);
+            }
         }
-    }
-    
-    public void setUnavailable(Player player){
-        if(this.availablePlayers.contains(player)){
-            this.availablePlayers.remove(player);
+
+        public void setUnavailable(Player player){
+            if(this.availablePlayers.contains(player)){
+                this.availablePlayers.remove(player);
+            }
         }
-    }
 
 
 }
