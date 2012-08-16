@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package soccerTeam.control;
+package soccerTeam.logic;
 
 import java.io.*;
 import soccerTeam.logic.DataPortal;
