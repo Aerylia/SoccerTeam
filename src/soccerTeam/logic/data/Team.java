@@ -135,20 +135,33 @@ public class Team {
             return this.getTeamName();
         }
 
-        public String[][] getDisplayableMatches() {
-            String[][] matchNames;
-            matchNames = new String[this.getMatches().size()][4];
-            for(int i = 0; i < this.getMatches().size(); i++){
-                Match match = this.getMatches().get(i);
-                matchNames[i][0] = match.date();
-                matchNames[i][1] = match.time();
-                matchNames[i][2] = match.getOpponents();
-                matchNames[i][3] = match.getLocation();
-            }
-            return matchNames;
+        public Object[] getDisplayableMatches() {
+           return this.getMatches().toArray();
         }
 
         public Object[] getAllPlayers() {
             return this.getTeam().toArray();
+        }
+
+        public Object[] getNonGoalkeepers() {
+            ArrayList<Player> nonGoalkeepers = new ArrayList();
+            for(Player player : this.getTeam()){
+                if(!player.isGoalkeeper()){
+                    nonGoalkeepers.add(player);
+                }
+            }
+            return nonGoalkeepers.toArray();
+        }
+        
+        
+
+        public Object[] getGoalkeepers() {
+            ArrayList<Player> goalkeepers = new ArrayList();
+            for(Player player : this.getTeam()){
+                if(player.isGoalkeeper()){
+                    goalkeepers.add(player);
+                }
+            }
+            return goalkeepers.toArray();
         }
 }

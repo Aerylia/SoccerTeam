@@ -92,4 +92,8 @@ public class SortedMatches{
     public Match get(int index) {
         return this.getMatches().get(index);
     }
+
+    public Object[] toArray() {
+        return this.getMatches().toArray();
+    }
 }

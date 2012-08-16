@@ -124,15 +124,8 @@ public abstract class Match {
             return this.getTime().toString();
         }
 
-        public String[] displayAvailablePlayers() {
-            String [] players;
-            players = new String [this.getAvailablePlayers().size()];
-            int index = 0;
-            for(Player player: this.getAvailablePlayers()){
-                players[index] = player.toString();
-                index++;
-            }
-            return players;
+        public Object[] displayAvailablePlayers() {
+            return this.getAvailablePlayers().toArray();
         }
 
     public void setAvailable(Player player) {

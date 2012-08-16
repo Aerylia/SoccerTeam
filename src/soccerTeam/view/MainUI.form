@@ -138,6 +138,9 @@
       <Properties>
         <Property name="defaultCloseOperation" type="int" value="2"/>
         <Property name="title" type="java.lang.String" value="Add Player"/>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[500, 300]"/>
+        </Property>
       </Properties>
 
       <Layout>
@@ -370,47 +373,37 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="changeAvailabilityMatchScrollPane" min="-2" pref="250" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="changeAvailabilityPlayersLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="changeAvailabilityHiddenTeamIndexLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="changeAvailabilityPlayerScrollPane" max="32767" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                          <Component id="changeAvailabilitySetUnavailableButton" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="changeAvailabilitySetAvailableButton" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="changeAvailabilityCancelButton" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
                           <Component id="changeAvailabilityIntroLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="changeAvailabilityTeamComboBox" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="changeAvailabilityTeamLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="changeAvailabilityTeamComboBox" max="32767" attributes="0"/>
+                              </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                  <Component id="changeAvailabilityMatchScrollPane" min="-2" pref="254" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="changeAvailabilityPlayerScrollPane" pref="316" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
                                   <Component id="changeAvailabilityMatchLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="changeAvailabilityPlayersLabel" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="changeAvailabilitySetUnavailableButton" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="changeAvailabilitySetAvailableButton" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="changeAvailabilityCancelButton" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -425,34 +418,27 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="changeAvailabilityIntroLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="changeAvailabilityTeamComboBox" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="changeAvailabilityTeamComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="changeAvailabilityTeamLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="changeAvailabilityMatchLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="changeAvailabilityPlayersLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="changeAvailabilityMatchScrollPane" min="-2" pref="229" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="changeAvailabilityPlayerScrollPane" min="-2" pref="229" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="changeAvailabilityMatchLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="changeAvailabilityPlayersLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="changeAvailabilityHiddenTeamIndexLabel" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="41" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="changeAvailabilityCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="changeAvailabilitySetAvailableButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="changeAvailabilitySetUnavailableButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="changeAvailabilityMatchScrollPane" pref="250" max="32767" attributes="0"/>
+                      <Component id="changeAvailabilityPlayerScrollPane" max="32767" attributes="0"/>
                   </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="changeAvailabilityCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="changeAvailabilitySetAvailableButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="changeAvailabilitySetUnavailableButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -497,18 +483,29 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="changeAvailabilitySetUnavailableButtonActionPerformed"/>
           </Events>
         </Component>
+        <Component class="javax.swing.JComboBox" name="changeAvailabilityTeamComboBox">
+          <Events>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="changeAvailabilityTeamComboBoxItemStateChanged"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="changeAvailabilityTeamComboBoxActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox(this.getSTC().getDisplayableTeam())"/>
+          </AuxValues>
+        </Component>
         <Container class="javax.swing.JScrollPane" name="changeAvailabilityMatchScrollPane">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="changeAvailabilityMatchTable">
-              <Properties>
-                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    this.getSTC().getDisplayableMatches(-1),&#xa;    new String [] {&#xa;        &quot;Date&quot;, &quot;Time&quot;, &quot;Opponents&quot;, &quot;Location&quot;&#xa;    }&#xa;)" type="code"/>
-                </Property>
-              </Properties>
+            <Component class="javax.swing.JList" name="changeAvailabilityMatchList">
+              <Events>
+                <EventHandler event="valueChanged" listener="javax.swing.event.ListSelectionListener" parameters="javax.swing.event.ListSelectionEvent" handler="changeAvailabilityMatchListValueChanged"/>
+              </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="changeAvailabilityMatchTable.setColumnSelectionAllowed(false);&#xa;changeAvailabilityMatchTable.setCellSelectionEnabled(false);&#xa;changeAvailabilityMatchTable.setRowSelectionAllowed(true);"/>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JList(this.getSTC().getDisplayableMatches(null))"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="assignCaptainPlayerList.setDragEnabled(false);&#xa;assignCaptainPlayerList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);"/>
               </AuxValues>
             </Component>
           </SubComponents>
@@ -521,140 +518,24 @@
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
             <Component class="javax.swing.JList" name="changeAvailabilityPlayerList">
-              <Properties>
-                <Property name="model" preCode="changeAvailabilityPlayerList.setListData(this.getSTC().getDisplayablePlayers(-1));"/>
-              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JList(this.getSTC().getAllPlayers(null))"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="assignCaptainPlayerList.setDragEnabled(false);&#xa;assignCaptainPlayerList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="changeAvailabilityHiddenTeamIndexLabel">
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="changeAvailabilityHiddenTeamIndexLabel.setVisible(false);"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JComboBox" name="changeAvailabilityTeamComboBox">
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="changeAvailabilityTeamComboBoxItemStateChanged"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="changeAvailabilityTeamComboBoxActionPerformed"/>
-          </Events>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox(this.getSTC().getDisplayableTeam())"/>
-          </AuxValues>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JDialog" name="teamSelectionDialog">
-      <Properties>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[200, 150]"/>
-        </Property>
-      </Properties>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
-                          <Component id="teamSelectionDismissGoalkeeperOKButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="teamSelectionAssignGoalkeeperOKButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="teamSelectionAssignCaptainOKButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="teamSelectionOKButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="teamSelectionCancelButton" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="teamSelectionIntroLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Component id="teamSelectionTeamComboBox" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="teamSelectionIntroLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="teamSelectionTeamComboBox" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="30" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="teamSelectionCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="teamSelectionOKButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="teamSelectionAssignCaptainOKButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="teamSelectionAssignGoalkeeperOKButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="teamSelectionDismissGoalkeeperOKButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="teamSelectionIntroLabel">
+        <Component class="javax.swing.JLabel" name="changeAvailabilityTeamLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Please select a team :"/>
+            <Property name="text" type="java.lang.String" value="Team :"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JToggleButton" name="teamSelectionCancelButton">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Cancel"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="teamSelectionCancelButtonActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JToggleButton" name="teamSelectionOKButton">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="OK"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="teamSelectionOKButtonActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JComboBox" name="teamSelectionTeamComboBox">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="teamSelectionTeamComboBoxActionPerformed"/>
-          </Events>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox(this.getSTC().getDisplayableTeam())"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JButton" name="teamSelectionAssignCaptainOKButton">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="OK"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="teamSelectionAssignCaptainOKButtonActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="teamSelectionAssignGoalkeeperOKButton">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="OK"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="teamSelectionDismissGoalkeeperOKButton">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="OK"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="teamSelectionDismissGoalkeeperOKButtonActionPerformed"/>
-          </Events>
         </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JDialog" name="assignCaptainDialog">
       <Properties>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[200, 500]"/>
+          <Dimension value="[500, 200]"/>
         </Property>
       </Properties>
 
@@ -665,20 +546,21 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jScrollPane1" max="32767" attributes="0"/>
-                              <Component id="assignCaptainIntroLabel" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="assignCaptainTeamLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="assignCaptainTeamComboBox" max="32767" attributes="0"/>
+                      </Group>
+                      <Component id="assignCaptainPlayerScrollPane" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="assignCaptainIntroLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="assignCaptainHiddenTeamIndexLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           <Component id="assignCaptainAssignButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="assignCaptainCancelButton" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="assignCaptainTeamComboBox" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -690,16 +572,18 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="assignCaptainIntroLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="assignCaptainTeamComboBox" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" pref="179" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="assignCaptainTeamComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="assignCaptainTeamLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="assignCaptainPlayerScrollPane" min="-2" pref="179" max="-2" attributes="0"/>
+                  <EmptySpace pref="11" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="assignCaptainCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="assignCaptainAssignButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="assignCaptainHiddenTeamIndexLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -710,7 +594,7 @@
             <Property name="text" type="java.lang.String" value="Please choose a team and a player to assign him/her as captain."/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+        <Container class="javax.swing.JScrollPane" name="assignCaptainPlayerScrollPane">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
@@ -719,7 +603,8 @@
           <SubComponents>
             <Component class="javax.swing.JList" name="assignCaptainPlayerList">
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JList(this.getSTC().getAllPlayers(-1))"/>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JList(this.getSTC().getAllPlayers(null))"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="assignCaptainPlayerList.setDragEnabled(false);&#xa;assignCaptainPlayerList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);"/>
               </AuxValues>
             </Component>
           </SubComponents>
@@ -740,18 +625,225 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="assignCaptainAssignButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="assignCaptainHiddenTeamIndexLabel">
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="assignCaptainHiddenTeamIndexLabel.setVisible(false);"/>
-          </AuxValues>
-        </Component>
         <Component class="javax.swing.JComboBox" name="assignCaptainTeamComboBox">
           <Events>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="assignCaptainTeamComboBoxItemStateChanged"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="assignCaptainTeamComboBoxActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox(this.getSTC().getDisplayableTeam())"/>
           </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="assignCaptainTeamLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Team :"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="assignGoalkeeperDialog">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jScrollPane1" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="assignGoalkeeperTeamLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="assignGoalkeeperTeamComboBox" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="assignGoalkeeperIntroLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="assignGoalkeeperAssignButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="assignGoalkeeperCancelButton" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="assignGoalkeeperIntroLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="assignGoalkeeperTeamLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="assignGoalkeeperTeamComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="170" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="assignGoalkeeperCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="assignGoalkeeperAssignButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="assignGoalkeeperIntroLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Please select a Team and a Player to assign him or her as Goalkeeper."/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="assignGoalkeeperTeamLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Team :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="assignGoalkeeperTeamComboBox">
+          <Events>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="assignGoalkeeperTeamComboBoxItemStateChanged"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox(this.getSTC().getDisplayableTeam())"/>
+          </AuxValues>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JList" name="assignGoalkeeperPlayerList">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JList(this.getSTC().getNonGoalkeepers(null))"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="assignGoalkeeperPlayerList.setDragEnabled(false);&#xa;assignGoalkeeperPlayerList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="assignGoalkeeperCancelButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancel"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="assignGoalkeeperCancelButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="assignGoalkeeperAssignButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Assign"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="assignGoalkeeperAssignButtonActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="dismissGoalkeeperDialog">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jScrollPane2" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="dismissGoalkeeperTeamLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="dismissGoalkeeperTeamComboBox" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="dismissGoalkeeperIntroLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="dismissGoalkeeperDismissButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="dismissGoalkeeperCancelButton" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="dismissGoalkeeperIntroLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="dismissGoalkeeperTeamLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="dismissGoalkeeperTeamComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane2" pref="203" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="dismissGoalkeeperCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="dismissGoalkeeperDismissButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="dismissGoalkeeperIntroLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Please select a team and a goalkeeper to dismiss him or her from goalkeeper."/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="dismissGoalkeeperTeamLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Team :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="dismissGoalkeeperTeamComboBox">
+          <Events>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="dismissGoalkeeperTeamComboBoxItemStateChanged"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox(this.getSTC().getDisplayableTeam())"/>
+          </AuxValues>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JList" name="dismissGoalkeeperGoalkeeperList">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JList(this.getSTC().getGoalkeepers(null))"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="dismissGoalkeeperGoalkeeperList.setDragEnabled(false);&#xa;dismissGoalkeeperGoalkeeperList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="dismissGoalkeeperCancelButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancel"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dismissGoalkeeperCancelButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="dismissGoalkeeperDismissButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Dismiss"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dismissGoalkeeperDismissButtonActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -1372,11 +1464,17 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Add Match"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="teamnAddMatchButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="teamCreateMatchTeamButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Create MatchTeam"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="teamCreateMatchTeamButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="teamAssignCaptainButton">
               <Properties>
@@ -1390,11 +1488,17 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Assign Goalkeeper"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="teamAssignGoalkeeperButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="teamDismissGoalkeeperButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Dismiss Goalkeeper"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="teamDismissGoalkeeperButtonActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

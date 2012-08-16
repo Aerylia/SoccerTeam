@@ -129,8 +129,4 @@ public class SoccerAssociation {
         return this.getTeams().toArray();
     }
 
-    public String[][] displayMatchesOfTeam(int index) {
-        return this.getTeams().get(index).getDisplayableMatches();
-    }
-
 }

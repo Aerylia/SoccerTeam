@@ -4,6 +4,7 @@
  */
 package soccerTeam.control;
 
+import soccerTeam.logic.DataManager;
 import java.awt.Component;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -267,20 +268,27 @@ public class SoccerTeamController {
                 playerZipcode, playerCity, playerPhonenumber);
     }
 
-    public String[][] getDisplayableMatches(Object team) {
-        //TODO
+    public Object[] getDisplayableMatches(Object team) {
         if(team != null){
             return this.getSTM().getDisplayableMatches(team);
         } else {
-            return new String[0][4];
+            return new Object[0];
         }
     }
     
-    public Object[] getDisplayablePlayers(Object team){
+    public Object[] getAllPlayers(Object team){
         if(team != null){
-            return this.getSTM().getDisplayablePlayers(team);
+            return this.getSTM().getAllPlayers(team); 
         } else {
-            return new String[0];
+            return new Object[0];
+        }
+    }
+    
+    public Object[] getAvailablePlayers(Object match){
+        if(match != null){
+            return this.getSTM().getAvailablePlayers(match);
+        } else {
+            return new Object[0];
         }
     }
 
@@ -291,16 +299,32 @@ public class SoccerTeamController {
     public void setUnavailable(Object match, Object player){
         this.getSTM().setUnavailable(match, player);
     }
-    
-    public Object[] getAllPlayers(Object team){
-        if(team != null){
-            return this.getSTM().getAllPlayers(team); 
-        } else {
-            return new String[0];
-        }
-    }
 
     public void assignCaptain(Object team, Object player) {
         this.getSTM().assignCaptain(team, player);
+    }
+    
+    public Object[] getNonGoalkeepers(Object team){
+        if(team != null){
+            return this.getSTM().getNonGoalkeepers(team);
+        } else {
+            return new Object[0];
+        }
+    }
+
+    public void assignGoalkeeper(Object player) {
+        this.getSTM().assignGoalkeeper(player);
+    }
+    
+    public Object[] getGoalkeepers(Object team){
+        if(team != null){
+            return this.getSTM().getGoalkeepers(team);
+        } else {
+            return new Object[0];
+        }
+    }
+
+    public void dismissGoalkeeper(Object player) {
+        this.getSTM().dismissGoalkeeper(player);
     }
 }

@@ -238,7 +238,7 @@ public class DataPortal{
         }
     }
 
-    public String[][] getDisplayableMatches(Object team) {
+    public Object[] getDisplayableMatches(Object team) {
         if (team instanceof Team){
             return ((Team)team).getDisplayableMatches();
         } else {
@@ -246,11 +246,11 @@ public class DataPortal{
         }
     }
 
-    public Object[] getDisplayablePlayers(Object team) {
-        if(team instanceof Team){
-            return ((Team)team).getAllPlayers();
+    public Object[] getAvailablePlayers(Object match) {
+        if(match instanceof Match){
+            return ((Match)match).displayAvailablePlayers();
         } else {
-            throw new IllegalArgumentException("The given team was not a Team");
+            throw new IllegalArgumentException("The given match was not a Match.");
         }
     }
 
@@ -295,6 +295,39 @@ public class DataPortal{
             }
         } else {
             throw new IllegalArgumentException("The given team is not a Team.");
+        }
+    }
+
+    public Object[] getNonGoalkeepers(Object team) {
+        if(team instanceof Team){
+            return ((Team)team).getNonGoalkeepers();
+        } else {
+            throw new IllegalArgumentException("The given team is not a Team.");
+        }
+        
+    }
+
+    public void assignGoalkeeper(Object player) {
+        if(player instanceof Player){
+            ((Player)player).assignToGoalkeeper();
+        } else {
+            throw new IllegalArgumentException("The given player is not a Player.");
+        }
+    }
+
+    public Object[] getGoalkeepers(Object team) {
+        if(team instanceof Team){
+            return ((Team)team).getGoalkeepers();
+        } else {
+            throw new IllegalArgumentException("The given team is not a Team.");
+        }
+    }
+
+    public void dismissGoalkeeper(Object player) {
+        if(player instanceof Player){
+            ((Player)player).dismissFromGoalkeeper();
+        } else {
+            throw new IllegalArgumentException("The given player was not a Player");
         }
     }
 
