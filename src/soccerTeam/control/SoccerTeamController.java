@@ -8,6 +8,7 @@ import soccerTeam.logic.DataManager;
 import java.awt.Component;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ComboBoxModel;
@@ -355,5 +356,13 @@ public class SoccerTeamController {
     
     public Object[] getAvailableMatches(Object team){
         return this.getSTM().getAvaialableMatches(team);
+    }
+
+    public boolean containsGoalkeeper(List selection) {
+        return this.getSTM().containsGoalkeeper(selection);
+    }
+
+    public void setMatchTeam(Object match, List selection) {
+        this.getSTM().setMatchTeam(match, selection);
     }
 }

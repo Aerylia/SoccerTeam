@@ -915,6 +915,11 @@ public class MainUI extends javax.swing.JFrame {
         });
 
         createMatchteamOKButton.setText("OK");
+        createMatchteamOKButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createMatchteamOKButtonActionPerformed(evt);
+            }
+        });
 
         createMatchteamTeamComboBox.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -1835,6 +1840,18 @@ public class MainUI extends javax.swing.JFrame {
         this.matchStatsList.setListData(this.getSTC().getMatchStatistics(
                     this.matchStatsMatchComboBox.getSelectedItem()));
     }//GEN-LAST:event_matchStatsMatchComboBoxItemStateChanged
+
+    private void createMatchteamOKButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createMatchteamOKButtonActionPerformed
+        // TODO add your handling code here:
+        List selection = this.createMatchteamSelectedList.getSelectedValuesList();
+        if(selection.size() < 11 || selection.size() > 15){
+            this.popup("You need to choose at least 11 players and you are not allowed to choose more than 15.");
+        } else if (!this.getSTC().containsGoalkeeper(selection)) {
+            this.popup("Please choose at least one goalkeeper.");
+        } else {
+            this.getSTC().setMatchTeam(this.createMatchteamMatchComboBox.getSelectedItem(), selection);
+        }
+    }//GEN-LAST:event_createMatchteamOKButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField SoccerAssociationPhonenumberTextField;

@@ -5,6 +5,9 @@
 package soccerTeam.logic;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import javax.swing.ComboBoxModel;
 import soccerTeam.logic.data.*;
 import soccerTeam.logic.exceptions.LoginFailtException;
@@ -393,6 +396,29 @@ public class DataPortal{
             }
         } else {
             throw new IllegalArgumentException("The user is not a Player.");
+        }
+    }
+
+    public boolean containsGoalkeeper(List selection) {
+        boolean contains = false;
+        for(Iterator<Object> it = selection.iterator(); it.hasNext();){
+            Object o = it.next();
+            if(o instanceof Player){
+                if(((Player)o).isGoalkeeper()){
+                    contains = true;
+                }
+            } else {
+                throw new IllegalArgumentException("Not all elements in selection are Players.");
+            }
+        }
+        return contains;
+    }
+
+    public void setMatchTeam(Object match, List selection) {
+        if(match instanceof Match){
+            ((Match)match).setMatchTeam(new ArrayList(selection));
+        } else {
+            throw new IllegalArgumentException("Given match is not a Match.");
         }
     }
 
