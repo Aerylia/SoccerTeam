@@ -80,7 +80,7 @@ public class Match {
         
 	//Methods
         private void setAvailablePlayers(Team team){
-            this.availablePlayers = team.getNonSuspendedPlayers(this);
+            this.availablePlayers = team.getAvailablePlayers();
         }
         
         @Override

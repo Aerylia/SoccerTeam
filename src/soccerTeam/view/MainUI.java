@@ -6,7 +6,6 @@ package soccerTeam.view;
 
 import java.util.List;
 import javax.swing.*;
-import javax.swing.table.TableModel;
 import soccerTeam.control.SoccerTeamController;
 
 /**
@@ -59,7 +58,7 @@ public class MainUI extends javax.swing.JFrame {
         addPlayerTeamLabel = new javax.swing.JLabel();
         addPlayerPhonenumberTextField = new javax.swing.JTextField();
         addPlayerZipcodeTextField = new javax.swing.JTextField();
-        addPlayerTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeam());
+        addPlayerTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeams());
         addPlayerStreetTextField = new javax.swing.JTextField();
         addPlayerNameTextField = new javax.swing.JTextField();
         addPlayerFemaleRadioButton = new javax.swing.JRadioButton();
@@ -77,7 +76,7 @@ public class MainUI extends javax.swing.JFrame {
         changeAvailabilityCancelButton = new javax.swing.JButton();
         changeAvailabilitySetAvailableButton = new javax.swing.JButton();
         changeAvailabilitySetUnavailableButton = new javax.swing.JButton();
-        changeAvailabilityTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeam());
+        changeAvailabilityTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeams());
         changeAvailabilityMatchScrollPane = new javax.swing.JScrollPane();
         changeAvailabilityMatchList = new javax.swing.JList(this.getSTC().getDisplayableMatches(null));
         changeAvailabilityPlayerScrollPane = new javax.swing.JScrollPane();
@@ -89,12 +88,12 @@ public class MainUI extends javax.swing.JFrame {
         assignCaptainPlayerList = new javax.swing.JList(this.getSTC().getAllPlayers(null));
         assignCaptainCancelButton = new javax.swing.JButton();
         assignCaptainAssignButton = new javax.swing.JButton();
-        assignCaptainTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeam());
+        assignCaptainTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeams());
         assignCaptainTeamLabel = new javax.swing.JLabel();
         assignGoalkeeperDialog = new javax.swing.JDialog();
         assignGoalkeeperIntroLabel = new javax.swing.JLabel();
         assignGoalkeeperTeamLabel = new javax.swing.JLabel();
-        assignGoalkeeperTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeam());
+        assignGoalkeeperTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeams());
         assignGoalkeeperPlayerScrollPane = new javax.swing.JScrollPane();
         assignGoalkeeperPlayerList = new javax.swing.JList(this.getSTC().getNonGoalkeepers(null));
         assignGoalkeeperCancelButton = new javax.swing.JButton();
@@ -102,7 +101,7 @@ public class MainUI extends javax.swing.JFrame {
         dismissGoalkeeperDialog = new javax.swing.JDialog();
         dismissGoalkeeperIntroLabel = new javax.swing.JLabel();
         dismissGoalkeeperTeamLabel = new javax.swing.JLabel();
-        dismissGoalkeeperTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeam());
+        dismissGoalkeeperTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeams());
         dismissGoalkeeperScrollPane = new javax.swing.JScrollPane();
         dismissGoalkeeperGoalkeeperList = new javax.swing.JList(this.getSTC().getGoalkeepers(null));
         dismissGoalkeeperCancelButton = new javax.swing.JButton();
@@ -110,7 +109,7 @@ public class MainUI extends javax.swing.JFrame {
         addMatchDialog = new javax.swing.JDialog();
         addMatchIntroLabel = new javax.swing.JLabel();
         addMatchTeamLabel = new javax.swing.JLabel();
-        addMatchTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeam());
+        addMatchTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeams());
         addMatchDateLabel = new javax.swing.JLabel();
         addMatchDayTextField = new javax.swing.JTextField();
         addMatchMonthTextField = new javax.swing.JTextField();
@@ -137,7 +136,7 @@ public class MainUI extends javax.swing.JFrame {
         createMatchteamSelectedList = new javax.swing.JList(new Object[15]);
         createMatchteamCancelButton = new javax.swing.JButton();
         createMatchteamOKButton = new javax.swing.JButton();
-        createMatchteamTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeam());
+        createMatchteamTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeams());
         createMatchteamTeamLabel = new javax.swing.JLabel();
         createMatchteamMatchLabel = new javax.swing.JLabel();
         createMatchteamMatchComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableMatches(null));
@@ -181,13 +180,13 @@ public class MainUI extends javax.swing.JFrame {
         availabilityScrollPane = new javax.swing.JScrollPane();
         availabilityList = new javax.swing.JList(new Object[0]);
         availabilityTeamLabel = new javax.swing.JLabel();
-        availabilityTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeam());
+        availabilityTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeams());
         matchStatsPanel = new javax.swing.JPanel();
         matchStatsIntroLabel = new javax.swing.JLabel();
         matchStatsTeamLabel = new javax.swing.JLabel();
         matchStatsMatchLabel = new javax.swing.JLabel();
         matchStatsMatchComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableMatches(null));
-        matchStatsTeamComboBox = new javax.swing.JComboBox(this.getSTC().getTeamsUser());
+        matchStatsTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeams());
         matchStatsScrollPane = new javax.swing.JScrollPane();
         matchStatsList = new javax.swing.JList(new Object[0]);
         matchStatsAddButton = new javax.swing.JButton();
@@ -1614,13 +1613,31 @@ public class MainUI extends javax.swing.JFrame {
     }//GEN-LAST:event_changeAvailabilityCancelButtonActionPerformed
 
     private void changeAvailabilitySetAvailableButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeAvailabilitySetAvailableButtonActionPerformed
-        this.getSTC().setAvailable(this.changeAvailabilityMatchList.getSelectedValue(), 
-                this.changeAvailabilityPlayerList.getSelectedValue());
+        Object match = this.changeAvailabilityMatchList.getSelectedValue();
+        if (match != null ){
+            Object player = this.changeAvailabilityPlayerList.getSelectedValue();
+            if(player != null){
+                this.getSTC().setAvailable(match, player);
+            } else {
+                this.popup("Please select a player.");
+            }
+        } else {
+            this.popup("Please select a match and then a player.");
+        }
     }//GEN-LAST:event_changeAvailabilitySetAvailableButtonActionPerformed
 
     private void changeAvailabilitySetUnavailableButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeAvailabilitySetUnavailableButtonActionPerformed
-        this.getSTC().setUnavailable(this.changeAvailabilityMatchList.getSelectedValue(), 
-                this.changeAvailabilityPlayerList.getSelectedValue());
+        Object match = this.changeAvailabilityMatchList.getSelectedValue();
+        if (match != null ){
+            Object player = this.changeAvailabilityPlayerList.getSelectedValue();
+            if(player != null){
+                this.getSTC().setUnavailable(match, player);
+            } else {
+                this.popup("Please select a player.");
+            }
+        } else {
+            this.popup("Please select a match and then a player.");
+        }
     }//GEN-LAST:event_changeAvailabilitySetUnavailableButtonActionPerformed
 
     private void teamAssignCaptainButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teamAssignCaptainButtonActionPerformed
@@ -1687,11 +1704,14 @@ public class MainUI extends javax.swing.JFrame {
     }//GEN-LAST:event_teamDismissGoalkeeperButtonActionPerformed
 
     private void teamnAddMatchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teamnAddMatchButtonActionPerformed
+        this.addMatchTeamComboBox.setModel(new DefaultComboBoxModel(this.getSTC().getDisplayableTeams()));
         this.addMatchDayTextField.setText("dd");
         this.addMatchMonthTextField.setText("mm");
         this.addMatchYearTextField.setText("yyyy");
         this.addMatchHourTextField.setText("hh");
         this.addMatchMinutesTextField.setText("mm");
+        this.addMatchOpponentsTextField.setText("");
+        this.addMatchLocationTextField.setText("");
         this.addMatchDialog.setVisible(true);
     }//GEN-LAST:event_teamnAddMatchButtonActionPerformed
 
@@ -1701,7 +1721,10 @@ public class MainUI extends javax.swing.JFrame {
         this.createMatchteamAvailableList.setListData(this.getSTC().getAvailablePlayers(
                 this.createMatchteamMatchComboBox.getSelectedItem()));
         this.createMatchteamDialog.setVisible(true);
-        // check forfeiting (new JDialog)
+        // check forfeiting (minder dan 11 spelers en/of geen goalkeepers in AvailableList(new JDialog) 
+        // Geef mogelijk heid om te kiezen, misschien nieuwe spelers recruiten etc. 
+        // Als er niet wordt geforfeit select, deselect en OK button op disabled.
+        // zo wel, dan een forfeit methode aanroepen.
     }//GEN-LAST:event_teamCreateMatchTeamButtonActionPerformed
 
     private void assignCaptainTeamComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_assignCaptainTeamComboBoxItemStateChanged
@@ -1766,10 +1789,15 @@ public class MainUI extends javax.swing.JFrame {
             } else {
                 this.getSTC().addMatchToTeam(team, day, month, year, hour, minutes, opponents, location);
                 this.addMatchDialog.dispose();
-            }
-            
+            }            
         } catch (NumberFormatException e){
             this.popup("Please only use numbers in the date and time fields.");
+        } catch (IllegalArgumentException e){
+            if(e.getMessage() == null ){
+                this.popup("Please make sure that the given date and time are possible in reality.");
+            } else {
+                System.out.println("The given team was not a Team at addMatchToTeam in SoccerTeamController.");
+            }
         }
     }//GEN-LAST:event_addMatchOKButtonActionPerformed
 
@@ -2061,7 +2089,7 @@ public class MainUI extends javax.swing.JFrame {
 
     private void setProfilePanel(boolean accessAllowed) {
         if(accessAllowed){
-            this.profileTeamSpinner.setModel(new SpinnerListModel(this.getSTC().getTeamsUser()));
+            this.profileTeamSpinner.setModel(new SpinnerListModel(this.getSTC().getDisplayableTeams()));
             this.profileNameTextField.setText(this.getSTC().getNameUser());
             this.profileGenderTextField.setText(this.getSTC().getGenderUser());
             this.profileStreetTextField.setText(this.getSTC().getStreetUser());

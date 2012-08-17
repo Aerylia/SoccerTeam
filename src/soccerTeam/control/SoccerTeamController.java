@@ -255,8 +255,8 @@ public class SoccerTeamController {
         this.getSTM().changePhonenumberSA(phonenumber);
     }
 
-    public Object[] getDisplayableTeam(){
-        return this.getSTM().getDisplayableTeam();
+    public Object[] getDisplayableTeams(){
+        return this.getSTM().getTeamsUser();
     }
 
     public String[] createPlayer(Object team, String playerName, boolean playerGender, String playerStreet, 
@@ -331,15 +331,7 @@ public class SoccerTeamController {
     }
 
     public void addMatchToTeam(Object team, int day, int month, int year, int hour, int minutes, String opponents, String location) {
-        try{
             this.getSTM().addMatchToTeam(team, day, month, year, hour, minutes, opponents, location);
-        } catch (IllegalArgumentException e){
-            if(e.getMessage() == null ){
-                this.getUI().popup("Please make sure that the given date and time are possible in reality.");
-            } else {
-                System.out.println("The given team was not a Team at addMatchToTeam in SoccerTeamController.");
-            }
-        }
     }
     
     public Object[] getMatchStatistics(Object match){
@@ -348,10 +340,6 @@ public class SoccerTeamController {
         } else {
             return new Object[0];
         }
-    }
-    
-    public Object[] getTeamsUser(){
-        return this.getSTM().getTeamsUser();
     }
     
     public Object[] getAvailableMatches(Object team){

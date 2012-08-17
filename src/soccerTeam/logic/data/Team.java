@@ -168,4 +168,8 @@ public class Team {
     public Object[] getAvailabilityPlayer(Player player) {
         return this.getMatches().getAvailabilityPlayer(player);
     }
+
+    public ArrayList<Player> getAvailablePlayers() {
+        return (ArrayList<Player>)this.getTeam().clone();
+    }
 }

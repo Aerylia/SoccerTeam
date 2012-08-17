@@ -215,10 +215,6 @@ public class DataPortal{
         this.getSA().setSAPhonenumber(phonenumber);
     }
 
-    public Object[] getDisplayableTeam() {
-       return this.getSA().getDisplayableTeams();
-    }
-
     public String[] createPlayer(Object team, String playerName, boolean playerGender, 
                 String playerStreet, String playerHousenumber, String playerZipcode, 
                 String playerCity, String playerPhonenumber) {
