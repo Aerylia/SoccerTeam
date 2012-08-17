@@ -5,6 +5,7 @@
 package soccerTeam.logic.data;
 
 import java.util.ArrayList;
+import soccerTeam.logic.SortedMatches;
 
 /**
  *
@@ -120,7 +121,15 @@ public class Match {
         }
 
     public Object[] getMatchStatistics() {
-        return this.getMatchStats().toArray();
+        if(this.getMatchStats()!= null){
+            return this.getMatchStats().toArray();
+        } else {
+            return new Object[0];
+        }
+    }
+
+    public boolean isAvailable(Player player) {
+        return this.getAvailablePlayers().contains(player);
     }
 
 

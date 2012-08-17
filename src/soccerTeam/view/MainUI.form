@@ -649,7 +649,7 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jScrollPane1" max="32767" attributes="0"/>
+                      <Component id="assignGoalkeeperPlayerScrollPane" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="assignGoalkeeperTeamLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -681,7 +681,7 @@
                       <Component id="assignGoalkeeperTeamComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" pref="170" max="-2" attributes="0"/>
+                  <Component id="assignGoalkeeperPlayerScrollPane" min="-2" pref="170" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="assignGoalkeeperCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -711,7 +711,7 @@
             <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox(this.getSTC().getDisplayableTeam())"/>
           </AuxValues>
         </Component>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+        <Container class="javax.swing.JScrollPane" name="assignGoalkeeperPlayerScrollPane">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
@@ -752,7 +752,7 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jScrollPane2" max="32767" attributes="0"/>
+                      <Component id="dismissGoalkeeperScrollPane" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="dismissGoalkeeperTeamLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -784,7 +784,7 @@
                       <Component id="dismissGoalkeeperTeamComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane2" pref="203" max="32767" attributes="0"/>
+                  <Component id="dismissGoalkeeperScrollPane" pref="203" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="dismissGoalkeeperCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -814,7 +814,7 @@
             <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox(this.getSTC().getDisplayableTeam())"/>
           </AuxValues>
         </Component>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+        <Container class="javax.swing.JScrollPane" name="dismissGoalkeeperScrollPane">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
@@ -1054,7 +1054,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
+                          <Component id="createMatchteamAvailableScrollPane" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="createMatchteamSelectButton" alignment="1" min="-2" pref="93" max="-2" attributes="0"/>
@@ -1067,7 +1067,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="createMatchteamCancelButton" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jScrollPane4" max="32767" attributes="0"/>
+                              <Component id="createMatchteamSelectedScrollPane" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
@@ -1118,8 +1118,8 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane3" pref="176" max="32767" attributes="0"/>
-                              <Component id="jScrollPane4" max="32767" attributes="0"/>
+                              <Component id="createMatchteamAvailableScrollPane" pref="176" max="32767" attributes="0"/>
+                              <Component id="createMatchteamSelectedScrollPane" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -1155,7 +1155,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="createMatchteamSelectButtonActionPerformed"/>
           </Events>
         </Component>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+        <Container class="javax.swing.JScrollPane" name="createMatchteamAvailableScrollPane">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
@@ -1170,7 +1170,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+        <Container class="javax.swing.JScrollPane" name="createMatchteamSelectedScrollPane">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
@@ -1256,7 +1256,7 @@
                       <Component id="welcomeTextLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="mainTabbedPane" alignment="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="mainTabbedPane" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -1276,6 +1276,9 @@
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JTabbedPane" name="mainTabbedPane">
+      <Events>
+        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="mainTabbedPaneStateChanged"/>
+      </Events>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
@@ -1320,7 +1323,6 @@
                               </Group>
                               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="profileTeamTextField" alignment="0" max="32767" attributes="0"/>
                                   <Component id="profileNameTextField" alignment="0" max="32767" attributes="0"/>
                                   <Component id="profileGenderTextField" alignment="0" max="32767" attributes="0"/>
                                   <Component id="profilePhonenumberTextField" alignment="0" max="32767" attributes="0"/>
@@ -1336,8 +1338,9 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="profileHousenumberLabel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="profileHousenumberTextField" pref="48" max="32767" attributes="0"/>
+                                      <Component id="profileHousenumberTextField" pref="80" max="32767" attributes="0"/>
                                   </Group>
+                                  <Component id="profileTeamSpinner" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -1351,7 +1354,7 @@
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="profileTeamLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="profileTeamTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profileTeamSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1435,8 +1438,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="profileChangeSaveButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="profileTeamTextField">
-            </Component>
             <Component class="javax.swing.JTextField" name="profileGenderTextField">
             </Component>
             <Component class="javax.swing.JTextField" name="profileNameTextField">
@@ -1474,6 +1475,11 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="profileLoginInfoButtonActionPerformed"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JSpinner" name="profileTeamSpinner">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="JFormattedTextField tf =&#xa;    ((JSpinner.DefaultEditor)profileTeamSpinner.getEditor()).getTextField();&#xa;tf.setFocusable(false);"/>
+              </AuxValues>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="soccerAssociationPanel">
@@ -1507,7 +1513,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="soccerAssociationHousenumberLabel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="soccerAssociationHousenumberTextField" pref="46" max="32767" attributes="0"/>
+                                      <Component id="soccerAssociationHousenumberTextField" pref="78" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="soccerAssociationZipcodeTextField" min="-2" pref="57" max="-2" attributes="0"/>
@@ -1626,13 +1632,18 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="availabilityScrollPane" pref="369" max="32767" attributes="0"/>
+                          <Component id="availabilityScrollPane" pref="401" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Component id="availabilityIntroLabel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="availabilityTeamLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="availabilityTeamComboBox" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -1644,8 +1655,14 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="availabilityIntroLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="availabilityScrollPane" pref="228" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="availabilityTeamLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="availabilityTeamComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="availabilityScrollPane" pref="187" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1657,53 +1674,35 @@
               </Properties>
             </Component>
             <Container class="javax.swing.JScrollPane" name="availabilityScrollPane">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="availabilityTable">
-                  <Properties>
-                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="4" rowCount="0">
-                        <Column editable="false" title="Date" type="java.lang.String"/>
-                        <Column editable="false" title="Time" type="java.lang.String"/>
-                        <Column editable="false" title="Opponents" type="java.lang.String"/>
-                        <Column editable="false" title="Location" type="java.lang.String"/>
-                      </Table>
-                    </Property>
-                    <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-                      <TableColumnModel selectionModel="0">
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                      </TableColumnModel>
-                    </Property>
-                    <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
-                      <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
-                    </Property>
-                  </Properties>
+                <Component class="javax.swing.JList" name="availabilityList">
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JList(new Object[0])"/>
+                  </AuxValues>
                 </Component>
               </SubComponents>
             </Container>
+            <Component class="javax.swing.JLabel" name="availabilityTeamLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Team :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="availabilityTeamComboBox">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox(this.getSTC().getDisplayableTeam())"/>
+              </AuxValues>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="matchStatsPanel">
+          <Events>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="matchStatsPanelFocusGained"/>
+          </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Match Statistics">
@@ -1720,23 +1719,23 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="matchStatsMatchLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="matchStatsTeamLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jComboBox2" max="32767" attributes="0"/>
-                                  <Component id="jComboBox1" max="32767" attributes="0"/>
+                                  <Component id="matchStatsTeamComboBox" max="32767" attributes="0"/>
+                                  <Component id="matchStatsMatchComboBox" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <Component id="matchStatsIntroLabel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jScrollPane5" pref="369" max="32767" attributes="0"/>
+                          <Component id="matchStatsScrollPane" pref="401" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                              <Component id="matchStatsAddButton" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -1747,69 +1746,75 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <Component id="matchStatsIntroLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="matchStatsTeamLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="matchStatsTeamComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="matchStatsMatchLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="matchStatsMatchComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane5" pref="141" max="32767" attributes="0"/>
+                      <Component id="matchStatsScrollPane" pref="141" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <Component id="matchStatsAddButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="matchStatsIntroLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Please select a team and a match to see its statistics."/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel2">
+            <Component class="javax.swing.JLabel" name="matchStatsTeamLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Team :"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel4">
+            <Component class="javax.swing.JLabel" name="matchStatsMatchLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Match : "/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox1">
+            <Component class="javax.swing.JComboBox" name="matchStatsMatchComboBox">
+              <Events>
+                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="matchStatsMatchComboBoxItemStateChanged"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox(this.getSTC().getDisplayableMatches(null))"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox2">
+            <Component class="javax.swing.JComboBox" name="matchStatsTeamComboBox">
+              <Events>
+                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="matchStatsTeamComboBoxItemStateChanged"/>
+              </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox(this.getSTC().getDisplayableTeam())"/>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox(this.getSTC().getTeamsUser())"/>
               </AuxValues>
             </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane5">
+            <Container class="javax.swing.JScrollPane" name="matchStatsScrollPane">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
               </AuxValues>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JList" name="jList1">
+                <Component class="javax.swing.JList" name="matchStatsList">
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JList(this.getSTC().getMatchStatistics(this.jComboBox1.getSelectedItem()))"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JList(new Object[0])"/>
                   </AuxValues>
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="matchStatsAddButton">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Add Matchstatistics"/>
+                <Property name="text" type="java.lang.String" value="Add Match Statistics"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -1842,7 +1847,7 @@
                                   <Component id="teamAssignGoalkeeperButton" alignment="0" max="32767" attributes="0"/>
                                   <Component id="teamAssignCaptainButton" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="123" max="32767" attributes="0"/>
+                              <EmptySpace pref="155" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="teamCreateMatchTeamButton" max="32767" attributes="0"/>
                                   <Component id="teamnAddMatchButton" max="32767" attributes="0"/>

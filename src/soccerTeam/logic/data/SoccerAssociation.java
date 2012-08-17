@@ -105,28 +105,28 @@ public class SoccerAssociation {
         this.teams.add(new Team(teamName, coach));
     }
 
-    public String getTeam(Coach coach) {
-        String teamName = "";
-        for(Team team:this.getTeams()){
-            if(team.containsCoach(coach) != -1){
-                teamName += team.getTeamName() + ", ";
-            }
-        }
-        return teamName;
-    }
-    
-    public String getTeam(Player player) {
-        String teamName = "";
-        for(Team team:this.getTeams()){
-            if(team.containsPlayer(player) != -1){
-                teamName += team.getTeamName() + ", ";
-            }
-        }
-        return teamName;
-    }
-
     public Object[] getDisplayableTeams() {
         return this.getTeams().toArray();
+    }
+
+    public Object[] getTeamsPlayer(Player player) {
+        ArrayList<Team> teamsOfPlayer = new ArrayList();
+        for(Team team : this.getTeams()){
+            if(team.containsPlayer(player) != -1){
+                teamsOfPlayer.add(team);
+            }
+        }
+        return teamsOfPlayer.toArray();
+    }
+    
+    public Object[] getTeamsCoach(Coach coach) {
+        ArrayList<Team> teamsOfCoach = new ArrayList();
+        for(Team team : this.getTeams()){
+            if(team.containsCoach(coach) != -1){
+                teamsOfCoach.add(team);
+            }
+        }
+        return teamsOfCoach.toArray();
     }
 
 }

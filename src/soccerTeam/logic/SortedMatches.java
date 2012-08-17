@@ -9,6 +9,7 @@ import soccerTeam.logic.data.CorrectDate;
 import java.util.ArrayList;
 import java.util.Iterator;
 import soccerTeam.logic.data.Match;
+import soccerTeam.logic.data.Player;
 import soccerTeam.logic.exceptions.NoExistingMatchException;
 
 /**
@@ -95,5 +96,15 @@ public class SortedMatches{
 
     public Object[] toArray() {
         return this.getMatches().toArray();
+    }
+
+    public Object[] getAvailabilityPlayer(Player player) {
+        ArrayList<Match> availableMatches = new ArrayList();
+        for(Match match : this.getMatches()){
+            if(match.isAvailable(player)){
+                availableMatches.add(match);
+            }
+        }
+        return availableMatches.toArray();
     }
 }

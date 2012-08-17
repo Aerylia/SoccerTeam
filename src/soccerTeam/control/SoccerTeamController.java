@@ -141,10 +141,6 @@ public class SoccerTeamController {
         return this.getSTM().getPhonenumberUser();
     }
 
-    public String getTeamUser() {
-        return this.getSTM().getTeamUser();
-    }
-
     public boolean userIsPlayer() {
         return this.getSTM().userIsPlayer();
     }
@@ -353,4 +349,11 @@ public class SoccerTeamController {
         }
     }
     
+    public Object[] getTeamsUser(){
+        return this.getSTM().getTeamsUser();
+    }
+    
+    public Object[] getAvailableMatches(Object team){
+        return this.getSTM().getAvaialableMatches(team);
+    }
 }

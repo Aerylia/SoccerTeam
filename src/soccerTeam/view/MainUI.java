@@ -95,7 +95,7 @@ public class MainUI extends javax.swing.JFrame {
         assignGoalkeeperIntroLabel = new javax.swing.JLabel();
         assignGoalkeeperTeamLabel = new javax.swing.JLabel();
         assignGoalkeeperTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeam());
-        jScrollPane1 = new javax.swing.JScrollPane();
+        assignGoalkeeperPlayerScrollPane = new javax.swing.JScrollPane();
         assignGoalkeeperPlayerList = new javax.swing.JList(this.getSTC().getNonGoalkeepers(null));
         assignGoalkeeperCancelButton = new javax.swing.JButton();
         assignGoalkeeperAssignButton = new javax.swing.JButton();
@@ -103,7 +103,7 @@ public class MainUI extends javax.swing.JFrame {
         dismissGoalkeeperIntroLabel = new javax.swing.JLabel();
         dismissGoalkeeperTeamLabel = new javax.swing.JLabel();
         dismissGoalkeeperTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeam());
-        jScrollPane2 = new javax.swing.JScrollPane();
+        dismissGoalkeeperScrollPane = new javax.swing.JScrollPane();
         dismissGoalkeeperGoalkeeperList = new javax.swing.JList(this.getSTC().getGoalkeepers(null));
         dismissGoalkeeperCancelButton = new javax.swing.JButton();
         dismissGoalkeeperDismissButton = new javax.swing.JButton();
@@ -131,9 +131,9 @@ public class MainUI extends javax.swing.JFrame {
         createMatchteamIntroLabel = new javax.swing.JLabel();
         createMatchteamDeselectButton = new javax.swing.JButton();
         createMatchteamSelectButton = new javax.swing.JButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
+        createMatchteamAvailableScrollPane = new javax.swing.JScrollPane();
         createMatchteamAvailableList = new javax.swing.JList(new Object[0]);
-        jScrollPane4 = new javax.swing.JScrollPane();
+        createMatchteamSelectedScrollPane = new javax.swing.JScrollPane();
         createMatchteamSelectedList = new javax.swing.JList(new Object[15]);
         createMatchteamCancelButton = new javax.swing.JButton();
         createMatchteamOKButton = new javax.swing.JButton();
@@ -150,7 +150,6 @@ public class MainUI extends javax.swing.JFrame {
         profileZipcodeLabel = new javax.swing.JLabel();
         profileLogoffLabel = new javax.swing.JButton();
         profileChangeSaveButton = new javax.swing.JButton();
-        profileTeamTextField = new javax.swing.JTextField();
         profileGenderTextField = new javax.swing.JTextField();
         profileNameTextField = new javax.swing.JTextField();
         profileStreetTextField = new javax.swing.JTextField();
@@ -162,6 +161,7 @@ public class MainUI extends javax.swing.JFrame {
         profileHousenumberTextField = new javax.swing.JTextField();
         profileCityTextField = new javax.swing.JTextField();
         profileLoginInfoButton = new javax.swing.JButton();
+        profileTeamSpinner = new javax.swing.JSpinner();
         soccerAssociationPanel = new javax.swing.JPanel();
         soccerAssociationNameLabel = new javax.swing.JLabel();
         soccerAssociationStreetLabel = new javax.swing.JLabel();
@@ -179,16 +179,18 @@ public class MainUI extends javax.swing.JFrame {
         availabilityPanel = new javax.swing.JPanel();
         availabilityIntroLabel = new javax.swing.JLabel();
         availabilityScrollPane = new javax.swing.JScrollPane();
-        availabilityTable = new javax.swing.JTable();
+        availabilityList = new javax.swing.JList(new Object[0]);
+        availabilityTeamLabel = new javax.swing.JLabel();
+        availabilityTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeam());
         matchStatsPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox(this.getSTC().getDisplayableMatches(null));
-        jComboBox2 = new javax.swing.JComboBox(this.getSTC().getDisplayableTeam());
-        jScrollPane5 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList(this.getSTC().getMatchStatistics(this.jComboBox1.getSelectedItem()));
-        jButton1 = new javax.swing.JButton();
+        matchStatsIntroLabel = new javax.swing.JLabel();
+        matchStatsTeamLabel = new javax.swing.JLabel();
+        matchStatsMatchLabel = new javax.swing.JLabel();
+        matchStatsMatchComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableMatches(null));
+        matchStatsTeamComboBox = new javax.swing.JComboBox(this.getSTC().getTeamsUser());
+        matchStatsScrollPane = new javax.swing.JScrollPane();
+        matchStatsList = new javax.swing.JList(new Object[0]);
+        matchStatsAddButton = new javax.swing.JButton();
         teamPanel = new javax.swing.JPanel();
         teamTeamLabel = new javax.swing.JLabel();
         teamAddPlayerButton = new javax.swing.JButton();
@@ -640,7 +642,7 @@ public class MainUI extends javax.swing.JFrame {
 
         assignGoalkeeperPlayerList.setDragEnabled(false);
         assignGoalkeeperPlayerList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-        jScrollPane1.setViewportView(assignGoalkeeperPlayerList);
+        assignGoalkeeperPlayerScrollPane.setViewportView(assignGoalkeeperPlayerList);
 
         assignGoalkeeperCancelButton.setText("Cancel");
         assignGoalkeeperCancelButton.addActionListener(new java.awt.event.ActionListener() {
@@ -663,7 +665,7 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(assignGoalkeeperDialogLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(assignGoalkeeperDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
+                    .addComponent(assignGoalkeeperPlayerScrollPane)
                     .addGroup(assignGoalkeeperDialogLayout.createSequentialGroup()
                         .addComponent(assignGoalkeeperTeamLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -688,7 +690,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(assignGoalkeeperTeamLabel)
                     .addComponent(assignGoalkeeperTeamComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(assignGoalkeeperPlayerScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(assignGoalkeeperDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(assignGoalkeeperCancelButton)
@@ -708,7 +710,7 @@ public class MainUI extends javax.swing.JFrame {
 
         dismissGoalkeeperGoalkeeperList.setDragEnabled(false);
         dismissGoalkeeperGoalkeeperList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-        jScrollPane2.setViewportView(dismissGoalkeeperGoalkeeperList);
+        dismissGoalkeeperScrollPane.setViewportView(dismissGoalkeeperGoalkeeperList);
 
         dismissGoalkeeperCancelButton.setText("Cancel");
         dismissGoalkeeperCancelButton.addActionListener(new java.awt.event.ActionListener() {
@@ -731,7 +733,7 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(dismissGoalkeeperDialogLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(dismissGoalkeeperDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2)
+                    .addComponent(dismissGoalkeeperScrollPane)
                     .addGroup(dismissGoalkeeperDialogLayout.createSequentialGroup()
                         .addComponent(dismissGoalkeeperTeamLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -756,7 +758,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(dismissGoalkeeperTeamLabel)
                     .addComponent(dismissGoalkeeperTeamComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
+                .addComponent(dismissGoalkeeperScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dismissGoalkeeperDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(dismissGoalkeeperCancelButton)
@@ -900,10 +902,10 @@ public class MainUI extends javax.swing.JFrame {
         });
 
         createMatchteamAvailableList.setDragEnabled(false);
-        jScrollPane3.setViewportView(createMatchteamAvailableList);
+        createMatchteamAvailableScrollPane.setViewportView(createMatchteamAvailableList);
 
         createMatchteamSelectedList.setFocusable(false);
-        jScrollPane4.setViewportView(createMatchteamSelectedList);
+        createMatchteamSelectedScrollPane.setViewportView(createMatchteamSelectedList);
 
         createMatchteamCancelButton.setText("Cancel");
         createMatchteamCancelButton.addActionListener(new java.awt.event.ActionListener() {
@@ -938,7 +940,7 @@ public class MainUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(createMatchteamDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(createMatchteamDialogLayout.createSequentialGroup()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(createMatchteamAvailableScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(createMatchteamDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(createMatchteamSelectButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -949,7 +951,7 @@ public class MainUI extends javax.swing.JFrame {
                                 .addComponent(createMatchteamOKButton, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(createMatchteamCancelButton))
-                            .addComponent(jScrollPane4)))
+                            .addComponent(createMatchteamSelectedScrollPane)))
                     .addGroup(createMatchteamDialogLayout.createSequentialGroup()
                         .addGroup(createMatchteamDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(createMatchteamIntroLabel)
@@ -987,8 +989,8 @@ public class MainUI extends javax.swing.JFrame {
                             .addComponent(createMatchteamMatchComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(createMatchteamDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
-                            .addComponent(jScrollPane4))))
+                            .addComponent(createMatchteamAvailableScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+                            .addComponent(createMatchteamSelectedScrollPane))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(createMatchteamDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(createMatchteamCancelButton)
@@ -998,6 +1000,12 @@ public class MainUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Programname");
+
+        mainTabbedPane.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                mainTabbedPaneStateChanged(evt);
+            }
+        });
 
         profileTeamLabel.setText("Team :");
 
@@ -1064,7 +1072,6 @@ public class MainUI extends javax.swing.JFrame {
                                 .addComponent(profilePhonenumberLabel)))
                         .addGap(18, 18, 18)
                         .addGroup(profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(profileTeamTextField)
                             .addComponent(profileNameTextField)
                             .addComponent(profileGenderTextField)
                             .addComponent(profilePhonenumberTextField)
@@ -1079,7 +1086,8 @@ public class MainUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(profileHousenumberLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(profileHousenumberTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)))))
+                                .addComponent(profileHousenumberTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE))
+                            .addComponent(profileTeamSpinner))))
                 .addContainerGap())
         );
         profilePanelLayout.setVerticalGroup(
@@ -1088,7 +1096,7 @@ public class MainUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(profileTeamLabel)
-                    .addComponent(profileTeamTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(profileTeamSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(profilePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(profileNameLabel)
@@ -1120,6 +1128,10 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(profileChangeSaveButton))
                 .addContainerGap())
         );
+
+        JFormattedTextField tf =
+        ((JSpinner.DefaultEditor)profileTeamSpinner.getEditor()).getTextField();
+        tf.setFocusable(false);
 
         mainTabbedPane.addTab("Profile", profilePanel);
 
@@ -1164,7 +1176,7 @@ public class MainUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(soccerAssociationHousenumberLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(soccerAssociationHousenumberTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE))
+                                .addComponent(soccerAssociationHousenumberTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE))
                             .addGroup(soccerAssociationPanelLayout.createSequentialGroup()
                                 .addComponent(soccerAssociationZipcodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1208,31 +1220,9 @@ public class MainUI extends javax.swing.JFrame {
 
         availabilityIntroLabel.setText("You are available for these matches :");
 
-        availabilityTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+        availabilityScrollPane.setViewportView(availabilityList);
 
-            },
-            new String [] {
-                "Date", "Time", "Opponents", "Location"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        availabilityTable.getTableHeader().setReorderingAllowed(false);
-        availabilityScrollPane.setViewportView(availabilityTable);
+        availabilityTeamLabel.setText("Team :");
 
         javax.swing.GroupLayout availabilityPanelLayout = new javax.swing.GroupLayout(availabilityPanel);
         availabilityPanel.setLayout(availabilityPanelLayout);
@@ -1241,10 +1231,14 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(availabilityPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(availabilityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(availabilityScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
+                    .addComponent(availabilityScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
                     .addGroup(availabilityPanelLayout.createSequentialGroup()
                         .addComponent(availabilityIntroLabel)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(availabilityPanelLayout.createSequentialGroup()
+                        .addComponent(availabilityTeamLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(availabilityTeamComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         availabilityPanelLayout.setVerticalGroup(
@@ -1252,21 +1246,44 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(availabilityPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(availabilityIntroLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(availabilityScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(availabilityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(availabilityTeamLabel)
+                    .addComponent(availabilityTeamComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addComponent(availabilityScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         mainTabbedPane.addTab("Availability", availabilityPanel);
 
-        jLabel1.setText("Please select a team and a match to see its statistics.");
+        matchStatsPanel.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                matchStatsPanelFocusGained(evt);
+            }
+        });
 
-        jLabel2.setText("Team :");
+        matchStatsIntroLabel.setText("Please select a team and a match to see its statistics.");
 
-        jLabel4.setText("Match : ");
+        matchStatsTeamLabel.setText("Team :");
 
-        jScrollPane5.setViewportView(jList1);
+        matchStatsMatchLabel.setText("Match : ");
 
-        jButton1.setText("Add Matchstatistics");
+        matchStatsMatchComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                matchStatsMatchComboBoxItemStateChanged(evt);
+            }
+        });
+
+        matchStatsTeamComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                matchStatsTeamComboBoxItemStateChanged(evt);
+            }
+        });
+
+        matchStatsScrollPane.setViewportView(matchStatsList);
+
+        matchStatsAddButton.setText("Add Match Statistics");
 
         javax.swing.GroupLayout matchStatsPanelLayout = new javax.swing.GroupLayout(matchStatsPanel);
         matchStatsPanel.setLayout(matchStatsPanelLayout);
@@ -1277,38 +1294,38 @@ public class MainUI extends javax.swing.JFrame {
                 .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(matchStatsPanelLayout.createSequentialGroup()
                         .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel2))
+                            .addComponent(matchStatsMatchLabel)
+                            .addComponent(matchStatsTeamLabel))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(matchStatsTeamComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(matchStatsMatchComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(matchStatsPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addComponent(matchStatsIntroLabel)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
+                    .addComponent(matchStatsScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, matchStatsPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1)))
+                        .addComponent(matchStatsAddButton)))
                 .addContainerGap())
         );
         matchStatsPanelLayout.setVerticalGroup(
             matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(matchStatsPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(matchStatsIntroLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(matchStatsTeamLabel)
+                    .addComponent(matchStatsTeamComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(matchStatsMatchLabel)
+                    .addComponent(matchStatsMatchComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                .addComponent(matchStatsScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addComponent(matchStatsAddButton)
                 .addContainerGap())
         );
 
@@ -1385,7 +1402,7 @@ public class MainUI extends javax.swing.JFrame {
                             .addComponent(teamDismissGoalkeeperButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(teamAssignGoalkeeperButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(teamAssignCaptainButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
                         .addGroup(teamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(teamCreateMatchTeamButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(teamnAddMatchButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -1429,7 +1446,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(welcomeTextLabel)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(mainTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(mainTabbedPane))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -1791,6 +1808,34 @@ public class MainUI extends javax.swing.JFrame {
         this.createMatchteamDialog.dispose();
     }//GEN-LAST:event_createMatchteamCancelButtonActionPerformed
 
+    private void matchStatsPanelFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_matchStatsPanelFocusGained
+
+    }//GEN-LAST:event_matchStatsPanelFocusGained
+
+    private void mainTabbedPaneStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_mainTabbedPaneStateChanged
+        if (this.mainTabbedPane.getSelectedComponent().equals(this.matchStatsPanel)){
+            this.matchStatsMatchComboBox.setModel(new DefaultComboBoxModel(
+                    this.getSTC().getDisplayableMatches(this.matchStatsTeamComboBox.getSelectedItem())));
+            this.matchStatsList.setListData(this.getSTC().getMatchStatistics(
+                    this.matchStatsMatchComboBox.getSelectedItem()));
+        } else if (this.mainTabbedPane.getSelectedComponent().equals(this.availabilityPanel)){
+            this.availabilityList.setListData(this.getSTC().getAvailableMatches(
+                    this.availabilityTeamComboBox.getSelectedItem()));
+        }
+    }//GEN-LAST:event_mainTabbedPaneStateChanged
+
+    private void matchStatsTeamComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_matchStatsTeamComboBoxItemStateChanged
+        this.matchStatsMatchComboBox.setModel(new DefaultComboBoxModel(
+                this.getSTC().getDisplayableMatches(this.matchStatsTeamComboBox.getSelectedItem())));
+        this.matchStatsList.setListData(this.getSTC().getMatchStatistics(
+                    this.matchStatsMatchComboBox.getSelectedItem()));
+    }//GEN-LAST:event_matchStatsTeamComboBoxItemStateChanged
+
+    private void matchStatsMatchComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_matchStatsMatchComboBoxItemStateChanged
+        this.matchStatsList.setListData(this.getSTC().getMatchStatistics(
+                    this.matchStatsMatchComboBox.getSelectedItem()));
+    }//GEN-LAST:event_matchStatsMatchComboBoxItemStateChanged
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField SoccerAssociationPhonenumberTextField;
     private javax.swing.JButton addMatchCancelButton;
@@ -1847,12 +1892,15 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JDialog assignGoalkeeperDialog;
     private javax.swing.JLabel assignGoalkeeperIntroLabel;
     private javax.swing.JList assignGoalkeeperPlayerList;
+    private javax.swing.JScrollPane assignGoalkeeperPlayerScrollPane;
     private javax.swing.JComboBox assignGoalkeeperTeamComboBox;
     private javax.swing.JLabel assignGoalkeeperTeamLabel;
     private javax.swing.JLabel availabilityIntroLabel;
+    private javax.swing.JList availabilityList;
     private javax.swing.JPanel availabilityPanel;
     private javax.swing.JScrollPane availabilityScrollPane;
-    private javax.swing.JTable availabilityTable;
+    private javax.swing.JComboBox availabilityTeamComboBox;
+    private javax.swing.JLabel availabilityTeamLabel;
     private javax.swing.JButton changeAvailabilityCancelButton;
     private javax.swing.JDialog changeAvailabilityDialog;
     private javax.swing.JLabel changeAvailabilityIntroLabel;
@@ -1867,6 +1915,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JComboBox changeAvailabilityTeamComboBox;
     private javax.swing.JLabel changeAvailabilityTeamLabel;
     private javax.swing.JList createMatchteamAvailableList;
+    private javax.swing.JScrollPane createMatchteamAvailableScrollPane;
     private javax.swing.JButton createMatchteamCancelButton;
     private javax.swing.JButton createMatchteamDeselectButton;
     private javax.swing.JDialog createMatchteamDialog;
@@ -1876,6 +1925,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JButton createMatchteamOKButton;
     private javax.swing.JButton createMatchteamSelectButton;
     private javax.swing.JList createMatchteamSelectedList;
+    private javax.swing.JScrollPane createMatchteamSelectedScrollPane;
     private javax.swing.JComboBox createMatchteamTeamComboBox;
     private javax.swing.JLabel createMatchteamTeamLabel;
     private javax.swing.JButton dismissGoalkeeperCancelButton;
@@ -1883,20 +1933,9 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JButton dismissGoalkeeperDismissButton;
     private javax.swing.JList dismissGoalkeeperGoalkeeperList;
     private javax.swing.JLabel dismissGoalkeeperIntroLabel;
+    private javax.swing.JScrollPane dismissGoalkeeperScrollPane;
     private javax.swing.JComboBox dismissGoalkeeperTeamComboBox;
     private javax.swing.JLabel dismissGoalkeeperTeamLabel;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JList jList1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JButton loginInfoCancelButton;
     private javax.swing.JDialog loginInfoDialog;
     private javax.swing.JLabel loginInfoIntro2Label;
@@ -1908,7 +1947,15 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel loginInfoUsernameLabel;
     private javax.swing.JTextField loginInfoUsernameTextField;
     private javax.swing.JTabbedPane mainTabbedPane;
+    private javax.swing.JButton matchStatsAddButton;
+    private javax.swing.JLabel matchStatsIntroLabel;
+    private javax.swing.JList matchStatsList;
+    private javax.swing.JComboBox matchStatsMatchComboBox;
+    private javax.swing.JLabel matchStatsMatchLabel;
     private javax.swing.JPanel matchStatsPanel;
+    private javax.swing.JScrollPane matchStatsScrollPane;
+    private javax.swing.JComboBox matchStatsTeamComboBox;
+    private javax.swing.JLabel matchStatsTeamLabel;
     private javax.swing.JButton profileChangeSaveButton;
     private javax.swing.JLabel profileCityLabel;
     private javax.swing.JTextField profileCityTextField;
@@ -1926,7 +1973,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel profileStreetLabel;
     private javax.swing.JTextField profileStreetTextField;
     private javax.swing.JLabel profileTeamLabel;
-    private javax.swing.JTextField profileTeamTextField;
+    private javax.swing.JSpinner profileTeamSpinner;
     private javax.swing.JLabel profileZipcodeLabel;
     private javax.swing.JTextField profileZipcodeTextField;
     private javax.swing.JLabel soccerAssociationCityLabel;
@@ -1997,7 +2044,7 @@ public class MainUI extends javax.swing.JFrame {
 
     private void setProfilePanel(boolean accessAllowed) {
         if(accessAllowed){
-            this.profileTeamTextField.setText(this.getSTC().getTeamUser());
+            this.profileTeamSpinner.setModel(new SpinnerListModel(this.getSTC().getTeamsUser()));
             this.profileNameTextField.setText(this.getSTC().getNameUser());
             this.profileGenderTextField.setText(this.getSTC().getGenderUser());
             this.profileStreetTextField.setText(this.getSTC().getStreetUser());
@@ -2005,8 +2052,7 @@ public class MainUI extends javax.swing.JFrame {
             this.profileZipcodeTextField.setText(this.getSTC().getZipcodeUser());
             this.profileCityTextField.setText(this.getSTC().getCityUser());
             this.profilePhonenumberTextField.setText(this.getSTC().getPhonenumberUser());
-            
-            this.profileTeamTextField.setFocusable(false);
+            ((JSpinner.DefaultEditor)profileTeamSpinner.getEditor()).getTextField().setFocusable(false);
             setFocusableProfilePanel(false);
         } else {
             this.mainTabbedPane.remove(this.profilePanel);

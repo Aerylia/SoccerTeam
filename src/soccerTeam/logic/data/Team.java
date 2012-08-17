@@ -164,4 +164,8 @@ public class Team {
     public void addMatch(Team team, int day, int month, int year, int hour, int minutes, String opponents, String location) {
         this.getMatches().add(new Match(team, new CorrectDate(day, month, year), new Time(hour, minutes, 0), opponents, location));
     }
+
+    public Object[] getAvailabilityPlayer(Player player) {
+        return this.getMatches().getAvailabilityPlayer(player);
+    }
 }

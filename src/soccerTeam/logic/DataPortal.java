@@ -114,14 +114,6 @@ public class DataPortal{
         return this.getUser().getPhonenumber();
     }
 
-    public String getTeamUser() {
-        if(this.getUser() instanceof Coach){
-            return this.getSA().getTeam((Coach)this.getUser());
-        } else {
-            return this.getSA().getTeam((Player)this.getUser());
-        }
-    }
-
     public String getNameSA() {
         return this.getSA().getSAName();
     }
@@ -379,6 +371,28 @@ public class DataPortal{
             return ((Match)match).getMatchStatistics();
         } else {
             throw new IllegalArgumentException("Given match was nog a Match.");
+        }
+    }
+
+    public Object[] getTeamsUser() {
+        if( this.userIsPlayer()){
+            return this.getSA().getTeamsPlayer((Player)this.getUser());
+        } else if (this.userIsCoach()) {
+            return this.getSA().getTeamsCoach((Coach)this.getUser());
+        } else {
+            throw new IllegalArgumentException("The user is not a Player");
+        }
+    }
+
+    public Object[] getAvaialableMatches(Object team) {
+        if ( this.userIsPlayer() ){
+            if(team instanceof Team){
+                return ((Team)team).getAvailabilityPlayer((Player)this.getUser());
+            } else {
+                throw new IllegalArgumentException("The given team is not a Team.");
+            }
+        } else {
+            throw new IllegalArgumentException("The user is not a Player.");
         }
     }
 
