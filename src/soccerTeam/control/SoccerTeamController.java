@@ -270,7 +270,12 @@ public class SoccerTeamController {
 
     public Object[] getDisplayableMatches(Object team) {
         if(team != null){
-            return this.getSTM().getDisplayableMatches(team);
+            Object[] matches = this.getSTM().getDisplayableMatches(team);
+            if(matches.length > 0){
+                return matches;
+            } else {
+                return new Object[0];
+            }
         } else {
             return new Object[0];
         }
@@ -337,6 +342,14 @@ public class SoccerTeamController {
             } else {
                 System.out.println("The given team was not a Team at addMatchToTeam in SoccerTeamController.");
             }
+        }
+    }
+    
+    public Object[] getMatchStatistics(Object match){
+        if (match != null){
+            return this.getSTM().getMatchStatistics(match);
+        } else {
+            return new Object[0];
         }
     }
     

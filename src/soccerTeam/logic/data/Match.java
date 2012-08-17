@@ -119,5 +119,9 @@ public class Match {
             }
         }
 
+    public Object[] getMatchStatistics() {
+        return this.getMatchStats().toArray();
+    }
+
 
 }

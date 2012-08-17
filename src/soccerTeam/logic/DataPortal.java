@@ -374,4 +374,12 @@ public class DataPortal{
         }
     }
 
+    public Object[] getMatchStatistics(Object match) {
+        if (match instanceof Match){
+            return ((Match)match).getMatchStatistics();
+        } else {
+            throw new IllegalArgumentException("Given match was nog a Match.");
+        }
+    }
+
 }

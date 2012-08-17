@@ -27,4 +27,7 @@ public abstract class Event {
     }
     public abstract void print();
     
+    @Override
+    public abstract String toString();
+    
 }

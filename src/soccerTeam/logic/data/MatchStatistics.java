@@ -18,4 +18,12 @@ public class MatchStatistics {
         //TODO
     }
     
+    private SortedEvents getEvents(){
+        return this.events;
+    }
+
+    public Object[] toArray() {
+        return this.getEvents().toArray();
+    }
+    
 }

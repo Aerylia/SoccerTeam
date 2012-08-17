@@ -39,4 +39,8 @@ public class SortedEvents {
 		}
 		return succeeded;
     }
+
+    public Object[] toArray() {
+        return this.getEvents().toArray();
+    }
 }

@@ -15,5 +15,10 @@ public class RedCardEvent extends Event{
         //TODO
         throw new UnsupportedOperationException("Not supported yet.");
     }
+
+    @Override
+    public String toString() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
     
 }
