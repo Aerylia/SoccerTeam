@@ -14,9 +14,9 @@ public class MatchStatistics {
     
     private SortedEvents events;
     private boolean forfeited;
-    public static int LOSS = 1;
-    public static int WON = 2;
-    public static int DRAW = 3;
+    public static int LOSS = 0;
+    public static int WON = 3;
+    public static int DRAW = 1;
     private int result;
     
     public MatchStatistics(boolean forfeited){
@@ -52,6 +52,14 @@ public class MatchStatistics {
     public String toString(){
         //TODO
         return "";
+    }
+
+    public boolean hasForfeited() {
+        return this.forfeited;
+    }
+
+    public int getResult() {
+        return this.result;
     }
     
 }

@@ -187,9 +187,28 @@ public class MainUI extends javax.swing.JFrame {
         matchStatsMatchLabel = new javax.swing.JLabel();
         matchStatsMatchComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableMatches(null));
         matchStatsTeamComboBox = new javax.swing.JComboBox(this.getSTC().getDisplayableTeams());
-        matchStatsScrollPane = new javax.swing.JScrollPane();
-        matchStatsList = new javax.swing.JList(new Object[0]);
+        matchStatsEventsScrollPane = new javax.swing.JScrollPane();
+        matchStatsEventsList = new javax.swing.JList(new Object[0]);
         matchStatsAddButton = new javax.swing.JButton();
+        matchStatsPlayerScrollPane = new javax.swing.JScrollPane();
+        matchStatsPlayerList = new javax.swing.JList(new Object[0]);
+        matchStatsEventsLabel = new javax.swing.JLabel();
+        matchStatsDateLabel = new javax.swing.JLabel();
+        matchStatsTimeLabel = new javax.swing.JLabel();
+        matchStatsOpponentsLabel = new javax.swing.JLabel();
+        matchStatsLocationLabel = new javax.swing.JLabel();
+        matchStatsPlayersLabel = new javax.swing.JLabel();
+        matchStatsOpponentsTextField = new javax.swing.JTextField();
+        matchStatsLocationTextField = new javax.swing.JTextField();
+        matchStatsTimeTextField = new javax.swing.JTextField();
+        matchStatsDateTextField = new javax.swing.JTextField();
+        matchStatsYesRadioButton = new javax.swing.JRadioButton();
+        matchStatsWonRadioButton = new javax.swing.JRadioButton();
+        matchStatsLossRadioButton = new javax.swing.JRadioButton();
+        matchStatsDrawRadioButton = new javax.swing.JRadioButton();
+        matchStatsResultLabel = new javax.swing.JLabel();
+        matchStatsNoRadioButton = new javax.swing.JRadioButton();
+        matchStatsForfeitedLabel = new javax.swing.JLabel();
         teamPanel = new javax.swing.JPanel();
         teamTeamLabel = new javax.swing.JLabel();
         teamAddPlayerButton = new javax.swing.JButton();
@@ -1090,7 +1109,7 @@ public class MainUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(profileHousenumberLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(profileHousenumberTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE))
+                                .addComponent(profileHousenumberTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 306, Short.MAX_VALUE))
                             .addComponent(profileTeamSpinner))))
                 .addContainerGap())
         );
@@ -1180,7 +1199,7 @@ public class MainUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(soccerAssociationHousenumberLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(soccerAssociationHousenumberTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE))
+                                .addComponent(soccerAssociationHousenumberTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 304, Short.MAX_VALUE))
                             .addGroup(soccerAssociationPanelLayout.createSequentialGroup()
                                 .addComponent(soccerAssociationZipcodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1215,7 +1234,7 @@ public class MainUI extends javax.swing.JFrame {
                 .addGroup(soccerAssociationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(soccerAssociationPhonenumberLabel)
                     .addComponent(SoccerAssociationPhonenumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 139, Short.MAX_VALUE)
                 .addComponent(soccerAssociationSaveButton)
                 .addContainerGap())
         );
@@ -1235,7 +1254,7 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(availabilityPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(availabilityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(availabilityScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
+                    .addComponent(availabilityScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 627, Short.MAX_VALUE)
                     .addGroup(availabilityPanelLayout.createSequentialGroup()
                         .addComponent(availabilityIntroLabel)
                         .addGap(0, 0, Short.MAX_VALUE))
@@ -1255,7 +1274,7 @@ public class MainUI extends javax.swing.JFrame {
                     .addComponent(availabilityTeamLabel)
                     .addComponent(availabilityTeamComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15)
-                .addComponent(availabilityScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                .addComponent(availabilityScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 251, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1285,9 +1304,50 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
 
-        matchStatsScrollPane.setViewportView(matchStatsList);
+        matchStatsEventsScrollPane.setViewportView(matchStatsEventsList);
 
         matchStatsAddButton.setText("Add Match Statistics");
+
+        matchStatsPlayerScrollPane.setViewportView(matchStatsPlayerList);
+
+        matchStatsEventsLabel.setText("Events :");
+
+        matchStatsDateLabel.setText("Date :");
+
+        matchStatsTimeLabel.setText("Time :");
+
+        matchStatsOpponentsLabel.setText("Opponents :");
+
+        matchStatsLocationLabel.setText("Location :");
+
+        matchStatsPlayersLabel.setText("Players played :");
+
+        matchStatsOpponentsTextField.setFocusable(false);
+
+        matchStatsLocationTextField.setFocusable(false);
+
+        matchStatsTimeTextField.setFocusable(false);
+
+        matchStatsDateTextField.setFocusable(false);
+
+        matchStatsYesRadioButton.setText("Yes");
+        matchStatsYesRadioButton.setFocusable(false);
+
+        matchStatsWonRadioButton.setText("Won");
+        matchStatsWonRadioButton.setFocusable(false);
+
+        matchStatsLossRadioButton.setText("Loss");
+        matchStatsLossRadioButton.setFocusable(false);
+
+        matchStatsDrawRadioButton.setText("Draw");
+        matchStatsDrawRadioButton.setFocusable(false);
+
+        matchStatsResultLabel.setText("Result :");
+
+        matchStatsNoRadioButton.setText("No");
+        matchStatsNoRadioButton.setFocusable(false);
+
+        matchStatsForfeitedLabel.setText("Forfeited :");
 
         javax.swing.GroupLayout matchStatsPanelLayout = new javax.swing.GroupLayout(matchStatsPanel);
         matchStatsPanel.setLayout(matchStatsPanelLayout);
@@ -1297,20 +1357,58 @@ public class MainUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(matchStatsPanelLayout.createSequentialGroup()
-                        .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(matchStatsMatchLabel)
-                            .addComponent(matchStatsTeamLabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(matchStatsTeamComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(matchStatsMatchComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(matchStatsPanelLayout.createSequentialGroup()
                         .addComponent(matchStatsIntroLabel)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(matchStatsScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, matchStatsPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(matchStatsAddButton)))
+                        .addComponent(matchStatsAddButton))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, matchStatsPanelLayout.createSequentialGroup()
+                        .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, matchStatsPanelLayout.createSequentialGroup()
+                                .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(matchStatsMatchLabel)
+                                    .addComponent(matchStatsTeamLabel))
+                                .addGap(25, 25, 25)
+                                .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(matchStatsMatchComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(matchStatsTeamComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(matchStatsPlayerScrollPane, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, matchStatsPanelLayout.createSequentialGroup()
+                                .addComponent(matchStatsPlayersLabel)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, matchStatsPanelLayout.createSequentialGroup()
+                                .addComponent(matchStatsLocationLabel)
+                                .addGap(18, 18, 18)
+                                .addComponent(matchStatsLocationTextField))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, matchStatsPanelLayout.createSequentialGroup()
+                                .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(matchStatsOpponentsLabel)
+                                    .addComponent(matchStatsTimeLabel)
+                                    .addComponent(matchStatsDateLabel))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(matchStatsOpponentsTextField)
+                                    .addComponent(matchStatsTimeTextField)
+                                    .addComponent(matchStatsDateTextField))))
+                        .addGap(18, 18, 18)
+                        .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(matchStatsEventsScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(matchStatsEventsLabel)
+                            .addGroup(matchStatsPanelLayout.createSequentialGroup()
+                                .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(matchStatsResultLabel)
+                                    .addComponent(matchStatsForfeitedLabel))
+                                .addGap(18, 18, 18)
+                                .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(matchStatsLossRadioButton)
+                                    .addComponent(matchStatsYesRadioButton))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(matchStatsPanelLayout.createSequentialGroup()
+                                        .addComponent(matchStatsWonRadioButton)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(matchStatsDrawRadioButton))
+                                    .addComponent(matchStatsNoRadioButton))))))
                 .addContainerGap())
         );
         matchStatsPanelLayout.setVerticalGroup(
@@ -1321,13 +1419,42 @@ public class MainUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(matchStatsTeamLabel)
-                    .addComponent(matchStatsTeamComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(matchStatsTeamComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(matchStatsYesRadioButton)
+                    .addComponent(matchStatsNoRadioButton)
+                    .addComponent(matchStatsForfeitedLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(matchStatsMatchLabel)
-                    .addComponent(matchStatsMatchComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(matchStatsMatchComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(matchStatsResultLabel)
+                    .addComponent(matchStatsLossRadioButton)
+                    .addComponent(matchStatsWonRadioButton)
+                    .addComponent(matchStatsDrawRadioButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(matchStatsScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(matchStatsDateLabel)
+                    .addComponent(matchStatsDateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(matchStatsEventsLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(matchStatsPanelLayout.createSequentialGroup()
+                        .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(matchStatsTimeLabel)
+                            .addComponent(matchStatsTimeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(matchStatsOpponentsLabel)
+                            .addComponent(matchStatsOpponentsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(matchStatsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(matchStatsLocationLabel)
+                            .addComponent(matchStatsLocationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(matchStatsPlayersLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(matchStatsPlayerScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(matchStatsEventsScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(matchStatsAddButton)
                 .addContainerGap())
@@ -1406,7 +1533,7 @@ public class MainUI extends javax.swing.JFrame {
                             .addComponent(teamDismissGoalkeeperButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(teamAssignGoalkeeperButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(teamAssignCaptainButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 381, Short.MAX_VALUE)
                         .addGroup(teamPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(teamCreateMatchTeamButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(teamnAddMatchButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -1433,7 +1560,7 @@ public class MainUI extends javax.swing.JFrame {
                 .addComponent(teamAssignGoalkeeperButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(teamDismissGoalkeeperButton)
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
 
         mainTabbedPane.addTab("Team", teamPanel);
@@ -1849,7 +1976,7 @@ public class MainUI extends javax.swing.JFrame {
         if (this.mainTabbedPane.getSelectedComponent().equals(this.matchStatsPanel)){
             this.matchStatsMatchComboBox.setModel(new DefaultComboBoxModel(
                     this.getSTC().getDisplayableMatches(this.matchStatsTeamComboBox.getSelectedItem())));
-            this.matchStatsList.setListData(this.getSTC().getMatchStatistics(
+            this.matchStatsEventsList.setListData(this.getSTC().getMatchStatistics(
                     this.matchStatsMatchComboBox.getSelectedItem()));
         } else if (this.mainTabbedPane.getSelectedComponent().equals(this.availabilityPanel)){
             this.availabilityList.setListData(this.getSTC().getAvailableMatches(
@@ -1860,13 +1987,27 @@ public class MainUI extends javax.swing.JFrame {
     private void matchStatsTeamComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_matchStatsTeamComboBoxItemStateChanged
         this.matchStatsMatchComboBox.setModel(new DefaultComboBoxModel(
                 this.getSTC().getDisplayableMatches(this.matchStatsTeamComboBox.getSelectedItem())));
-        this.matchStatsList.setListData(this.getSTC().getMatchStatistics(
+        this.matchStatsEventsList.setListData(this.getSTC().getMatchStatistics(
                     this.matchStatsMatchComboBox.getSelectedItem()));
     }//GEN-LAST:event_matchStatsTeamComboBoxItemStateChanged
 
     private void matchStatsMatchComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_matchStatsMatchComboBoxItemStateChanged
-        this.matchStatsList.setListData(this.getSTC().getMatchStatistics(
-                    this.matchStatsMatchComboBox.getSelectedItem()));
+        Object match = this.matchStatsMatchComboBox.getSelectedItem();
+        if (this.getSTC().isUpcomming(match)) {
+            this.matchStatsDateTextField.setText(this.getSTC().getDateMatch(match));
+            this.matchStatsTimeTextField.setText(this.getSTC().getTimeMatch(match));
+            this.matchStatsOpponentsTextField.setText(this.getSTC().getOpponentsMatch(match));
+            this.matchStatsLocationTextField.setText(this.getSTC().getLocationMatch(match));
+            this.matchStatsPlayerList.setListData(this.getSTC().getMatchTeam(match));
+            this.matchStatsYesRadioButton.setSelected(this.getSTC().getMatchForfeited(match));
+            this.matchStatsNoRadioButton.setSelected(!this.matchStatsYesRadioButton.isSelected());
+            int score = this.getSTC().getMatchResult(match);
+            this.matchStatsWonRadioButton.setSelected(score == 3);
+            this.matchStatsLossRadioButton.setSelected(score == 0);
+            this.matchStatsDrawRadioButton.setSelected(score == 1);
+            this.matchStatsEventsList.setListData(this.getSTC().getMatchStatistics(match));
+        }
+        
     }//GEN-LAST:event_matchStatsMatchComboBoxItemStateChanged
 
     private void createMatchteamOKButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createMatchteamOKButtonActionPerformed
@@ -1993,14 +2134,33 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JTextField loginInfoUsernameTextField;
     private javax.swing.JTabbedPane mainTabbedPane;
     private javax.swing.JButton matchStatsAddButton;
+    private javax.swing.JLabel matchStatsDateLabel;
+    private javax.swing.JTextField matchStatsDateTextField;
+    private javax.swing.JRadioButton matchStatsDrawRadioButton;
+    private javax.swing.JLabel matchStatsEventsLabel;
+    private javax.swing.JList matchStatsEventsList;
+    private javax.swing.JScrollPane matchStatsEventsScrollPane;
+    private javax.swing.JLabel matchStatsForfeitedLabel;
     private javax.swing.JLabel matchStatsIntroLabel;
-    private javax.swing.JList matchStatsList;
+    private javax.swing.JLabel matchStatsLocationLabel;
+    private javax.swing.JTextField matchStatsLocationTextField;
+    private javax.swing.JRadioButton matchStatsLossRadioButton;
     private javax.swing.JComboBox matchStatsMatchComboBox;
     private javax.swing.JLabel matchStatsMatchLabel;
+    private javax.swing.JRadioButton matchStatsNoRadioButton;
+    private javax.swing.JLabel matchStatsOpponentsLabel;
+    private javax.swing.JTextField matchStatsOpponentsTextField;
     private javax.swing.JPanel matchStatsPanel;
-    private javax.swing.JScrollPane matchStatsScrollPane;
+    private javax.swing.JList matchStatsPlayerList;
+    private javax.swing.JScrollPane matchStatsPlayerScrollPane;
+    private javax.swing.JLabel matchStatsPlayersLabel;
+    private javax.swing.JLabel matchStatsResultLabel;
     private javax.swing.JComboBox matchStatsTeamComboBox;
     private javax.swing.JLabel matchStatsTeamLabel;
+    private javax.swing.JLabel matchStatsTimeLabel;
+    private javax.swing.JTextField matchStatsTimeTextField;
+    private javax.swing.JRadioButton matchStatsWonRadioButton;
+    private javax.swing.JRadioButton matchStatsYesRadioButton;
     private javax.swing.JButton profileChangeSaveButton;
     private javax.swing.JLabel profileCityLabel;
     private javax.swing.JTextField profileCityTextField;

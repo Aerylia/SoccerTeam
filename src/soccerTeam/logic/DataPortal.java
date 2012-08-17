@@ -418,4 +418,68 @@ public class DataPortal{
         }
     }
 
+    public boolean isUpcomming(Object match) {
+        if(match instanceof Match){
+            return ((Match)match).isUpcomming();
+        } else {
+            throw new IllegalArgumentException("Given match was not a Match.");
+        }
+    }
+
+    public String getDateMatch(Object match) {
+        if(match instanceof Match){
+            return ((Match)match).getDate().toString();
+        } else {
+            throw new IllegalArgumentException("Given match was not a Match.");
+        }
+    }
+
+    public String getTimeMatch(Object match) {
+        if(match instanceof Match){
+            return ((Match)match).getTime().toString();
+        } else {
+            throw new IllegalArgumentException("Given match was not a Match.");
+        }
+    }
+
+    public String getOpponentsMatch(Object match) {
+        if(match instanceof Match){
+            return ((Match)match).getOpponents();
+        } else {
+            throw new IllegalArgumentException("Given match was not a Match.");
+        }
+    }
+
+    public String getLocationMatch(Object match) {
+        if(match instanceof Match){
+            return ((Match)match).getLocation();
+        } else {
+            throw new IllegalArgumentException("Given match was not a Match.");
+        }
+    }
+
+    public Object[] getMatchTeam(Object match) {
+        if(match instanceof Match){
+            return ((Match)match).getMatchTeam();
+        } else {
+            throw new IllegalArgumentException("Given match was not a Match.");
+        }
+    }
+
+    public boolean getMatchForfeited(Object match) {
+        if(match instanceof Match){
+            return ((Match)match).isForfeited();
+        } else {
+            throw new IllegalArgumentException("Given match was not a Match.");
+        }
+    }
+
+    public int getMatchResult(Object match) {
+        if(match instanceof Match){
+            return ((Match)match).getResult();
+        } else {
+            throw new IllegalArgumentException("Given match was not a Match.");
+        }
+    }
+
 }

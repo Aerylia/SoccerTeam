@@ -353,4 +353,68 @@ public class SoccerTeamController {
     public void setMatchTeam(Object match, List selection) {
         this.getSTM().setMatchTeam(match, selection);
     }
+    
+    public boolean isUpcomming(Object match){
+        if(match != null){
+            return this.getSTM().isUpcomming(match);
+        } else {
+            return false;
+        }
+    }
+
+    public String getDateMatch(Object match) {
+        if(match != null){
+            return this.getSTM().getDateMatch(match);
+        } else {
+            return new String();
+        }
+    }
+
+    public String getTimeMatch(Object match) {
+        if(match != null){
+            return this.getSTM().getTimeMatch(match);
+        } else {
+            return new String();
+        }
+    }
+
+    public String getOpponentsMatch(Object match) {
+        if(match != null){
+            return this.getSTM().getOpponentsMatch(match);
+        } else {
+            return new String();
+        }
+    }
+
+    public String getLocationMatch(Object match) {
+        if(match != null){
+            return this.getSTM().getLocationMatch(match);
+        } else {
+            return new String();
+        }
+    }
+    
+    public Object[] getMatchTeam(Object match){
+        if(match != null){
+            return this.getSTM().getMatchTeam(match);
+        } else {
+            return new Object[0];
+        }
+    }
+
+    public boolean getMatchForfeited(Object match) {
+        if(match != null){
+            return this.getSTM().getMatchForfeited(match);
+        } else {
+            return false;
+        }
+    }
+
+    public int getMatchResult(Object match) {
+        if(match != null){
+            return this.getSTM().getMatchResult(match);
+        } else {
+            return 2;
+        }
+    }
 }

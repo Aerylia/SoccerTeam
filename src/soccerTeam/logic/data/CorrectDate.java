@@ -4,6 +4,7 @@
  */
 package soccerTeam.logic.data;
 
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 /**
@@ -60,5 +61,9 @@ public class CorrectDate {
             String y = new Integer(this.getYear()).toString();
             return d + "/" + m + "/" + y;
         }
+
+    boolean isUpcomming() {
+        return Calendar.getInstance().compareTo(this.getDate()) < 0;
+    }
 }
 

@@ -132,5 +132,21 @@ public class Match {
         return this.getAvailablePlayers().contains(player);
     }
 
+    public boolean isForfeited() {
+        return this.getMatchStats().hasForfeited();
+    }
+
+    public Object[] getMatchTeam() {
+        return this.matchTeam.toArray();
+    }
+
+    public boolean isUpcomming() {
+        return this.getDate().isUpcomming();
+    }
+
+    public int getResult() {
+        return this.getMatchStats().getResult();
+    }
+
 
 }

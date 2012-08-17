@@ -1336,7 +1336,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="profileHousenumberLabel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="profileHousenumberTextField" pref="80" max="32767" attributes="0"/>
+                                      <Component id="profileHousenumberTextField" pref="306" max="32767" attributes="0"/>
                                   </Group>
                                   <Component id="profileTeamSpinner" alignment="0" max="32767" attributes="0"/>
                               </Group>
@@ -1511,7 +1511,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="soccerAssociationHousenumberLabel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="soccerAssociationHousenumberTextField" pref="78" max="32767" attributes="0"/>
+                                      <Component id="soccerAssociationHousenumberTextField" pref="304" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="soccerAssociationZipcodeTextField" min="-2" pref="57" max="-2" attributes="0"/>
@@ -1558,7 +1558,7 @@
                           <Component id="soccerAssociationPhonenumberLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="SoccerAssociationPhonenumberTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="75" max="32767" attributes="0"/>
+                      <EmptySpace pref="139" max="32767" attributes="0"/>
                       <Component id="soccerAssociationSaveButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1633,7 +1633,7 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="availabilityScrollPane" pref="401" max="32767" attributes="0"/>
+                          <Component id="availabilityScrollPane" pref="627" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Component id="availabilityIntroLabel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -1659,7 +1659,7 @@
                           <Component id="availabilityTeamComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                      <Component id="availabilityScrollPane" pref="187" max="32767" attributes="0"/>
+                      <Component id="availabilityScrollPane" pref="251" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1715,25 +1715,76 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="matchStatsMatchLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="matchStatsTeamLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="matchStatsTeamComboBox" max="32767" attributes="0"/>
-                                  <Component id="matchStatsMatchComboBox" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
                           <Group type="102" attributes="0">
                               <Component id="matchStatsIntroLabel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="matchStatsScrollPane" pref="401" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               <Component id="matchStatsAddButton" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="matchStatsMatchLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="matchStatsTeamLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="matchStatsMatchComboBox" max="32767" attributes="0"/>
+                                          <Component id="matchStatsTeamComboBox" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="matchStatsPlayerScrollPane" alignment="0" pref="351" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="matchStatsPlayersLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="matchStatsLocationLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="matchStatsLocationTextField" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="matchStatsOpponentsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="matchStatsTimeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="matchStatsDateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="matchStatsOpponentsTextField" max="32767" attributes="0"/>
+                                          <Component id="matchStatsTimeTextField" max="32767" attributes="0"/>
+                                          <Component id="matchStatsDateTextField" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="matchStatsEventsScrollPane" min="-2" max="-2" attributes="0"/>
+                                  <Component id="matchStatsEventsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="matchStatsResultLabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="matchStatsForfeitedLabel" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="matchStatsLossRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="matchStatsYesRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="matchStatsWonRadioButton" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="matchStatsDrawRadioButton" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="matchStatsNoRadioButton" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -1749,14 +1800,49 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="matchStatsTeamLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="matchStatsTeamComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="matchStatsYesRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="matchStatsNoRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="matchStatsForfeitedLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="matchStatsMatchLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="matchStatsMatchComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="matchStatsResultLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="matchStatsLossRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="matchStatsWonRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="matchStatsDrawRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="matchStatsScrollPane" pref="141" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="matchStatsDateLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="matchStatsDateTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="matchStatsEventsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="matchStatsTimeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="matchStatsTimeTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="matchStatsOpponentsLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="matchStatsOpponentsTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="matchStatsLocationLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="matchStatsLocationTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="matchStatsPlayersLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="matchStatsPlayerScrollPane" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="matchStatsEventsScrollPane" pref="179" max="32767" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="matchStatsAddButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -1796,14 +1882,14 @@
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox(this.getSTC().getDisplayableTeams())"/>
               </AuxValues>
             </Component>
-            <Container class="javax.swing.JScrollPane" name="matchStatsScrollPane">
+            <Container class="javax.swing.JScrollPane" name="matchStatsEventsScrollPane">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
               </AuxValues>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JList" name="matchStatsList">
+                <Component class="javax.swing.JList" name="matchStatsEventsList">
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JList(new Object[0])"/>
                   </AuxValues>
@@ -1813,6 +1899,120 @@
             <Component class="javax.swing.JButton" name="matchStatsAddButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Add Match Statistics"/>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="matchStatsPlayerScrollPane">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JList" name="matchStatsPlayerList">
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JList(new Object[0])"/>
+                  </AuxValues>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="matchStatsEventsLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Events :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="matchStatsDateLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Date :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="matchStatsTimeLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Time :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="matchStatsOpponentsLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Opponents :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="matchStatsLocationLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Location :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="matchStatsPlayersLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Players played :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="matchStatsOpponentsTextField">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="matchStatsOpponentsTextField.setFocusable(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="matchStatsLocationTextField">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="matchStatsLocationTextField.setFocusable(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="matchStatsTimeTextField">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="matchStatsTimeTextField.setFocusable(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="matchStatsDateTextField">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="matchStatsDateTextField.setFocusable(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="matchStatsYesRadioButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Yes"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="matchStatsYesRadioButton.setFocusable(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="matchStatsWonRadioButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Won"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="matchStatsWonRadioButton.setFocusable(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="matchStatsLossRadioButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Loss"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="matchStatsLossRadioButton.setFocusable(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="matchStatsDrawRadioButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Draw"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="matchStatsDrawRadioButton.setFocusable(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="matchStatsResultLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Result :"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="matchStatsNoRadioButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="No"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="matchStatsNoRadioButton.setFocusable(false);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="matchStatsForfeitedLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Forfeited :"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -1845,7 +2045,7 @@
                                   <Component id="teamAssignGoalkeeperButton" alignment="0" max="32767" attributes="0"/>
                                   <Component id="teamAssignCaptainButton" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="155" max="32767" attributes="0"/>
+                              <EmptySpace pref="381" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="teamCreateMatchTeamButton" max="32767" attributes="0"/>
                                   <Component id="teamnAddMatchButton" max="32767" attributes="0"/>
@@ -1880,7 +2080,7 @@
                       <Component id="teamAssignGoalkeeperButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="teamDismissGoalkeeperButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="94" max="32767" attributes="0"/>
+                      <EmptySpace pref="158" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
