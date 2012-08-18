@@ -4,6 +4,7 @@
  */
 package soccerTeam.logic.data;
 
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 /**
@@ -13,43 +14,36 @@ import java.util.GregorianCalendar;
 public class Time {
     
     private GregorianCalendar time;
-    private int hour;
-    private int minutes;
-    private int seconds;
+    private boolean hasSeconds;
     
-    public Time(int hour, int minutes, int seconds){
-        this.time = new GregorianCalendar(0, 0, 0, hour, minutes, seconds);
-        this.setHour(hour);
-        this.setMinutes(minutes);
-        this.setSeconds(seconds);
+    public Time(int hours, int minutes, int seconds){
+        this.time = new GregorianCalendar(0, 0, 0, hours, minutes, seconds);
+        this.hasSeconds = true;
+    }
+    
+    public Time(int hour, int minutes){
+        this.time = new GregorianCalendar(0, 0, 0, hour, minutes);
+        this.hasSeconds = false;
+    }
+    
+    private boolean hasSeconds(){
+        return this.hasSeconds;
     }
     
     private GregorianCalendar getTime(){
         return this.time;
     }
     
-    private void setHour(int hour){
-        this.hour = hour;
-    }
-    
-    private void setMinutes(int minutes){ 
-        this.minutes = minutes;
-    }
-    
-    private void setSeconds(int seconds){
-        this.seconds = seconds;
-    }
-    
     private int getHour(){
-        return this.hour;
+        return this.getTime().get(Calendar.HOUR_OF_DAY);
     }
     
     private int getMinutes(){
-        return this.minutes;
+        return this.getTime().get(Calendar.MINUTE);
     }
     
     private int getSeconds(){
-        return this.seconds;
+        return this.getTime().get(Calendar.SECOND);
     }
     public int compareTo(Time otherTime){
         return this.getTime().compareTo(otherTime.getTime());
@@ -58,8 +52,12 @@ public class Time {
     @Override
     public String toString(){
         String hour = new Integer(this.getHour()).toString();
-        String minutes = new Integer(this.getMinutes()).toString();
-        String seconds = new Integer(this.getSeconds()).toString();
-        return hour +":"+ minutes +":"+ seconds;
+        String minute = new Integer(this.getMinutes()).toString();
+        if(this.hasSeconds()){
+            String second = new Integer(this.getSeconds()).toString();
+            return hour +":"+ minute +":"+ second;
+        } else {
+            return hour +":"+ minute ;
+        }
     }
 }
