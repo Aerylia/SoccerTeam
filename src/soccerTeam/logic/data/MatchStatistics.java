@@ -13,7 +13,7 @@ import soccerTeam.logic.SortedEvents;
 public class MatchStatistics {
     
     private SortedEvents events;
-    private boolean forfeited;
+    private Boolean forfeited;
     public static int LOSS = 0;
     public static int WON = 3;
     public static int DRAW = 1;

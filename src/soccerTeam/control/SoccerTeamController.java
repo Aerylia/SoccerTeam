@@ -5,13 +5,9 @@
 package soccerTeam.control;
 
 import soccerTeam.logic.DataManager;
-import java.awt.Component;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.ComboBoxModel;
 import javax.swing.JFrame;
 import soccerTeam.logic.DataPortal;
 import soccerTeam.logic.exceptions.LoginFailtException;

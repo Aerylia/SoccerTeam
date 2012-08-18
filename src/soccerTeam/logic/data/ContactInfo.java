@@ -97,7 +97,7 @@ public class ContactInfo {
     
     @Override
     public String toString(){
-        return Util.concat('\t', this.getName(), this.gender(), this.getStreet(), this.getHousenumber(),
+        return Util.concat("    ", this.getName(), this.gender(), this.getStreet(), this.getHousenumber(),
                 this.getZipcode(), this.getCity(), this.getPhonenumber());
     }
     

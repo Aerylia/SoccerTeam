@@ -189,10 +189,10 @@ public class Player implements User{
         public String toString(){
             String string = new String();
             if(isCaptain()){
-                string += "Captain\t";
+                string += "Captain    ";
             }
             if(isGoalkeeper()){
-                string += "Goalkeeper\t";
+                string += "Goalkeeper    ";
             }
             return string + this.getContactInfo().toString();
         }

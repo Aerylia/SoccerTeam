@@ -85,7 +85,8 @@ public class Match {
         
         @Override
 	public String toString(){
-            return this.getDate().toString() + "\t" + this.getTime().toString() + "\t" + this.getOpponents() + "\t" +  this.getLocation();
+            return this.getDate().toString() + "    " + this.getTime().toString() + "    " + this.getOpponents() + 
+                    "    " +  this.getLocation();
         }
         
         public void addMatchStats(/*stuffies*/){
@@ -108,16 +109,16 @@ public class Match {
             return this.getAvailablePlayers().toArray();
         }
 
-        public void setAvailable(Player player) {
+        public boolean setAvailable(Player player) {
             if(!this.availablePlayers.contains(player)){
-                this.availablePlayers.add(player);
+                return this.availablePlayers.add(player);
+            } else {
+                return false;
             }
         }
 
-        public void setUnavailable(Player player){
-            if(this.availablePlayers.contains(player)){
-                this.availablePlayers.remove(player);
-            }
+        public boolean setUnavailable(Player player){
+            return this.availablePlayers.remove(player);
         }
 
     public Object[] getMatchStatistics() {

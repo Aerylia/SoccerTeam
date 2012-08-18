@@ -120,7 +120,7 @@ public class Coach implements User{
         
         @Override
         public String toString(){
-            return "Coach\t" + this.getContactInfo().toString();
+            return "Coach    " + this.getContactInfo().toString();
         }
 
 }

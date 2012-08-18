@@ -49,7 +49,14 @@ public class Team {
         }
         
         public boolean addPlayerToTeam(Player player){
-            return getTeam().add(player);
+            boolean succeeded = true;
+            if( !getTeam().add(player)){
+                succeeded = false;
+            }
+            if( !getMatches().addAvailablePlayer(player)){
+                succeeded = false;
+            }
+            return succeeded;
         }
         
         public boolean addCoachToTeam(Coach coach){
@@ -162,7 +169,7 @@ public class Team {
         }
 
     public void addMatch(Team team, int day, int month, int year, int hour, int minutes, String opponents, String location) {
-        this.getMatches().add(new Match(team, new CorrectDate(day, month, year), new Time(hour, minutes, 0), opponents, location));
+        this.getMatches().add(new Match(team, new CorrectDate(day, month, year), new Time(hour, minutes), opponents, location));
     }
 
     public Object[] getAvailabilityPlayer(Player player) {

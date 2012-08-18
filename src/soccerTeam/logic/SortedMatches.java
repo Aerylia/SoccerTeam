@@ -55,7 +55,7 @@ public class SortedMatches{
 		} else {
 			int idx = 0;
 			/* zolang match.getDate() komt na this.get(idx).getDate() */
-			while(match.getDate().compareTo(matches.get(idx).getDate()) > 0 && idx < matches.size()){
+			while(idx < matches.size() && match.getDate().compareTo(matches.get(idx).getDate()) > 0){
 				idx++;
 			}
 			matches.add(idx, match);
@@ -106,5 +106,17 @@ public class SortedMatches{
             }
         }
         return availableMatches.toArray();
+    }
+
+    public boolean addAvailablePlayer(Player player) {
+        boolean succeeded = true;
+        for(Match match : this.getMatches()){
+            if (match.isUpcomming()){
+                if ( !match.setAvailable(player)){
+                    succeeded = false;
+                }
+            }
+        }
+        return succeeded;
     }
 }

@@ -1993,19 +1993,26 @@ public class MainUI extends javax.swing.JFrame {
 
     private void matchStatsMatchComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_matchStatsMatchComboBoxItemStateChanged
         Object match = this.matchStatsMatchComboBox.getSelectedItem();
-        if (this.getSTC().isUpcomming(match)) {
-            this.matchStatsDateTextField.setText(this.getSTC().getDateMatch(match));
-            this.matchStatsTimeTextField.setText(this.getSTC().getTimeMatch(match));
-            this.matchStatsOpponentsTextField.setText(this.getSTC().getOpponentsMatch(match));
-            this.matchStatsLocationTextField.setText(this.getSTC().getLocationMatch(match));
-            this.matchStatsPlayerList.setListData(this.getSTC().getMatchTeam(match));
+        this.matchStatsDateTextField.setText(this.getSTC().getDateMatch(match));
+        this.matchStatsTimeTextField.setText(this.getSTC().getTimeMatch(match));
+        this.matchStatsOpponentsTextField.setText(this.getSTC().getOpponentsMatch(match));
+        this.matchStatsLocationTextField.setText(this.getSTC().getLocationMatch(match));
+        this.matchStatsPlayerList.setListData(this.getSTC().getMatchTeam(match));
+        Object[] events = this.getSTC().getMatchStatistics(match);
+        this.matchStatsEventsList.setListData(events);
+        if(events.length > 0){
             this.matchStatsYesRadioButton.setSelected(this.getSTC().getMatchForfeited(match));
             this.matchStatsNoRadioButton.setSelected(!this.matchStatsYesRadioButton.isSelected());
             int score = this.getSTC().getMatchResult(match);
             this.matchStatsWonRadioButton.setSelected(score == 3);
             this.matchStatsLossRadioButton.setSelected(score == 0);
             this.matchStatsDrawRadioButton.setSelected(score == 1);
-            this.matchStatsEventsList.setListData(this.getSTC().getMatchStatistics(match));
+        } else {
+            this.matchStatsYesRadioButton.setSelected(false);
+            this.matchStatsNoRadioButton.setSelected(false);
+            this.matchStatsWonRadioButton.setSelected(false);
+            this.matchStatsLossRadioButton.setSelected(false);
+            this.matchStatsDrawRadioButton.setSelected(false);
         }
         
     }//GEN-LAST:event_matchStatsMatchComboBoxItemStateChanged

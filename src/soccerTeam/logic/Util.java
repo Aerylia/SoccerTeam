@@ -20,7 +20,7 @@ public abstract class Util {
 	 * @param strings
 	 * @return
 	 */
-	public static String concat(char c, String... strings){
+	public static String concat(String c, String... strings){
 		String buffer = "";
 		for (String string : strings){
 			buffer += string;
